@@ -1,0 +1,192 @@
+[
+  {
+    "name": "get_backend_state",
+    "arguments": {},
+    "seconds": 4.11,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"backend\": \"swig\",\n  \"realtime\": false,\n  \"realtime_sync\": false,\n  \"ipcConnected\": false,\n  \"ipc_connected\": false,\n  \"loadedProject\": false,\n  \"loadedBoard\": false,\n  \"projectPath\": null,\n  \"boardPath\": null,\n  \"sessionBackend\": null,\n  \"sessionBoardPath\": null,\n  \"dirty\": false,\n  \"dirtyReason\": \"No board is loaded\",\n  \"diskChangedExternally\": false,\n  \"message\": \"swig backend; no board loaded\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_toolboxes",
+    "arguments": {},
+    "seconds": 0.0,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"open_toolboxes\": [],\n  \"toolboxes\": [\n    {\n      \"name\": \"board\",\n      \"description\": \"Board configuration: layers, mounting holes, text and graphics, SVG logos, zones, visualization\",\n      \"open\": false,\n      \"tool_count\": 15,\n      \"tools\": [\n        \"add_layer\",\n        \"set_active_layer\",\n        \"get_layer_list\",\n        \"add_mounting_hole\",\n        \"add_board_text\",\n        \"list_graphics\",\n        \"delete_graphic\",\n        \"update_graphic\",\n        \"import_svg_logo\",\n        \"add_zone\",\n        \"get_board_extents\",\n        \"get_board_2d_view\",\n        \"set_board_origin\",\n        \"get_board_origin\",\n        \"launch_kicad_ui\"\n      ]\n    },\n    {\n      \"name\": \"component\",\n      \"description\": \"Advanced component operations: edit, delete, duplicate, arrays and alignment, search, pads, courtyard and placement checks, placement suggestions, group, annotate\",\n      \"open\": false,\n      \"tool_count\": 24,\n      \"tools\": [\n        \"rotate_component\",\n        \"delete_component\",\n        \"edit_component\",\n        \"duplicate_component\",\n        \"place_component_array\",\n        \"align_components\",\n        \"set_footprint_type\",\n        \"find_component\",\n        \"get_component_list\",\n        \"get_component_properties\",\n        \"get_component_pads\",\n        \"get_pad_position\",\n        \"get_pads\",\n        \"get_net_pads\",\n        \"get_ratsnest\",\n        \"estimate_airwire_lengths\",\n        \"check_placement_clearance\",\n        \"check_courtyard_overlaps\",\n        \"suggest_placement\",\n        \"move_footprint_text\",\n        \"add_component_annotation\",\n        \"group_components\",\n        \"replace_component\",\n        \"hierarchical_place\"\n      ]\n    },\n    {\n      \"name\": \"export\",\n      \"description\": \"File export for fabrication and documentation: Gerber, PDF, BOM, 3D models\",\n      \"open\": false,\n      \"tool_count\": 27,\n      \"tools\": [\n        \"export_gerber\",\n        \"export_gerbers\",\n        \"export_drill\",\n        \"export_ipc2581\",\n        \"export_odb\",\n        \"export_ipcd356\",\n        \"export_gencad\",\n        \"export_pos\",\n        \"export_pcb_pdf\",\n        \"export_pcb_svg\",\n        \"export_pcb_dxf\",\n        \"export_gerber_single\",\n        \"export_3d_cli\",\n        \"export_sch_bom\",\n        \"export_sch_pdf\",\n        \"export_sch_svg\",\n        \"export_sch_dxf\",\n        \"export_sch_hpgl\",\n        \"export_sch_ps\",\n        \"export_sch_python_bom\",\n        \"export_pdf\",\n        \"export_svg\",\n        \"export_3d\",\n        \"export_bom\",\n        \"export_netlist\",\n        \"export_position_file\",\n        \"export_vrml\"\n      ]\n    },\n    {\n      \"name\": \"drc\",\n      \"description\": \"Design rule checking and electrical validation: DRC, net classes, clearances\",\n      \"open\": false,\n      \"tool_count\": 8,\n      \"tools\": [\n        \"set_design_rules\",\n        \"get_design_rules\",\n        \"run_drc\",\n        \"create_netclass\",\n        \"assign_net_to_class\",\n        \"set_layer_constraints\",\n        \"check_clearance\",\n        \"get_drc_violations\"\n      ]\n    },\n    {\n      \"name\": \"schematic\",\n      \"description\": \"Schematic operations: create, inspect, add/edit/delete components and their properties, wire connections, net labels, netlists, annotation, ERC\",\n      \"open\": false,\n      \"tool_count\": 36,\n      \"tools\": [\n        \"create_schematic\",\n        \"add_schematic_component\",\n        \"list_schematic_components\",\n        \"move_schematic_component\",\n        \"rotate_schematic_component\",\n        \"annotate_schematic\",\n        \"add_schematic_wire\",\n        \"delete_schematic_wire\",\n        \"add_schematic_net_label\",\n        \"delete_schematic_net_label\",\n        \"add_no_connect\",\n        \"connect_to_net\",\n        \"connect_passthrough\",\n        \"get_net_connections\",\n        \"list_schematic_nets\",\n        \"list_schematic_wires\",\n        \"list_schematic_labels\",\n        \"get_wire_connections\",\n        \"generate_netlist\",\n        \"sync_schematic_to_board\",\n        \"backannotate_footprints\",\n        \"get_schematic_view\",\n        \"export_schematic_svg\",\n        \"export_schematic_pdf\",\n        \"add_schematic_text\",\n        \"list_schematic_texts\",\n        \"get_schematic_component\",\n        \"edit_schematic_component\",\n        \"set_schematic_component_property\",\n        \"remove_schematic_component_property\",\n        \"delete_schematic_component\",\n        \"get_schematic_pin_locations\",\n        \"move_schematic_net_label\",\n        \"get_net_at_point\",\n        \"get_schematic_view_region\",\n        \"run_erc\"\n      ]\n    },\n    {\n      \"name\": \"library\",\n      \"description\": \"Footprint library access: register and list footprint libraries, search, browse, get footprint information, maintain library tables\",\n      \"open\": false,\n      \"tool_count\": 9,\n      \"tools\": [\n        \"list_libraries\",\n        \"list_footprint_libraries\",\n        \"register_footprint_library\",\n        \"search_footprints\",\n        \"list_library_footprints\",\n        \"get_footprint_info\",\n        \"list_library_table\",\n        \"remove_library_table_entry\",\n        \"set_library_table_uri\"\n      ]\n    },\n    {\n      \"name\": \"symbol_library\",\n      \"description\": \"Symbol library access and maintenance: search/browse sym-lib-table libraries, create/edit/rename/import/export symbols in a .kicad_sym file, repair malformed vendor symbols, and sync placed schematic instances to their library definitions\",\n      \"open\": false,\n      \"tool_count\": 17,\n      \"tools\": [\n        \"list_symbol_libraries\",\n        \"search_symbols\",\n        \"list_library_symbols\",\n        \"get_symbol_info\",\n        \"create_symbol\",\n        \"delete_symbol\",\n        \"rename_symbol\",\n        \"import_symbol\",\n        \"export_symbol\",\n        \"list_symbols_in_library\",\n        \"register_symbol_library\",\n        \"add_symbol_property\",\n        \"repair_flat_symbols\",\n        \"update_symbol_from_library\",\n        \"add_library_symbol_property\",\n        \"replace_instance_lib_ids\",\n        \"find_duplicate_symbols\"\n      ]\n    },\n    {\n      \"name\": \"symbol_pins\",\n      \"description\": \"Read a symbol's pins straight from the library (no schematic needed), and set their electrical types\",\n      \"open\": false,\n      \"tool_count\": 3,\n      \"tools\": [\n        \"list_symbol_pins\",\n        \"batch_list_symbol_pins\",\n        \"set_symbol_pin_type\"\n      ]\n    },\n    {\n      \"name\": \"schematic_hierarchy\",\n      \"description\": \"Hierarchical schematic sheets: insert/remove a sheet, scaffold a sub-sheet, add hierarchical labels and sheet pins, read and write sheet properties\",\n      \"open\": false,\n      \"tool_count\": 7,\n      \"tools\": [\n        \"add_hierarchical_sheet\",\n        \"remove_hierarchical_sheet\",\n        \"create_hierarchical_subsheet\",\n        \"add_schematic_hierarchical_label\",\n        \"add_sheet_pin\",\n        \"set_sheet_property\",\n        \"get_sheet_properties\"\n      ]\n    },\n    {\n      \"name\": \"schematic_layout\",\n      \"description\": \"Schematic layout and lint: move and autoplace Ref/Value fields, suggest decluttering, find overlapping elements, wires crossing symbols, floating labels and orphaned wires, inspect a region, and find/snap off-grid coordinates\",\n      \"open\": false,\n      \"tool_count\": 12,\n      \"tools\": [\n        \"set_schematic_property_position\",\n        \"batch_set_schematic_property_positions\",\n        \"autoplace_schematic_fields\",\n        \"suggest_schematic_declutter\",\n        \"lint_schematic_cosmetic\",\n        \"lint_offgrid\",\n        \"snap_to_grid\",\n        \"find_overlapping_elements\",\n        \"find_wires_crossing_symbols\",\n        \"list_floating_labels\",\n        \"find_orphaned_wires\",\n        \"get_elements_in_region\"\n      ]\n    },\n    {\n      \"name\": \"schematic_batch\",\n      \"description\": \"Batch schematic authoring: add/edit/replace components, batch no-connects, batch connect, add-and-connect\",\n      \"open\": false,\n      \"tool_count\": 6,\n      \"tools\": [\n        \"batch_add_components\",\n        \"batch_edit_schematic_components\",\n        \"replace_schematic_component\",\n        \"batch_add_no_connects\",\n        \"batch_connect\",\n        \"batch_add_and_connect\"\n      ]\n    },\n    {\n      \"name\": \"routing\",\n      \"description\": \"Tracks, vias, zones and nets: route arcs, pad-to-pad and differential pairs; modify, delete, query and copy routing; vias, stitching vias, copper pours and zone refill; net list and net colors\",\n      \"open\": false,\n      \"tool_count\": 14,\n      \"tools\": [\n        \"route_arc_trace\",\n        \"route_pad_to_pad\",\n        \"route_differential_pair\",\n        \"modify_trace\",\n        \"delete_trace\",\n        \"query_traces\",\n        \"copy_routing_pattern\",\n        \"add_via\",\n        \"add_gnd_stitching_vias\",\n        \"add_copper_pour\",\n        \"query_zones\",\n        \"refill_zones\",\n        \"get_nets_list\",\n        \"set_net_color\"\n      ]\n    },\n    {\n      \"name\": \"autoroute\",\n      \"description\": \"Freerouting autorouter: automatic PCB routing via Specctra DSN/SES\",\n      \"open\": false,\n      \"tool_count\": 4,\n      \"tools\": [\n        \"autoroute\",\n        \"export_dsn\",\n        \"import_ses\",\n        \"check_freerouting\"\n      ]\n    },\n    {\n      \"name\": \"validation\",\n      \"description\": \"File integrity checks: locate structural damage in schematics and symbol libraries before KiCad refuses to open them\",\n      \"open\": false,\n      \"tool_count\": 2,\n      \"tools\": [\n        \"validate_schematic\",\n        \"validate_symbol_library\"\n      ]\n    },\n    {\n      \"name\": \"footprint\",\n      \"description\": \"Footprint creation and 3D models: create a footprint, edit its pads, copy a 3D model into the project, attach 3D models to footprint files or to placed footprints\",\n      \"open\": false,\n      \"tool_count\": 5,\n      \"tools\": [\n        \"create_footprint\",\n        \"edit_footprint_pad\",\n        \"import_3d_model\",\n        \"add_footprint_3d_model\",\n        \"add_component_3d_model\"\n      ]\n    },\n    {\n      \"name\": \"import\",\n      \"description\": \"Import designs from other tools: Eagle projects, and vendor PCB files (PADS, Altium, Eagle, CADSTAR, Fabmaster, P-CAD, SolidWorks PCB, Allegro)\",\n      \"open\": false,\n      \"tool_count\": 2,\n      \"tools\": [\n        \"import_eagle_project\",\n        \"import_pcb\"\n      ]\n    },\n    {\n      \"name\": \"jlcpcb\",\n      \"description\": \"JLCPCB/LCSC parts: download and search the local JLCPCB catalog, part details and stats, cheaper or in-stock alternatives, and LCSC datasheet lookup and enrichment\",\n      \"open\": false,\n      \"tool_count\": 7,\n      \"tools\": [\n        \"download_jlcpcb_database\",\n        \"get_jlcpcb_database_stats\",\n        \"search_jlcpcb_parts\",\n        \"get_jlcpcb_part\",\n        \"suggest_jlcpcb_alternatives\",\n        \"get_datasheet_url\",\n        \"enrich_datasheets\"\n      ]\n    },\n    {\n      \"name\": \"parts-registry\",\n      \"description\": \"Open gate-verified parts registry (PartReel by default, no auth): search existing KiCAD parts and download footprint/symbol/3D files before generating custom ones\",\n      \"open\": false,\n      \"tool_count\": 3,\n      \"tools\": [\n        \"search_parts_registry\",\n        \"get_registry_part\",\n        \"download_registry_part\"\n      ]\n    },\n    {\n      \"name\": \"digikey\",\n      \"description\": \"Digi-Key Product Information V4: search parts for stock, price and lifecycle, and sweep a symbol library for obsolete or unavailable parts (needs DIGIKEY_CLIENT_ID / DIGIKEY_CLIENT_SECRET in the server environment)\",\n      \"open\": false,\n      \"tool_count\": 3,\n      \"tools\": [\n        \"digikey_test_connection\",\n        \"digikey_search_parts\",\n        \"digikey_check_library_availability\"\n      ]\n    },\n    {\n      \"name\": \"gui-driver\",\n      \"description\": \"GUI-driver: drive KiCad's live GUI (menus, toolbars, dialogs, plugins) over a token-gated localhost helper. Opt-in — deploy with install_gui_driver and enable via KICAD_GUI_DRIVER_ENABLE. Destructive items are advisory-flagged, not gated.\",\n      \"open\": false,\n      \"tool_count\": 11,\n      \"tools\": [\n        \"install_gui_driver\",\n        \"kicad_gui_tree\",\n        \"kicad_gui_click\",\n        \"kicad_run_action_plugin\",\n        \"kicad_gui_wait_for\",\n        \"kicad_gui_screenshot\",\n        \"kicad_pcb_snapshot\",\n        \"kicad_reload_and_open_plugin\",\n        \"kicad_run_drc\",\n        \"kicad_gui_tree_atspi\",\n        \"kicad_gui_click_atspi\"\n      ]\n    }\n  ],\n  \"core_tools\": [\n    \"create_project\",\n    \"open_project\",\n    \"open_board\",\n    \"reload_board\",\n    \"close_project\",\n    \"save_project\",\n    \"save_as\",\n    \"save_board\",\n    \"is_dirty\",\n    \"discard_or_reload\",\n    \"snapshot_project\",\n    \"get_project_info\",\n    \"place_component\",\n    \"move_component\",\n    \"batch_move_components\",\n    \"add_net\",\n    \"route_trace\",\n    \"get_board_info\",\n    \"set_board_size\",\n    \"add_board_outline\",\n    \"replace_board_outline\",\n    \"clear_board_outline\",\n    \"get_component_geometry\",\n    \"add_schematic_component\",\n    \"list_schematic_components\",\n    \"annotate_schematic\",\n    \"connect_passthrough\",\n    \"connect_to_net\",\n    \"add_schematic_net_label\",\n    \"sync_schematic_to_board\",\n    \"create_board_from_schematic\",\n    \"get_backend_state\",\n    \"check_kicad_ui\"\n  ],\n  \"note\": \"Open the toolboxes a task needs with open_toolbox before calling their tools. A tool in a closed toolbox is rejected as disabled.\"\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "check_kicad_ui",
+    "arguments": {},
+    "seconds": 0.43,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"running\": true,\n  \"processes\": [\n    {\n      \"pid\": \"9196\",\n      \"name\": \"kicad.exe\",\n      \"command\": \"kicad.exe\"\n    }\n  ],\n  \"message\": \"KiCAD is running\",\n  \"backend\": \"swig\",\n  \"realtime_sync\": false,\n  \"ipc_connected\": false,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_project",
+    "arguments": {
+      "path": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\mcp_smoke_test",
+      "name": "mcp_smoke_test"
+    },
+    "seconds": 6.15,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"message\": \"Created project: mcp_smoke_test\",\n  \"project\": {\n    \"name\": \"mcp_smoke_test\",\n    \"path\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/mcp_smoke_test/mcp_smoke_test.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/mcp_smoke_test/mcp_smoke_test.kicad_pcb\",\n    \"schematicPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/mcp_smoke_test/mcp_smoke_test.kicad_sch\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "add_board_outline",
+    "arguments": {
+      "shape": "rectangle",
+      "params": {
+        "x": 0,
+        "y": 0,
+        "width": 50,
+        "height": 30,
+        "unit": "mm"
+      }
+    },
+    "seconds": 0.08,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Added board outline: rectangle\",\"outline\":{\"shape\":\"rectangle\",\"width\":50,\"height\":30,\"center\":{\"x\":25,\"y\":15,\"unit\":\"mm\"},\"radius\":null,\"cornerRadius\":0,\"points\":[]},\"_backend\":\"swig\",\"_realtime\":false}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "place_component",
+    "arguments": {
+      "componentId": "Resistor_SMD:R_0603_1608Metric",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "reference": "R1",
+      "value": "10k",
+      "position": {
+        "x": 25,
+        "y": 15,
+        "unit": "mm"
+      }
+    },
+    "seconds": 0.83,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Placed component: Resistor_SMD:R_0603_1608Metric\",\"component\":{\"reference\":\"R1\",\"value\":\"10k\",\"position\":{\"x\":25,\"y\":15,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "save_project",
+    "arguments": {},
+    "seconds": 0.63,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\",\n  \"project\": {\n    \"name\": \"mcp_smoke_test\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_board_info",
+    "arguments": {},
+    "seconds": 0.17,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"board\":{\"filename\":\"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\",\"size\":{\"width\":50,\"height\":30,\"unit\":\"mm\"},\"layers\":[{\"name\":\"F.Cu\",\"type\":\"signal\",\"id\":0},{\"name\":\"F.Mask\",\"type\":\"unknown\",\"id\":1},{\"name\":\"B.Cu\",\"type\":\"signal\",\"id\":2},{\"name\":\"B.Mask\",\"type\":\"unknown\",\"id\":3},{\"name\":\"F.Silkscreen\",\"type\":\"unknown\",\"id\":5},{\"name\":\"B.Silkscreen\",\"type\":\"unknown\",\"id\":7},{\"name\":\"F.Adhesive\",\"type\":\"unknown\",\"id\":9},{\"name\":\"B.Adhesive\",\"type\":\"unknown\",\"id\":11},{\"name\":\"F.Paste\",\"type\":\"unknown\",\"id\":13},{\"name\":\"B.Paste\",\"type\":\"unknown\",\"id\":15},{\"name\":\"User.Drawings\",\"type\":\"unknown\",\"id\":17},{\"name\":\"User.Comments\",\"type\":\"unknown\",\"id\":19},{\"name\":\"User.Eco1\",\"type\":\"unknown\",\"id\":21},{\"name\":\"User.Eco2\",\"type\":\"unknown\",\"id\":23},{\"name\":\"Edge.Cuts\",\"type\":\"unknown\",\"id\":25},{\"name\":\"Margin\",\"type\":\"unknown\",\"id\":27},{\"name\":\"B.Courtyard\",\"type\":\"unknown\",\"id\":29},{\"name\":\"F.Courtyard\",\"type\":\"unknown\",\"id\":31},{\"name\":\"B.Fab\",\"type\":\"unknown\",\"id\":33},{\"name\":\"F.Fab\",\"type\":\"unknown\",\"id\":35},{\"name\":\"Rescue\",\"type\":\"unknown\",\"id\":37},{\"name\":\"User.1\",\"type\":\"unknown\",\"id\":39},{\"name\":\"User.2\",\"type\":\"unknown\",\"id\":41},{\"name\":\"User.3\",\"type\":\"unknown\",\"id\":43},{\"name\":\"User.4\",\"type\":\"unknown\",\"id\":45}],\"title\":\"mcp_smoke_test\"},\"_backend\":\"swig\",\"_realtime\":false}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "add_schematic_component",
+    "arguments": {
+      "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\mcp_smoke_test\\mcp_smoke_test.kicad_sch",
+      "symbol": "Device:R",
+      "reference": "R1",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    "seconds": 1.9,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Successfully added R1 (Device:R) to schematic"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_schematic_components",
+    "arguments": {
+      "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\mcp_smoke_test\\mcp_smoke_test.kicad_sch"
+    },
+    "seconds": 1.31,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Components (1):\n  R1: Device:R = \"10k\" at (100.33, 100.33) rot=0° [2 pins]"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_project_info",
+    "arguments": {},
+    "seconds": 0.11,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"project\": {\n    \"name\": \"mcp_smoke_test\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\",\n    \"title\": \"mcp_smoke_test\",\n    \"date\": \"2026-11-07\",\n    \"revision\": \"\",\n    \"company\": \"\",\n    \"comment1\": \"\",\n    \"comment2\": \"\",\n    \"comment3\": \"\",\n    \"comment4\": \"\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_backend_state",
+    "arguments": {},
+    "seconds": 0.17,
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"success\": true,\n  \"backend\": \"swig\",\n  \"realtime\": false,\n  \"realtime_sync\": false,\n  \"ipcConnected\": false,\n  \"ipc_connected\": false,\n  \"loadedProject\": true,\n  \"loadedBoard\": true,\n  \"projectPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pro\",\n  \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\",\n  \"sessionBackend\": \"swig\",\n  \"sessionBoardPath\": \"%USERPROFILE%\\\\dev\\\\ai-pcb-engineer\\\\hardware\\\\sandbox\\\\mcp_smoke_test\\\\mcp_smoke_test.kicad_pcb\",\n  \"dirty\": false,\n  \"dirtyReason\": \"Board file matches the MCP recorded disk signature\",\n  \"diskChangedExternally\": false,\n  \"message\": \"swig backend; board loaded\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+        }
+      ]
+    }
+  }
+]

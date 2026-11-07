@@ -1,0 +1,160 @@
+{
+  "server": {
+    "name": "kicad-mcp-server",
+    "version": "2.8.3",
+    "description": "MCP server for KiCAD PCB design operations"
+  },
+  "protocolVersion": "2025-06-18",
+  "toolbox_setting": "core",
+  "tool_count": 37,
+  "tools": [
+    {
+      "name": "search_tools",
+      "description": "Search all available KiCAD tools by keyword. Returns matching tool names and their categories."
+    },
+    {
+      "name": "list_toolboxes",
+      "description": "List the toolboxes: groups of related KiCad tools, each with a description, its tools, and whether it is open. Your tool list holds the core tools plus the tools of open toolboxes; open a toolbox with"
+    },
+    {
+      "name": "open_toolbox",
+      "description": "Open one or more toolboxes (see list_toolboxes) to add their tools to your tool list. In most clients the new tools can be called from the user's next message, not in the current turn, so open what a "
+    },
+    {
+      "name": "close_toolbox",
+      "description": "Close one or more toolboxes to remove their tools from your tool list and free context. The core tools stay."
+    },
+    {
+      "name": "create_project",
+      "description": "Create a new KiCAD project"
+    },
+    {
+      "name": "open_project",
+      "description": "Open an existing KiCAD project"
+    },
+    {
+      "name": "open_board",
+      "description": "Open a specific .kicad_pcb board file and refresh the MCP in-memory board state."
+    },
+    {
+      "name": "reload_board",
+      "description": "Reload the current or specified .kicad_pcb from disk, discarding stale in-memory board state."
+    },
+    {
+      "name": "close_project",
+      "description": "Close the currently loaded KiCAD project: optionally save, then drop the in-memory board and clear session state. Use this to hand control back so the user (or the agent) can edit project files direct"
+    },
+    {
+      "name": "save_project",
+      "description": "Save the current KiCAD project. Refuses to overwrite the board file if its contents changed on disk since load (external edit) unless force is true."
+    },
+    {
+      "name": "save_board",
+      "description": "Save the current PCB board. Refuses to overwrite external disk edits unless force=true."
+    },
+    {
+      "name": "save_as",
+      "description": "Save the current PCB board to a new .kicad_pcb path."
+    },
+    {
+      "name": "is_dirty",
+      "description": "Return whether the MCP knows the loaded board has unsaved memory changes or external disk changes."
+    },
+    {
+      "name": "discard_or_reload",
+      "description": "Discard the current in-memory PCB state and reload the board from disk."
+    },
+    {
+      "name": "get_project_info",
+      "description": "Get information about the current KiCAD project"
+    },
+    {
+      "name": "snapshot_project",
+      "description": "Save a named checkpoint snapshot of the current project state (renders board to PDF and records step label). Call after completing each major step — e.g. after Step 1 (schematic_ok) and Step 2 (layout"
+    },
+    {
+      "name": "set_board_size",
+      "description": "Set the PCB board dimensions (width and height) in the specified unit."
+    },
+    {
+      "name": "get_board_info",
+      "description": "Retrieve general information about the current PCB board (dimensions, layer count, DRC status)."
+    },
+    {
+      "name": "add_board_outline",
+      "description": "Draw the PCB board outline (Edge.Cuts layer) as a rectangle, rounded rectangle, circle or polygon."
+    },
+    {
+      "name": "clear_board_outline",
+      "description": "Delete all Edge.Cuts graphics from the current PCB board."
+    },
+    {
+      "name": "replace_board_outline",
+      "description": "Replace the current Edge.Cuts board outline with a rectangle, rounded rectangle, circle or polygon."
+    },
+    {
+      "name": "place_component",
+      "description": "Place a footprint component onto the PCB at the specified position. Optionally set reference, value, footprint, rotation and layer."
+    },
+    {
+      "name": "move_component",
+      "description": "Move a PCB component to a new position. Optionally update rotation or flip to a different copper layer."
+    },
+    {
+      "name": "batch_move_components",
+      "description": "Move multiple PCB components transactionally. If one reference/spec is invalid, no components are moved. Saves by default unless save=false."
+    },
+    {
+      "name": "get_component_geometry",
+      "description": "Return separated footprint geometry bboxes: body, pads, courtyard, keepout, fab, silk and text."
+    },
+    {
+      "name": "add_net",
+      "description": "Create a new net on the PCB"
+    },
+    {
+      "name": "route_trace",
+      "description": "Route a trace segment between two XY points on a fixed layer. WARNING: Does NOT handle layer changes — if start and end are on different copper layers, use route_pad_to_pad instead, which automaticall"
+    },
+    {
+      "name": "add_schematic_component",
+      "description": "Add a component to the schematic. Symbol format is 'Library:SymbolName' (e.g., 'Device:R', 'EDA-MCP:ESP32-C3')"
+    },
+    {
+      "name": "add_schematic_net_label",
+      "description": "Add a net label to the schematic. PREFERRED: supply componentRef + pinNumber to snap the label to the exact pin endpoint — this guarantees an electrical connection. Alternatively supply position [x, y"
+    },
+    {
+      "name": "connect_to_net",
+      "description": "Connect a component pin to a named net by adding a wire stub and net label at the exact pin endpoint. The response includes pin_location (exact pin coords), label_location (where the label was placed)"
+    },
+    {
+      "name": "connect_passthrough",
+      "description": "Connects all pins of a source connector (e.g. J1) to matching pins of a target connector (e.g. J2) via shared net labels — pin N gets net '{netPrefix}_{N}'. Use this for FFC/ribbon cable passthrough a"
+    },
+    {
+      "name": "list_schematic_components",
+      "description": "List all components in a schematic with their references, values, positions, and pins. Essential for inspecting what's on the schematic before making edits."
+    },
+    {
+      "name": "annotate_schematic",
+      "description": "Assign reference designators to unannotated components (R? → R1, R2, ...). Must be called before tools that require known references. Numbers are unique across the whole project, each use of a sheet t"
+    },
+    {
+      "name": "sync_schematic_to_board",
+      "description": "Import the schematic netlist into the PCB board — equivalent to pressing F8 in KiCAD (Tools → Update PCB from Schematic). MUST be called after the schematic is complete and before placing or routing c"
+    },
+    {
+      "name": "create_board_from_schematic",
+      "description": "Create a new .kicad_pcb file from a schematic, then update the PCB from that schematic so footprints and nets are present."
+    },
+    {
+      "name": "get_backend_state",
+      "description": "Return the active backend, realtime status, loaded project/board paths, and dirty state."
+    },
+    {
+      "name": "check_kicad_ui",
+      "description": "Check if KiCAD UI is currently running"
+    }
+  ]
+}

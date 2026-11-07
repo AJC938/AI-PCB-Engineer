@@ -1,0 +1,51 @@
+# ---- Secrets and machine-specific config (never commit) ----
+.env
+.env.*
+!.env.example
+.mcp.json
+*.pem
+*.key
+.claude/settings.local.json
+
+# ---- Node / Python tooling ----
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+dist/
+build/
+
+# ---- Logs and temporary files ----
+*.log
+logs/
+tmp/
+*.tmp
+*.bak
+
+# ---- KiCad local / generated state (design files ARE tracked) ----
+*.lck
+~*.lck
+_autosave-*
+*-backups/
+fp-info-cache
+*.kicad_prl
+*-cache.lib
+\#auto_saved_files\#
+
+# ---- KiCad MCP server automatic pre-write backups (created per project) ----
+.mcp-backups/
+
+# ---- MCP sandbox: throwaway test projects, not deliverables ----
+hardware/sandbox/*
+!hardware/sandbox/.gitkeep
+!hardware/sandbox/README.md
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

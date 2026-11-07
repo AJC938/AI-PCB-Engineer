@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "kicad": {
+      "type": "stdio",
+      "command": "<USERPROFILE>\\dev\\tools\\node-v24.22.2\\node.exe",
+      "args": ["<USERPROFILE>\\dev\\tools\\KiCAD-MCP-Server\\dist\\index.js"],
+      "env": {
+        "KICAD_PYTHON": "<LOCALAPPDATA>\\Programs\\KiCad\\10.0\\bin\\python.exe",
+        "PYTHONPATH": "<LOCALAPPDATA>\\Programs\\KiCad\\10.0\\bin\\Lib\\site-packages",
+        "KICAD_BACKEND": "swig",
+        "KICAD_MCP_TOOLBOXES": "core",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}
