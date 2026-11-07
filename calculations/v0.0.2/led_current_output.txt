@@ -1,0 +1,18 @@
+Case                                          I (mA)  P_R (mW) P_LED (mW)  V_R (V)
+Nominal (Vs 5.00, VF 1.80 graph, R 620)         5.16     16.52       9.29     3.20
+Nominal w/ table VF (VF 1.90 @10 mA)            5.00     15.50       9.50     3.10
+Max current (Vs +5 %, VF low, R -1 %)           5.78     20.53       9.83     3.55
+Min current (Vs -5 %, VF max, R +1 %)           3.91      9.59       9.00     2.45
+
+Sensitivities
+  dI/dVF            = -1.613 mA/V  -> +/-0.1 V VF tolerance = +/-0.161 mA
+  R tolerance +/-1 %  -> dI ~ -/+0.052 mA (~ -/+1 %)
+  VF tempco 0..50 degC (ref 25 degC): dVF = +/-47.5 mV -> dI = -/+0.077 mA
+
+Margins
+  Resistor power  : worst 20.5 mW vs 250 mW rating -> 8.2 % of rating
+  Resistor voltage: worst 3.55 V vs 250 V max
+  LED current     : worst 5.78 mA vs 30 mA max -> 19.3 %
+  LED dissipation : worst 9.8 mW vs 75 mW max
+  Connector       : 5.78 mA vs 17.5 A rating
+  Reverse polarity: LED would see up to ~5.25 V reverse vs VR max 5.0 V -> EXCEEDS rating (no reverse protection in this test circuit)
