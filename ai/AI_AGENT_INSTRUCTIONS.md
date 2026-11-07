@@ -27,6 +27,22 @@ owns all design decisions and approvals.
 - Killing processes, changing PATH/registry/global git config.
 - Reading, printing or storing credentials.
 
+## MCP workflow rules (from the V0.0.2 evaluation, KiCAD-MCP-Server v2.8.3, SWIG)
+See `reports/v0.0.2/FINAL_V0.0.2_REPORT.md` for the defects behind these rules.
+1. Call `check_kicad_ui` before any write. Never write while the project is open in KiCad.
+2. Call `set_design_rules` explicitly before placement or routing (the default clearance can read 0).
+3. After `sync_schematic_to_board` or `refill_zones`, call `open_project` and verify the file on
+   disk. These tools write through a separate path and leave the session's memory stale.
+4. Name nets with **global labels** or power symbols. Local-label names lose their `/` prefix on sync.
+5. After sync, run `ai/workflows/sync_footprint_fields.py` (non-MCP) to copy MPN, Manufacturer and
+   Description into the footprints.
+6. Use `place_component` with `MountingHole:MountingHole_3.2mm_M3`, **not** `add_mounting_hole`.
+7. Final DRC: `kicad-cli pcb drc --severity-all --schematic-parity --refill-zones`. MCP `run_drc`
+   has no parity check.
+8. Take the BOM from `export_sch_bom`, not `export_bom`. Inspect fab outputs with
+   `ai/workflows/inspect_fab_outputs.py`.
+9. `route_pad_to_pad` draws straight segments only. Plan placement for it, or route with waypoints.
+
 ## Engineering constraints
 Follow `docs/ENGINEERING_RULES.md`. Never invent component data; mark anything
 unverified as `UNVERIFIED`. ERC/DRC passing is not proof of correctness.

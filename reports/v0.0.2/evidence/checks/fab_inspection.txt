@@ -1,0 +1,60 @@
+== Gerber files
+   led_test-B_Cu.gbl 23877 bytes
+   led_test-B_Mask.gbs 1690 bytes
+   led_test-B_Silkscreen.gbo 1702 bytes
+   led_test-Edge_Cuts.gm1 1047 bytes
+   led_test-F_Cu.gtl 2015 bytes
+   led_test-F_Mask.gts 1690 bytes
+   led_test-F_Silkscreen.gto 16272 bytes
+   led_test-NPTH-drl_map.pdf 12695 bytes
+   led_test-NPTH.drl 403 bytes
+   led_test-PTH-drl_map.pdf 12812 bytes
+   led_test-PTH.drl 555 bytes
+   led_test-job.gbrjob 2553 bytes
+
+== Edge.Cuts extents: X 100.000..150.000  Y 100.000..130.000  -> 50.000 x 30.000 mm
+   file function: ['Profile,NP']
+
+== F_Cu.gtl: 6 pad flashes  (FileFunction ['Copper,L1,Top'])
+   ( 105.600,  112.460)  aperture RoundRect 0.250000X-1.050000X1.050000X-1.050000X-1.050000X1.050000X-1.050000X1.050000X1.050000X0
+   ( 105.600,  117.540)  aperture C 2.600000
+   ( 115.000,  110.000)  aperture C 1.600000
+   ( 125.160,  110.000)  aperture C 1.600000
+   ( 135.000,  115.000)  aperture C 1.800000
+   ( 135.000,  117.540)  aperture R 1.800000X1.800000
+   TO.N nets referenced: ['+5V', 'GND', 'LED_A']
+
+== B_Cu.gbl: 6 pad flashes  (FileFunction ['Copper,L2,Bot'])
+   ( 105.600,  112.460)  aperture RoundRect 0.250000X-1.050000X1.050000X-1.050000X-1.050000X1.050000X-1.050000X1.050000X1.050000X0
+   ( 105.600,  117.540)  aperture C 2.600000
+   ( 115.000,  110.000)  aperture C 1.600000
+   ( 125.160,  110.000)  aperture C 1.600000
+   ( 135.000,  115.000)  aperture C 1.800000
+   ( 135.000,  117.540)  aperture R 1.800000X1.800000
+   TO.N nets referenced: ['+5V', 'GND', 'LED_A']
+
+== Drill files
+   led_test-NPTH.drl: units=METRIC T1 Ø3.200 mm x4
+   led_test-PTH.drl: units=METRIC T1 Ø0.800 mm x2, T2 Ø0.900 mm x2, T3 Ø1.300 mm x2
+
+== BOM (schematic): led_test-bom.csv
+    ['Reference', 'Value', 'Footprint', 'Manufacturer', 'MPN', 'Qty']
+    ['D1', 'Red', 'LED_THT:LED_D5.0mm', 'Kingbright', 'WP7113ID', '1']
+    ['J1', '5V_IN', 'TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal', 'Phoenix Contact', '1715721', '1']
+    ['R1', '620', 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal', 'Yageo', 'MFR-25FBF52-620R', '1']
+
+== BOM (from PCB, MCP export_bom): led_test-bom-from-pcb.csv
+    ['reference', 'value', 'footprint', 'layer']
+    ['R1', '620', 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal', 'F.Cu']
+    ['J1', '5V_IN', 'TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal', 'F.Cu']
+    ['D1', 'Red', 'LED_THT:LED_D5.0mm', 'F.Cu']
+    ['H1', 'MountingHole_M3', 'MountingHole:MountingHole_3.2mm_M3', 'F.Cu']
+    ['H4', 'MountingHole_M3', 'MountingHole:MountingHole_3.2mm_M3', 'F.Cu']
+    ['H3', 'MountingHole_M3', 'MountingHole:MountingHole_3.2mm_M3', 'F.Cu']
+    ['H2', 'MountingHole_M3', 'MountingHole:MountingHole_3.2mm_M3', 'F.Cu']
+
+== CPL: led_test-cpl.csv
+    ['Ref', 'Val', 'Package', 'PosX', 'PosY', 'Rot', 'Side']
+    ['D1', 'Red', 'LED_D5.0mm', '135.000000', '-117.540000', '90.000000', 'top']
+    ['J1', '5V_IN', 'TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal', '105.600000', '-112.460000', '-90.000000', 'top']
+    ['R1', '620', 'R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal', '115.000000', '-110.000000', '0.000000', 'top']

@@ -3,8 +3,10 @@
 An AI-assisted PCB engineering workflow, using **Claude Code → MCP → KiCad 10**, aimed at
 designing, manufacturing, assembling and physically testing a real PCB.
 
-**Current version:** `0.0.2` (in progress): MCP capability evaluation on a complete LED
-test board in the sandbox. `0.0.1` (environment setup and MCP integration) is complete.
+**Current version:** `0.0.2`: MCP capability evaluation completed on a full LED test board
+(schematic → ERC → PCB → routing → DRC → Gerber/drill/BOM/CPL), digitally validated only.
+Results: [reports/v0.0.2/FINAL_V0.0.2_REPORT.md](reports/v0.0.2/FINAL_V0.0.2_REPORT.md).
+`0.0.1` (environment setup and MCP integration) is complete.
 The MCP connection was verified inside Claude Code: `kicad` server connected, backend SWIG,
 37 core tools, `get_backend_state` OK.
 
@@ -73,8 +75,11 @@ ERC/DRC → Gerber/BOM/CPL → fabrication → assembly → testing. See
 [docs/DEVELOPMENT_ROADMAP.md](docs/DEVELOPMENT_ROADMAP.md).
 
 ## Current limitations
-- Only the sandbox smoke test has been run ([reports/v0.0.1/SMOKE_TEST.md](reports/v0.0.1/SMOKE_TEST.md)).
-  No real circuit, nets or routing yet.
+- Only sandbox test boards exist: V0.0.1 smoke test and the V0.0.2 LED test board
+  ([capability matrix](reports/v0.0.2/MCP_CAPABILITY_MATRIX.md)). No real product design yet.
+- Known MCP server defects and the required workarounds are listed in
+  [FINAL_V0.0.2_REPORT.md](reports/v0.0.2/FINAL_V0.0.2_REPORT.md#defects-and-limitations) and
+  [ai/AI_AGENT_INSTRUCTIONS.md](ai/AI_AGENT_INSTRUCTIONS.md).
 - SWIG backend: KiCad must not have the edited file open and must reload after changes.
 - IPC API, Freerouting, part sourcing and simulation are not configured.
 - **No hardware has been designed, fabricated or tested.**

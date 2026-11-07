@@ -1,0 +1,8 @@
+reference,value,footprint,layer
+R1,620,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,F.Cu
+J1,5V_IN,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",F.Cu
+D1,Red,LED_THT:LED_D5.0mm,F.Cu
+H1,MountingHole_M3,MountingHole:MountingHole_3.2mm_M3,F.Cu
+H4,MountingHole_M3,MountingHole:MountingHole_3.2mm_M3,F.Cu
+H3,MountingHole_M3,MountingHole:MountingHole_3.2mm_M3,F.Cu
+H2,MountingHole_M3,MountingHole:MountingHole_3.2mm_M3,F.Cu

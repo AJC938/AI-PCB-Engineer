@@ -1,0 +1,4 @@
+"Reference","Value","Footprint","Manufacturer","MPN","Qty"
+"D1","Red","LED_THT:LED_D5.0mm","Kingbright","WP7113ID","1"
+"J1","5V_IN","TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal","Phoenix Contact","1715721","1"
+"R1","620","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","Yageo","MFR-25FBF52-620R","1"
