@@ -28,9 +28,12 @@ Status: `PASS` · `WARNING` · `FAILED` · `NOT TESTED`
 | WSL2 | NOT TESTED | Ubuntu 24.04 present | — | Fallback only |
 
 ## Known warnings
-1. **Claude Code project-server approval pending.** `claude mcp get kicad` shows
-   *Scope: Project config, Status: Pending approval*. The user must approve the
-   `kicad` server once (Claude Code security gate) and start a new session.
+1. **Claude Code connection: VERIFIED (2026-11-07).** The user approved the `kicad`
+   project server in the desktop app. Inside the Claude Code session the server is
+   connected, the backend is `swig`, 37 core tools are exposed, and `get_backend_state`
+   succeeded. *Non-blocking inconsistency:* the bundled CLI `claude mcp get kicad` still
+   prints "Pending approval". The desktop app appears to store its approval separately
+   from the CLI. In-session tool calls are the authoritative check.
 2. **False "No KiCAD installations found" log warning.** This comes from a legacy
    diagnostic in `python/kicad_interface.py` that only checks KiCad 9's
    `lib\python3\dist-packages` layout. The real discovery in

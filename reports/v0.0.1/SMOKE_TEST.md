@@ -32,11 +32,27 @@ Client: a minimal stdio MCP client that launches the server exactly as configure
 | Schematic | file inspection | PASS: `lib_id "Device:R"`, Reference R1, Value 10k, Footprint set |
 | Exports | `kicad-cli pcb export gerbers / svg` | PASS: 24 Gerber layers + job file, SVG render |
 
+## In-session verification (Claude Code, after user approval, 2026-11-07)
+The 13 calls above used a stand-alone stdio client. After the user approved the project
+server, the connection was re-verified from inside a Claude Code session (read-only, no
+files changed):
+
+| Call | Result |
+|---|---|
+| Tool discovery | PASS: 37 `kicad` tools exposed to the session (33 core + 4 toolbox-management) |
+| `get_backend_state` | PASS: `backend: swig`, no board loaded |
+| `check_kicad_ui` | PASS: reported KiCad not running at that time |
+| `is_dirty` | PASS: no board loaded |
+| `list_toolboxes` / `search_tools("drc")` | PASS: 20 toolboxes, 9 DRC-related matches |
+
+Previous sandbox DRC result (unchanged): 0 violations, 0 unconnected.
+Known non-blocking inconsistency: CLI `claude mcp get kicad` still says "Pending approval".
+
 ## Limitations of this test
 - No nets, wiring or routing. Schematic and board are not linked (no
   `sync_schematic_to_board`), so it is not a functional circuit.
 - Only the `core` toolbox was exercised.
 - IPC backend, GUI driver, Freerouting and part sourcing were not tested.
-- The test used a stand-alone stdio client. Tool use *from inside a Claude Code
-  session* still requires the user to approve the project MCP server (see README).
+- The 13 build-and-check calls used a stand-alone stdio client. In-session use was
+  verified afterwards with read-only calls only (see above).
 - No physical hardware involved. Nothing here says anything about a real board.

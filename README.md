@@ -3,8 +3,10 @@
 An AI-assisted PCB engineering workflow, using **Claude Code → MCP → KiCad 10**, aimed at
 designing, manufacturing, assembling and physically testing a real PCB.
 
-**Current version:** `0.0.1` — environment setup and MCP integration (infrastructure only,
-no production design yet).
+**Current version:** `0.0.2` (in progress): MCP capability evaluation on a complete LED
+test board in the sandbox. `0.0.1` (environment setup and MCP integration) is complete.
+The MCP connection was verified inside Claude Code: `kicad` server connected, backend SWIG,
+37 core tools, `get_backend_state` OK.
 
 ## Architecture
 ```
@@ -45,6 +47,9 @@ KiCAD-MCP-Server v2.8.3 · Git 2.55. Full list with statuses:
    Approve it. In the CLI, `/mcp` shows its status.
 3. Check: the session should list `kicad` tools (37 with the `core` toolbox). Ask, for
    example, "call get_backend_state". The expected answer is `backend: swig`.
+   (Verified 2026-11-07.) Note: the bundled CLI `claude mcp get kicad` may still print
+   "Pending approval" after approving in the desktop app. This is a known, non-blocking
+   inconsistency; the in-session tool calls are the authoritative check.
 4. Open more toolboxes only when needed (`list_toolboxes`, `open_toolbox`).
 
 Rules for every session: [CLAUDE.md](CLAUDE.md), [docs/ENGINEERING_RULES.md](docs/ENGINEERING_RULES.md).
