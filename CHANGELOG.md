@@ -3,6 +3,20 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: SemVer.
 
+## [0.0.3-rc1] — 2026-11-08 — MCP advanced capability evaluation (branch `evaluation/v0.0.3-mcp-capabilities`)
+
+### Added
+- Reports in `reports/v0.0.3/`: IPC, custom symbol, custom footprint, GUI driver, SWIG vs IPC, capability
+  matrix, test log, evidence index, next-stage recommendation, final report. Sanitized evidence.
+- `ai/workflows/mcp_harness.py` (reproducible MCP stdio test client). Test generators and readers in `reports/v0.0.3/tests/`.
+- MCP workflow rules 10–14 in `ai/AI_AGENT_INSTRUCTIONS.md`.
+
+### Results
+- SWIG 12/12 PASS. IPC tested and not usable (kicad-python 0.8.0 vs KiCad 10.0.8, silent wrong reads).
+- Custom symbol creation PASS (native MCP). Custom footprint creation PASS with limitations.
+- GUI driver not usable on Windows (install path, unprocessed clicks, screenshot privacy). GUI DRC BLOCKED.
+- New defects D-10 to D-22. KiCad global config restored byte-identical after the temporary, approved changes.
+
 ## [0.0.2] — 2026-11-07 — MCP capability evaluation
 
 ### Added

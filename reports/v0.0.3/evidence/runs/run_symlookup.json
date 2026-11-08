@@ -1,0 +1,144 @@
+{
+ "overrides": {
+  "KICAD_MCP_TOOLBOXES": "symbol_library"
+ },
+ "started": "2026-11-08T01:29:49",
+ "initialize": {
+  "secs": 0.336,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 54,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "list_symbol_libraries",
+  "repair_flat_symbols",
+  "search_symbols",
+  "list_library_symbols",
+  "get_symbol_info",
+  "find_duplicate_symbols",
+  "update_symbol_from_library",
+  "add_library_symbol_property",
+  "replace_instance_lib_ids",
+  "create_symbol",
+  "delete_symbol",
+  "list_symbols_in_library",
+  "register_symbol_library",
+  "add_symbol_property",
+  "import_symbol",
+  "export_symbol",
+  "rename_symbol",
+  "get_backend_state",
+  "check_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "G1",
+   "name": "get_symbol_info",
+   "arguments": {
+    "symbol": "AIPCB_Symbols:LED_WP7113ID",
+    "projectPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols"
+   },
+   "secs": 3.724,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Symbol: AIPCB_Symbols:LED_WP7113ID\nValue: LED_WP7113ID\nDescription: Red 5 mm THT LED, Kingbright WP7113ID (V0.0.3 custom test symbol)\nFootprint: AIPCB_Footprints:LED_D5.0mm_WP7113ID\nDatasheet: https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf"
+  },
+  {
+   "label": "G2",
+   "name": "get_symbol_info",
+   "arguments": {
+    "symbol": "AIPCB_Symbols:LED_WP7113ID",
+    "projectPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_sch"
+   },
+   "secs": 0.105,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Symbol: AIPCB_Symbols:LED_WP7113ID\nValue: LED_WP7113ID\nDescription: Red 5 mm THT LED, Kingbright WP7113ID (V0.0.3 custom test symbol)\nFootprint: AIPCB_Footprints:LED_D5.0mm_WP7113ID\nDatasheet: https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf"
+  },
+  {
+   "label": "G3",
+   "name": "search_symbols",
+   "arguments": {
+    "query": "WP7113ID",
+    "projectPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_pro"
+   },
+   "secs": 30.015,
+   "isError": true,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Command timeout after 30s: search_symbols"
+  },
+  {
+   "label": "G4",
+   "name": "list_library_symbols",
+   "arguments": {
+    "library": "AIPCB_Symbols",
+    "projectPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_pro"
+   },
+   "secs": 2.614,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Library \"AIPCB_Symbols\" contains 1 symbols:\n  - LED_WP7113ID"
+  },
+  {
+   "label": "G5",
+   "name": "get_symbol_info",
+   "arguments": {
+    "symbol": "Device:LED"
+   },
+   "secs": 0.846,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Symbol: Device:LED\nValue: LED\nDescription: Light emitting diode\nSim.Pins: 1=K 2=A"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

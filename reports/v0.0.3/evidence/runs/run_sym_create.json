@@ -1,0 +1,858 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "schematic,symbol_library,symbol_pins,validation"
+ },
+ "started": "2026-11-08T01:28:01",
+ "initialize": {
+  "secs": 0.547,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 88,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "create_schematic",
+  "add_schematic_component",
+  "delete_schematic_component",
+  "edit_schematic_component",
+  "set_schematic_component_property",
+  "remove_schematic_component_property",
+  "get_schematic_component",
+  "add_schematic_wire",
+  "add_schematic_net_label",
+  "add_no_connect",
+  "connect_to_net",
+  "get_net_connections",
+  "get_wire_connections",
+  "get_schematic_pin_locations",
+  "connect_passthrough",
+  "list_schematic_components",
+  "list_schematic_nets",
+  "list_schematic_wires",
+  "list_schematic_labels",
+  "move_schematic_component",
+  "rotate_schematic_component",
+  "annotate_schematic",
+  "delete_schematic_wire",
+  "delete_schematic_net_label",
+  "move_schematic_net_label",
+  "export_schematic_svg",
+  "export_schematic_pdf",
+  "get_schematic_view",
+  "run_erc",
+  "generate_netlist",
+  "sync_schematic_to_board",
+  "backannotate_footprints",
+  "create_board_from_schematic",
+  "get_schematic_view_region",
+  "get_net_at_point",
+  "list_schematic_texts",
+  "add_schematic_text",
+  "list_symbol_libraries",
+  "repair_flat_symbols",
+  "search_symbols",
+  "list_library_symbols",
+  "get_symbol_info",
+  "list_symbol_pins",
+  "batch_list_symbol_pins",
+  "set_symbol_pin_type",
+  "find_duplicate_symbols",
+  "update_symbol_from_library",
+  "add_library_symbol_property",
+  "replace_instance_lib_ids",
+  "create_symbol",
+  "delete_symbol",
+  "list_symbols_in_library",
+  "register_symbol_library",
+  "add_symbol_property",
+  "import_symbol",
+  "export_symbol",
+  "rename_symbol",
+  "get_backend_state",
+  "check_kicad_ui",
+  "validate_schematic",
+  "validate_symbol_library"
+ ],
+ "steps": [
+  {
+   "label": "S1",
+   "name": "create_symbol",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\AIPCB_Symbols.kicad_sym",
+    "name": "LED_WP7113ID",
+    "referencePrefix": "D",
+    "description": "Red 5 mm THT LED, Kingbright WP7113ID (V0.0.3 custom test symbol)",
+    "keywords": "LED red THT 5mm",
+    "datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf",
+    "footprint": "AIPCB_Footprints:LED_D5.0mm_WP7113ID",
+    "inBom": true,
+    "onBoard": true,
+    "pins": [
+     {
+      "name": "K",
+      "number": "1",
+      "type": "passive",
+      "at": {
+       "x": -3.81,
+       "y": 0,
+       "angle": 0
+      },
+      "length": 1.27
+     },
+     {
+      "name": "A",
+      "number": "2",
+      "type": "passive",
+      "at": {
+       "x": 3.81,
+       "y": 0,
+       "angle": 180
+      },
+      "length": 1.27
+     }
+    ],
+    "polylines": [
+     {
+      "points": [
+       {
+        "x": 1.27,
+        "y": 1.27
+       },
+       {
+        "x": 1.27,
+        "y": -1.27
+       },
+       {
+        "x": -1.27,
+        "y": 0
+       },
+       {
+        "x": 1.27,
+        "y": 1.27
+       }
+      ],
+      "width": 0.254,
+      "fill": "none"
+     },
+     {
+      "points": [
+       {
+        "x": -1.27,
+        "y": 1.27
+       },
+       {
+        "x": -1.27,
+        "y": -1.27
+       }
+      ],
+      "width": 0.254,
+      "fill": "none"
+     },
+     {
+      "points": [
+       {
+        "x": -2.54,
+        "y": 0
+       },
+       {
+        "x": 2.54,
+        "y": 0
+       }
+      ],
+      "width": 0,
+      "fill": "none"
+     },
+     {
+      "points": [
+       {
+        "x": -0.5,
+        "y": 1.8
+       },
+       {
+        "x": 0.5,
+        "y": 2.8
+       }
+      ],
+      "width": 0,
+      "fill": "none"
+     },
+     {
+      "points": [
+       {
+        "x": 0.5,
+        "y": 1.8
+       },
+       {
+        "x": 1.5,
+        "y": 2.8
+       }
+      ],
+      "width": 0,
+      "fill": "none"
+     }
+    ]
+   },
+   "secs": 1.748,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"library_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_symbols\\\\AIPCB_Symbols.kicad_sym\",\n  \"symbol_name\": \"LED_WP7113ID\",\n  \"pin_count\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "S2",
+   "name": "list_symbols_in_library",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\AIPCB_Symbols.kicad_sym"
+   },
+   "secs": 0.131,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"library_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_symbols\\\\AIPCB_Symbols.kicad_sym\",\n  \"symbol_count\": 1,\n  \"symbols\": [\n    \"LED_WP7113ID\"\n  ],\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "S3",
+   "name": "validate_symbol_library",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\AIPCB_Symbols.kicad_sym"
+   },
+   "secs": 0.46,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"valid\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_symbols\\\\AIPCB_Symbols.kicad_sym\",\n  \"message\": \"AIPCB_Symbols.kicad_sym is valid\",\n  \"errorCount\": 0,\n  \"warningCount\": 0,\n  \"issues\": [],\n  \"kicadCli\": {\n    \"ran\": true,\n    \"ok\": true,\n    \"exitCode\": 0,\n    \"output\": \"Saving symbol library in updated format\"\n  },\n  \"symbolCount\": 1,\n  \"semanticChecksRan\": true,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "S4",
+   "name": "create_project",
+   "arguments": {
+    "path": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols",
+    "name": "sym_test"
+   },
+   "secs": 1.598,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Created project: sym_test\",\n  \"project\": {\n    \"name\": \"sym_test\",\n    \"path\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_pcb\",\n    \"schematicPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/sym_test.kicad_sch\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "S5",
+   "name": "register_symbol_library",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\AIPCB_Symbols.kicad_sym",
+    "libraryName": "AIPCB_Symbols",
+    "scope": "project",
+    "projectPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_pro",
+    "description": "V0.0.3 custom symbol test library"
+   },
+   "secs": 0.003,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"already_registered\": false,\n  \"table_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_symbols\\\\sym-lib-table\",\n  \"library_name\": \"AIPCB_Symbols\",\n  \"uri\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/AIPCB_Symbols.kicad_sym\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "S6",
+   "name": "batch_list_symbol_pins",
+   "arguments": {
+    "symbols": [
+     "AIPCB_Symbols:LED_WP7113ID",
+     "Device:LED"
+    ],
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch"
+   },
+   "secs": 0.909,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "AIPCB_Symbols:LED_WP7113ID — 2 pin(s) | body 10.16×2.54mm:\n    Pin 1 (K) — type: passive at (-3.81,0) angle=0\n    Pin 2 (A) — type: passive at (3.81,0) angle=180\nDevice:LED — 2 pin(s) | body 10.16×2.54mm:\n    Pin 1 (K) — type: passive at (-3.81,0) angle=0\n    Pin 2 (A) — type: passive at (3.81,0) angle=180"
+  },
+  {
+   "label": "S7",
+   "name": "get_symbol_info",
+   "arguments": {
+    "symbol": "AIPCB_Symbols:LED_WP7113ID",
+    "projectPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_pro"
+   },
+   "secs": 0.155,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Failed to get symbol info: Symbol not found: AIPCB_Symbols:LED_WP7113ID"
+  },
+  {
+   "label": "add_J1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "Connector:Screw_Terminal_01x02",
+    "reference": "J1",
+    "value": "5V_IN",
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "position": {
+     "x": 40.64,
+     "y": 80.01
+    },
+    "angle": 0
+   },
+   "secs": 1.371,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added J1 (Connector:Screw_Terminal_01x02) to schematic"
+  },
+  {
+   "label": "add_R1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "Device:R",
+    "reference": "R1",
+    "value": "620",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+    "position": {
+     "x": 60.96,
+     "y": 80.01
+    },
+    "angle": 0
+   },
+   "secs": 1.265,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added R1 (Device:R) to schematic"
+  },
+  {
+   "label": "add_D1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "AIPCB_Symbols:LED_WP7113ID",
+    "reference": "D1",
+    "value": "WP7113ID",
+    "footprint": "LED_THT:LED_D5.0mm",
+    "position": {
+     "x": 60.96,
+     "y": 92.71
+    },
+    "angle": 90
+   },
+   "secs": 0.613,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added D1 (AIPCB_Symbols:LED_WP7113ID) to schematic"
+  },
+  {
+   "label": "add_#PWR01",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:+5V",
+    "reference": "#PWR01",
+    "value": "+5V",
+    "position": {
+     "x": 30.48,
+     "y": 74.93
+    },
+    "angle": 0
+   },
+   "secs": 0.81,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR01 (power:+5V) to schematic"
+  },
+  {
+   "label": "add_#PWR02",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:+5V",
+    "reference": "#PWR02",
+    "value": "+5V",
+    "position": {
+     "x": 60.96,
+     "y": 73.66
+    },
+    "angle": 0
+   },
+   "secs": 0.32,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR02 (power:+5V) to schematic"
+  },
+  {
+   "label": "add_#PWR03",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:GND",
+    "reference": "#PWR03",
+    "value": "GND",
+    "position": {
+     "x": 33.02,
+     "y": 88.9
+    },
+    "angle": 0
+   },
+   "secs": 0.37,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR03 (power:GND) to schematic"
+  },
+  {
+   "label": "add_#PWR04",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:GND",
+    "reference": "#PWR04",
+    "value": "GND",
+    "position": {
+     "x": 60.96,
+     "y": 100.33
+    },
+    "angle": 0
+   },
+   "secs": 0.583,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR04 (power:GND) to schematic"
+  },
+  {
+   "label": "add_#FLG01",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:PWR_FLAG",
+    "reference": "#FLG01",
+    "value": "PWR_FLAG",
+    "position": {
+     "x": 66.04,
+     "y": 73.66
+    },
+    "angle": 0
+   },
+   "secs": 1.528,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #FLG01 (power:PWR_FLAG) to schematic"
+  },
+  {
+   "label": "add_#FLG02",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "symbol": "power:PWR_FLAG",
+    "reference": "#FLG02",
+    "value": "PWR_FLAG",
+    "position": {
+     "x": 66.04,
+     "y": 99.06
+    },
+    "angle": 180
+   },
+   "secs": 0.845,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #FLG02 (power:PWR_FLAG) to schematic"
+  },
+  {
+   "label": "pins_D1",
+   "name": "get_schematic_pin_locations",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "D1"
+   },
+   "secs": 1.248,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Pin locations for D1:\n  Pin 1 (K): x=60.96, y=96.52, angle=270°\n  Pin 2 (A): x=60.96, y=88.89999999999999, angle=90°"
+  },
+  {
+   "label": "W1",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      35.56,
+      80.01
+     ],
+     [
+      30.48,
+      80.01
+     ],
+     [
+      30.48,
+      74.93
+     ]
+    ]
+   },
+   "secs": 4.453,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to J1/1 at [35.56, 80.01]; end snapped to #PWR01/1 at [30.48, 74.93]"
+  },
+  {
+   "label": "W2",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      35.56,
+      82.55
+     ],
+     [
+      33.02,
+      82.55
+     ],
+     [
+      33.02,
+      88.9
+     ]
+    ]
+   },
+   "secs": 1.693,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to J1/2 at [35.56, 82.55000000000001]; end snapped to #PWR03/1 at [33.02, 88.9]"
+  },
+  {
+   "label": "W3",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      73.66
+     ],
+     [
+      60.96,
+      76.2
+     ]
+    ]
+   },
+   "secs": 1.361,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to #PWR02/1 at [60.96, 73.66]; end snapped to R1/1 at [60.96, 76.2]"
+  },
+  {
+   "label": "W4",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      76.2
+     ],
+     [
+      66.04,
+      76.2
+     ],
+     [
+      66.04,
+      73.66
+     ]
+    ]
+   },
+   "secs": 0.841,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to R1/1 at [60.96, 76.2]; end snapped to #FLG01/1 at [66.04, 73.66]"
+  },
+  {
+   "label": "W5",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      83.82
+     ],
+     [
+      60.96,
+      88.9
+     ]
+    ]
+   },
+   "secs": 2.579,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to R1/2 at [60.96, 83.82000000000001]; end snapped to D1/2 at [60.96, 88.89999999999999]"
+  },
+  {
+   "label": "W6",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      96.52
+     ],
+     [
+      60.96,
+      100.33
+     ]
+    ]
+   },
+   "secs": 2.897,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to D1/1 at [60.96, 96.52]; end snapped to #PWR04/1 at [60.96, 100.33]"
+  },
+  {
+   "label": "W7",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      96.52
+     ],
+     [
+      66.04,
+      96.52
+     ],
+     [
+      66.04,
+      99.06
+     ]
+    ]
+   },
+   "secs": 3.91,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to D1/1 at [60.96, 96.52]; end snapped to #FLG02/1 at [66.04, 99.06]"
+  },
+  {
+   "label": "lbl",
+   "name": "add_schematic_net_label",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "netName": "LED_A",
+    "labelType": "global_label",
+    "componentRef": "R1",
+    "pinNumber": "2"
+   },
+   "secs": 1.766,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added net label 'LED_A' at exact pin endpoint R1/2 (60.96, 83.82000000000001)\",\n  \"actual_position\": [\n    60.96,\n    83.82000000000001\n  ],\n  \"orientation\": 270,\n  \"snapped_to_pin\": {\n    \"component\": \"R1\",\n    \"pin\": \"2\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "mpn_D1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "D1",
+    "name": "MPN",
+    "value": "WP7113ID"
+   },
+   "secs": 0.173,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"WP7113ID\" on D1"
+  },
+  {
+   "label": "mfr_D1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "D1",
+    "name": "Manufacturer",
+    "value": "Kingbright"
+   },
+   "secs": 0.468,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Kingbright\" on D1"
+  },
+  {
+   "label": "mpn_R1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "R1",
+    "name": "MPN",
+    "value": "MFR-25FBF52-620R"
+   },
+   "secs": 0.282,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"MFR-25FBF52-620R\" on R1"
+  },
+  {
+   "label": "mfr_R1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "R1",
+    "name": "Manufacturer",
+    "value": "Yageo"
+   },
+   "secs": 0.435,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Yageo\" on R1"
+  },
+  {
+   "label": "mpn_J1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "J1",
+    "name": "MPN",
+    "value": "1715721"
+   },
+   "secs": 0.42,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"1715721\" on J1"
+  },
+  {
+   "label": "mfr_J1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch",
+    "reference": "J1",
+    "name": "Manufacturer",
+    "value": "Phoenix Contact"
+   },
+   "secs": 0.188,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Phoenix Contact\" on J1"
+  },
+  {
+   "label": "S8",
+   "name": "validate_schematic",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch"
+   },
+   "secs": 0.931,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"valid\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_symbols\\\\sym_test.kicad_sch\",\n  \"message\": \"sym_test.kicad_sch is valid\",\n  \"errorCount\": 0,\n  \"warningCount\": 0,\n  \"issues\": [],\n  \"kicadCli\": {\n    \"ran\": true,\n    \"ok\": true,\n    \"exitCode\": 0,\n    \"output\": \"Successfully saved schematic file using the latest format\"\n  },\n  \"componentCount\": 9,\n  \"semanticChecksRan\": true,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "S9",
+   "name": "run_erc",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch"
+   },
+   "secs": 5.695,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "ERC result: 0 violation(s)\n  Errors: 0  Warnings: 0  Info: 0"
+  },
+  {
+   "label": "S10",
+   "name": "generate_netlist",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch"
+   },
+   "secs": 0.772,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "=== Netlist for %USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\sym_test.kicad_sch ===\n\nComponents (3):\n  D1: WP7113ID (LED_THT:LED_D5.0mm)\n  J1: 5V_IN (TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal)\n  R1: 620 (Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal)\n\nNets (3):\n  +5V: J1/1, R1/1\n  GND: D1/1, J1/2\n  LED_A: D1/2, R1/2"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

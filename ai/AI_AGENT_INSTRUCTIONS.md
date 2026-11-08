@@ -43,6 +43,16 @@ See `reports/v0.0.2/FINAL_V0.0.2_REPORT.md` for the defects behind these rules.
    `ai/workflows/inspect_fab_outputs.py`.
 9. `route_pad_to_pad` draws straight segments only. Plan placement for it, or route with waypoints.
 
+### Added by the V0.0.3 evaluation (`reports/v0.0.3/FINAL_V0.0.3_REPORT.md`)
+10. Backend is **SWIG only**. Do not enable IPC: with kicad-python 0.8.0 on KiCad 10.0.8, component
+    reads fail silently (`success:true`, 0 components). Do not use the GUI-driver toolbox.
+11. `run_drc` does not refill zones. Refill first, or use `kicad-cli pcb drc --refill-zones`.
+12. After `register_symbol_library` / `register_footprint_library` (always `scope: project`), rewrite
+    the URI to `${KIPRJMOD}/…`. Restart the MCP session before `get_symbol_info` / `get_footprint_info`.
+13. After `create_footprint`, set the footprint type and add non-rectangular graphics and polarity marks
+    in a reviewed step. Verify every new symbol or footprint with `kicad-cli sym|fp export svg`.
+14. Never run GUI screenshot tools on a shared desktop: they capture other applications.
+
 ## Engineering constraints
 Follow `docs/ENGINEERING_RULES.md`. Never invent component data; mark anything
 unverified as `UNVERIFIED`. ERC/DRC passing is not proof of correctness.

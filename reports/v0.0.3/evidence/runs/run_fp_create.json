@@ -1,0 +1,1088 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "schematic,symbol_library,footprint,library,board,component,routing,drc"
+ },
+ "started": "2026-11-08T01:30:48",
+ "initialize": {
+  "secs": 0.25,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 158,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "rotate_component",
+  "delete_component",
+  "edit_component",
+  "set_footprint_type",
+  "find_component",
+  "get_component_properties",
+  "add_component_annotation",
+  "group_components",
+  "replace_component",
+  "get_component_pads",
+  "get_pads",
+  "get_net_pads",
+  "get_component_geometry",
+  "get_component_list",
+  "get_pad_position",
+  "get_ratsnest",
+  "estimate_airwire_lengths",
+  "check_placement_clearance",
+  "move_footprint_text",
+  "place_component_array",
+  "align_components",
+  "check_courtyard_overlaps",
+  "suggest_placement",
+  "duplicate_component",
+  "hierarchical_place",
+  "add_net",
+  "route_trace",
+  "route_arc_trace",
+  "add_via",
+  "add_copper_pour",
+  "delete_trace",
+  "query_traces",
+  "query_zones",
+  "add_gnd_stitching_vias",
+  "get_nets_list",
+  "modify_trace",
+  "create_netclass",
+  "set_net_color",
+  "route_differential_pair",
+  "refill_zones",
+  "route_pad_to_pad",
+  "copy_routing_pattern",
+  "set_design_rules",
+  "get_design_rules",
+  "run_drc",
+  "assign_net_to_class",
+  "set_layer_constraints",
+  "check_clearance",
+  "get_drc_violations",
+  "create_schematic",
+  "add_schematic_component",
+  "delete_schematic_component",
+  "edit_schematic_component",
+  "set_schematic_component_property",
+  "remove_schematic_component_property",
+  "get_schematic_component",
+  "add_schematic_wire",
+  "add_schematic_net_label",
+  "add_no_connect",
+  "connect_to_net",
+  "get_net_connections",
+  "get_wire_connections",
+  "get_schematic_pin_locations",
+  "connect_passthrough",
+  "list_schematic_components",
+  "list_schematic_nets",
+  "list_schematic_wires",
+  "list_schematic_labels",
+  "move_schematic_component",
+  "rotate_schematic_component",
+  "annotate_schematic",
+  "delete_schematic_wire",
+  "delete_schematic_net_label",
+  "move_schematic_net_label",
+  "export_schematic_svg",
+  "export_schematic_pdf",
+  "get_schematic_view",
+  "run_erc",
+  "generate_netlist",
+  "sync_schematic_to_board",
+  "backannotate_footprints",
+  "create_board_from_schematic",
+  "get_schematic_view_region",
+  "get_net_at_point",
+  "list_schematic_texts",
+  "add_schematic_text",
+  "list_libraries",
+  "search_footprints",
+  "list_library_footprints",
+  "get_footprint_info",
+  "list_library_table",
+  "remove_library_table_entry",
+  "set_library_table_uri",
+  "list_symbol_libraries",
+  "repair_flat_symbols",
+  "search_symbols",
+  "list_library_symbols",
+  "get_symbol_info",
+  "find_duplicate_symbols",
+  "update_symbol_from_library",
+  "add_library_symbol_property",
+  "replace_instance_lib_ids",
+  "create_footprint",
+  "add_footprint_3d_model",
+  "import_3d_model",
+  "add_component_3d_model",
+  "edit_footprint_pad",
+  "register_footprint_library",
+  "list_footprint_libraries",
+  "create_symbol",
+  "delete_symbol",
+  "list_symbols_in_library",
+  "register_symbol_library",
+  "add_symbol_property",
+  "import_symbol",
+  "export_symbol",
+  "rename_symbol",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "F1",
+   "name": "create_footprint",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\AIPCB_Footprints.pretty",
+    "name": "LED_D5.0mm_WP7113ID",
+    "description": "Kingbright WP7113ID 5 mm THT LED: pitch 2.54, hole 0.9 (datasheet V.14A p.1); pad 1.7 (edited to 1.8 in test)",
+    "tags": "LED THT 5mm WP7113ID",
+    "pads": [
+     {
+      "number": "1",
+      "type": "thru_hole",
+      "shape": "rect",
+      "at": {
+       "x": 0,
+       "y": 0
+      },
+      "size": {
+       "w": 1.7,
+       "h": 1.7
+      },
+      "drill": 0.9
+     },
+     {
+      "number": "2",
+      "type": "thru_hole",
+      "shape": "circle",
+      "at": {
+       "x": 2.54,
+       "y": 0
+      },
+      "size": {
+       "w": 1.7,
+       "h": 1.7
+      },
+      "drill": 0.9
+     }
+    ],
+    "fabLayer": {
+     "x1": -1.68,
+     "y1": -2.95,
+     "x2": 4.22,
+     "y2": 2.95,
+     "width": 0.1
+    },
+    "silkscreen": {
+     "x1": -1.8,
+     "y1": -3.07,
+     "x2": 4.34,
+     "y2": 3.07,
+     "width": 0.12
+    },
+    "courtyard": {
+     "x1": -1.93,
+     "y1": -3.2,
+     "x2": 4.47,
+     "y2": 3.2,
+     "width": 0.05
+    },
+    "refPosition": {
+     "x": 1.27,
+     "y": -4.2
+    },
+    "valuePosition": {
+     "x": 1.27,
+     "y": 4.2
+    }
+   },
+   "secs": 1.645,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\AIPCB_Footprints.pretty\\\\LED_D5.0mm_WP7113ID.kicad_mod\",\n  \"name\": \"LED_D5.0mm_WP7113ID\",\n  \"pad_count\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F2a",
+   "name": "edit_footprint_pad",
+   "arguments": {
+    "footprintPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\AIPCB_Footprints.pretty\\LED_D5.0mm_WP7113ID.kicad_mod",
+    "padNumber": "1",
+    "size": {
+     "w": 1.8,
+     "h": 1.8
+    }
+   },
+   "secs": 0.2,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"footprint_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\AIPCB_Footprints.pretty\\\\LED_D5.0mm_WP7113ID.kicad_mod\",\n  \"pad_number\": \"1\",\n  \"updated\": [\n    \"size→(size 1.8 1.8)\"\n  ],\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F2b",
+   "name": "edit_footprint_pad",
+   "arguments": {
+    "footprintPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\AIPCB_Footprints.pretty\\LED_D5.0mm_WP7113ID.kicad_mod",
+    "padNumber": "2",
+    "size": {
+     "w": 1.8,
+     "h": 1.8
+    }
+   },
+   "secs": 0.167,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"footprint_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\AIPCB_Footprints.pretty\\\\LED_D5.0mm_WP7113ID.kicad_mod\",\n  \"pad_number\": \"2\",\n  \"updated\": [\n    \"size→(size 1.8 1.8)\"\n  ],\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F3",
+   "name": "add_footprint_3d_model",
+   "arguments": {
+    "footprintPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\AIPCB_Footprints.pretty\\LED_D5.0mm_WP7113ID.kicad_mod",
+    "modelPath": "${KICAD10_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.step"
+   },
+   "secs": 0.273,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"footprint_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\AIPCB_Footprints.pretty\\\\LED_D5.0mm_WP7113ID.kicad_mod\",\n  \"model\": \"${KICAD10_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.step\",\n  \"added\": true,\n  \"replaced\": 0,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F4",
+   "name": "create_project",
+   "arguments": {
+    "path": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints",
+    "name": "fp_test"
+   },
+   "secs": 2.479,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Created project: fp_test\",\n  \"project\": {\n    \"name\": \"fp_test\",\n    \"path\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_footprints/fp_test.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_footprints/fp_test.kicad_pcb\",\n    \"schematicPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_footprints/fp_test.kicad_sch\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "F5a",
+   "name": "register_footprint_library",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\AIPCB_Footprints.pretty",
+    "libraryName": "AIPCB_Footprints",
+    "scope": "project",
+    "projectPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_pro",
+    "description": "V0.0.3 custom footprint test library"
+   },
+   "secs": 0.123,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"already_registered\": false,\n  \"table_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp-lib-table\",\n  \"library_name\": \"AIPCB_Footprints\",\n  \"uri\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_footprints/AIPCB_Footprints.pretty\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F5b",
+   "name": "register_symbol_library",
+   "arguments": {
+    "libraryPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_symbols\\AIPCB_Symbols.kicad_sym",
+    "libraryName": "AIPCB_Symbols",
+    "scope": "project",
+    "projectPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_pro"
+   },
+   "secs": 0.283,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"already_registered\": false,\n  \"table_path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\sym-lib-table\",\n  \"library_name\": \"AIPCB_Symbols\",\n  \"uri\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/sandbox/v0.0.3/custom_symbols/AIPCB_Symbols.kicad_sym\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F6",
+   "name": "get_footprint_info",
+   "arguments": {
+    "library_name": "AIPCB_Footprints",
+    "footprint_name": "LED_D5.0mm_WP7113ID"
+   },
+   "secs": 0.92,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Failed to get footprint info: Failed to get footprint info"
+  },
+  {
+   "label": "add_J1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "Connector:Screw_Terminal_01x02",
+    "reference": "J1",
+    "value": "5V_IN",
+    "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "position": {
+     "x": 40.64,
+     "y": 80.01
+    },
+    "angle": 0
+   },
+   "secs": 2.03,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added J1 (Connector:Screw_Terminal_01x02) to schematic"
+  },
+  {
+   "label": "add_R1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "Device:R",
+    "reference": "R1",
+    "value": "620",
+    "footprint": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+    "position": {
+     "x": 60.96,
+     "y": 80.01
+    },
+    "angle": 0
+   },
+   "secs": 1.058,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added R1 (Device:R) to schematic"
+  },
+  {
+   "label": "add_D1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "AIPCB_Symbols:LED_WP7113ID",
+    "reference": "D1",
+    "value": "WP7113ID",
+    "footprint": "AIPCB_Footprints:LED_D5.0mm_WP7113ID",
+    "position": {
+     "x": 60.96,
+     "y": 92.71
+    },
+    "angle": 90
+   },
+   "secs": 0.738,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added D1 (AIPCB_Symbols:LED_WP7113ID) to schematic"
+  },
+  {
+   "label": "add_#PWR01",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:+5V",
+    "reference": "#PWR01",
+    "value": "+5V",
+    "position": {
+     "x": 30.48,
+     "y": 74.93
+    },
+    "angle": 0
+   },
+   "secs": 1.536,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR01 (power:+5V) to schematic"
+  },
+  {
+   "label": "add_#PWR02",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:+5V",
+    "reference": "#PWR02",
+    "value": "+5V",
+    "position": {
+     "x": 60.96,
+     "y": 73.66
+    },
+    "angle": 0
+   },
+   "secs": 1.307,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR02 (power:+5V) to schematic"
+  },
+  {
+   "label": "add_#PWR03",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:GND",
+    "reference": "#PWR03",
+    "value": "GND",
+    "position": {
+     "x": 33.02,
+     "y": 88.9
+    },
+    "angle": 0
+   },
+   "secs": 2.153,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR03 (power:GND) to schematic"
+  },
+  {
+   "label": "add_#PWR04",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:GND",
+    "reference": "#PWR04",
+    "value": "GND",
+    "position": {
+     "x": 60.96,
+     "y": 100.33
+    },
+    "angle": 0
+   },
+   "secs": 1.652,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #PWR04 (power:GND) to schematic"
+  },
+  {
+   "label": "add_#FLG01",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:PWR_FLAG",
+    "reference": "#FLG01",
+    "value": "PWR_FLAG",
+    "position": {
+     "x": 66.04,
+     "y": 73.66
+    },
+    "angle": 0
+   },
+   "secs": 1.833,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #FLG01 (power:PWR_FLAG) to schematic"
+  },
+  {
+   "label": "add_#FLG02",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "symbol": "power:PWR_FLAG",
+    "reference": "#FLG02",
+    "value": "PWR_FLAG",
+    "position": {
+     "x": 66.04,
+     "y": 99.06
+    },
+    "angle": 180
+   },
+   "secs": 0.667,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added #FLG02 (power:PWR_FLAG) to schematic"
+  },
+  {
+   "label": "pins_D1",
+   "name": "get_schematic_pin_locations",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "D1"
+   },
+   "secs": 0.705,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Pin locations for D1:\n  Pin 1 (K): x=60.96, y=96.52, angle=270°\n  Pin 2 (A): x=60.96, y=88.89999999999999, angle=90°"
+  },
+  {
+   "label": "W1",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      35.56,
+      80.01
+     ],
+     [
+      30.48,
+      80.01
+     ],
+     [
+      30.48,
+      74.93
+     ]
+    ]
+   },
+   "secs": 1.682,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to J1/1 at [35.56, 80.01]; end snapped to #PWR01/1 at [30.48, 74.93]"
+  },
+  {
+   "label": "W2",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      35.56,
+      82.55
+     ],
+     [
+      33.02,
+      82.55
+     ],
+     [
+      33.02,
+      88.9
+     ]
+    ]
+   },
+   "secs": 1.663,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to J1/2 at [35.56, 82.55000000000001]; end snapped to #PWR03/1 at [33.02, 88.9]"
+  },
+  {
+   "label": "W3",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      73.66
+     ],
+     [
+      60.96,
+      76.2
+     ]
+    ]
+   },
+   "secs": 3.584,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to #PWR02/1 at [60.96, 73.66]; end snapped to R1/1 at [60.96, 76.2]"
+  },
+  {
+   "label": "W4",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      76.2
+     ],
+     [
+      66.04,
+      76.2
+     ],
+     [
+      66.04,
+      73.66
+     ]
+    ]
+   },
+   "secs": 3.995,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to R1/1 at [60.96, 76.2]; end snapped to #FLG01/1 at [66.04, 73.66]"
+  },
+  {
+   "label": "W5",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      83.82
+     ],
+     [
+      60.96,
+      88.9
+     ]
+    ]
+   },
+   "secs": 4.006,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to R1/2 at [60.96, 83.82000000000001]; end snapped to D1/2 at [60.96, 88.89999999999999]"
+  },
+  {
+   "label": "W6",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      96.52
+     ],
+     [
+      60.96,
+      100.33
+     ]
+    ]
+   },
+   "secs": 3.484,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to D1/1 at [60.96, 96.52]; end snapped to #PWR04/1 at [60.96, 100.33]"
+  },
+  {
+   "label": "W7",
+   "name": "add_schematic_wire",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "waypoints": [
+     [
+      60.96,
+      96.52
+     ],
+     [
+      66.04,
+      96.52
+     ],
+     [
+      66.04,
+      99.06
+     ]
+    ]
+   },
+   "secs": 2.462,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Wire added successfully; start snapped to D1/1 at [60.96, 96.52]; end snapped to #FLG02/1 at [66.04, 99.06]"
+  },
+  {
+   "label": "lbl",
+   "name": "add_schematic_net_label",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "netName": "LED_A",
+    "labelType": "global_label",
+    "componentRef": "R1",
+    "pinNumber": "2"
+   },
+   "secs": 0.603,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added net label 'LED_A' at exact pin endpoint R1/2 (60.96, 83.82000000000001)\",\n  \"actual_position\": [\n    60.96,\n    83.82000000000001\n  ],\n  \"orientation\": 270,\n  \"snapped_to_pin\": {\n    \"component\": \"R1\",\n    \"pin\": \"2\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "mpn_D1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "D1",
+    "name": "MPN",
+    "value": "WP7113ID"
+   },
+   "secs": 0.235,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"WP7113ID\" on D1"
+  },
+  {
+   "label": "mfr_D1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "D1",
+    "name": "Manufacturer",
+    "value": "Kingbright"
+   },
+   "secs": 0.208,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Kingbright\" on D1"
+  },
+  {
+   "label": "mpn_R1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "R1",
+    "name": "MPN",
+    "value": "MFR-25FBF52-620R"
+   },
+   "secs": 0.161,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"MFR-25FBF52-620R\" on R1"
+  },
+  {
+   "label": "mfr_R1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "R1",
+    "name": "Manufacturer",
+    "value": "Yageo"
+   },
+   "secs": 0.291,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Yageo\" on R1"
+  },
+  {
+   "label": "mpn_J1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "J1",
+    "name": "MPN",
+    "value": "1715721"
+   },
+   "secs": 0.258,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property MPN=\"1715721\" on J1"
+  },
+  {
+   "label": "mfr_J1",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "reference": "J1",
+    "name": "Manufacturer",
+    "value": "Phoenix Contact"
+   },
+   "secs": 0.108,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added property Manufacturer=\"Phoenix Contact\" on J1"
+  },
+  {
+   "label": "F7",
+   "name": "run_erc",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch"
+   },
+   "secs": 3.992,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "ERC result: 0 violation(s)\n  Errors: 0  Warnings: 0  Info: 0"
+  },
+  {
+   "label": "F8",
+   "name": "sync_schematic_to_board",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_sch",
+    "boardPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_pcb"
+   },
+   "secs": 0.632,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"PCB updated from schematic: 3 footprints added, 3 nets added, 6 pads assigned\",\n  \"sheets_scanned\": [\n    \"fp_test.kicad_sch\"\n  ],\n  \"nets_added\": [\n    \"GND\",\n    \"LED_A\",\n    \"+5V\"\n  ],\n  \"nets_total\": 3,\n  \"pads_assigned\": 6,\n  \"unmatched_pad_count\": 0,\n  \"unmatched_pads\": [],\n  \"unmatched_pads_sample\": [],\n  \"warnings\": [\n    \"Auto-save refused: the on-disk PCB file's contents changed externally since this MCP session loaded it. To avoid clobbering those changes, the in-memory mutation has NOT been written to disk. Reload via open_project to refresh, then re-apply the change.\"\n  ],\n  \"footprints_added\": [\n    {\n      \"reference\": \"D1\",\n      \"footprint\": \"AIPCB_Footprints:LED_D5.0mm_WP7113ID\"\n    },\n    {\n      \"reference\": \"J1\",\n      \"footprint\": \"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal\"\n    },\n    {\n      \"reference\": \"R1\",\n      \"footprint\": \"Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal\"\n    }\n  ],\n  \"footprints_skipped\": [],\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"autoSave\": {\n    \"saved\": false,\n    \"warning\": \"Auto-save refused: the on-disk PCB file's contents changed externally since this MCP session loaded it. To avoid clobbering those changes, the in-memory mutation has NOT been written to disk. Reload via open_project to refresh, then re-apply the change.\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test.kicad_pcb\",\n    \"diskChangedExternally\": true,\n    \"expectedMtimeNs\": 1794090650954306600,\n    \"currentMtimeNs\": 1794090695646509800,\n    \"memChangesUnsaved\": true\n  }\n}"
+  },
+  {
+   "label": "F9",
+   "name": "open_project",
+   "arguments": {
+    "filename": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\fp_test.kicad_pro"
+   },
+   "secs": 0.009,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Opened project: fp_test.kicad_pcb\",\n  \"project\": {\n    \"name\": \"fp_test\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "F10",
+   "name": "set_design_rules",
+   "arguments": {
+    "clearance": 0.25,
+    "minTrackWidth": 0.25,
+    "trackWidth": 0.5,
+    "minHoleDiameter": 0.3,
+    "courtyardClearance": 0.25
+   },
+   "secs": 0.003,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Updated design rules\",\"rules\":{\"clearance\":0.25,\"trackWidth\":0.5,\"viaDiameter\":0.6,\"viaDrill\":0.3,\"microViaDiameter\":0.2,\"microViaDrill\":0.1,\"minTrackWidth\":0.25,\"minViaDiameter\":0.5,\"minThroughDrill\":0.3,\"minMicroViaDiameter\":0.2,\"minMicroViaDrill\":0.1,\"holeClearance\":0.25,\"holeToHoleMin\":0.25,\"viasMinAnnularWidth\":0.1},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F11",
+   "name": "add_board_outline",
+   "arguments": {
+    "shape": "rounded_rectangle",
+    "params": {
+     "x": 100,
+     "y": 100,
+     "width": 50,
+     "height": 30,
+     "cornerRadius": 1,
+     "unit": "mm"
+    }
+   },
+   "secs": 0.014,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added board outline: rounded_rectangle\",\"outline\":{\"shape\":\"rounded_rectangle\",\"width\":50,\"height\":30,\"center\":{\"x\":125,\"y\":115,\"unit\":\"mm\"},\"radius\":null,\"cornerRadius\":1,\"points\":[]},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F12a",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J1",
+    "position": {
+     "x": 105.6,
+     "y": 112.46,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.013,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J1\",\"component\":{\"reference\":\"J1\",\"position\":{\"x\":105.6,\"y\":112.46,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F12b",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R1",
+    "position": {
+     "x": 115,
+     "y": 110,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.012,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R1\",\"component\":{\"reference\":\"R1\",\"position\":{\"x\":115,\"y\":110,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F12c",
+   "name": "move_component",
+   "arguments": {
+    "reference": "D1",
+    "position": {
+     "x": 135,
+     "y": 117.54,
+     "unit": "mm"
+    },
+    "rotation": 90
+   },
+   "secs": 0.013,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: D1\",\"component\":{\"reference\":\"D1\",\"position\":{\"x\":135,\"y\":117.54,\"unit\":\"mm\"},\"rotation\":90,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F13",
+   "name": "get_component_pads",
+   "arguments": {
+    "reference": "D1"
+   },
+   "secs": 0.002,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"reference\":\"D1\",\"componentPosition\":{\"x\":135,\"y\":117.54,\"unit\":\"mm\"},\"padCount\":2,\"pads\":[{\"name\":\"1\",\"number\":\"1\",\"position\":{\"x\":135,\"y\":117.54,\"unit\":\"mm\"},\"net\":\"GND\",\"netCode\":1,\"shape\":\"rect\",\"type\":\"through_hole\",\"size\":{\"x\":1.8,\"y\":1.8,\"unit\":\"mm\"},\"drillSize\":0.9},{\"name\":\"2\",\"number\":\"2\",\"position\":{\"x\":135,\"y\":115,\"unit\":\"mm\"},\"net\":\"LED_A\",\"netCode\":2,\"shape\":\"circle\",\"type\":\"through_hole\",\"size\":{\"x\":1.8,\"y\":1.8,\"unit\":\"mm\"},\"drillSize\":0.9}],\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "F14a",
+   "name": "route_pad_to_pad",
+   "arguments": {
+    "fromRef": "J1",
+    "fromPad": "1",
+    "toRef": "R1",
+    "toPad": "1",
+    "layer": "F.Cu",
+    "width": 0.5
+   },
+   "secs": 0.016,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added trace\",\n  \"trace\": {\n    \"start\": {\n      \"x\": 105.6,\n      \"y\": 112.46,\n      \"unit\": \"mm\"\n    },\n    \"end\": {\n      \"x\": 115,\n      \"y\": 110,\n      \"unit\": \"mm\"\n    },\n    \"layer\": \"F.Cu\",\n    \"width\": 0.5,\n    \"net\": \"+5V\"\n  },\n  \"fromPad\": {\n    \"ref\": \"J1\",\n    \"pad\": \"1\",\n    \"x\": 105.6,\n    \"y\": 112.46\n  },\n  \"toPad\": {\n    \"ref\": \"R1\",\n    \"pad\": \"1\",\n    \"x\": 115,\n    \"y\": 110\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F14b",
+   "name": "route_pad_to_pad",
+   "arguments": {
+    "fromRef": "R1",
+    "fromPad": "2",
+    "toRef": "D1",
+    "toPad": "2",
+    "layer": "F.Cu",
+    "width": 0.5
+   },
+   "secs": 0.02,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added trace\",\n  \"trace\": {\n    \"start\": {\n      \"x\": 125.16,\n      \"y\": 110,\n      \"unit\": \"mm\"\n    },\n    \"end\": {\n      \"x\": 135,\n      \"y\": 115,\n      \"unit\": \"mm\"\n    },\n    \"layer\": \"F.Cu\",\n    \"width\": 0.5,\n    \"net\": \"LED_A\"\n  },\n  \"fromPad\": {\n    \"ref\": \"R1\",\n    \"pad\": \"2\",\n    \"x\": 125.16,\n    \"y\": 110\n  },\n  \"toPad\": {\n    \"ref\": \"D1\",\n    \"pad\": \"2\",\n    \"x\": 135,\n    \"y\": 115\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F14c",
+   "name": "route_pad_to_pad",
+   "arguments": {
+    "fromRef": "D1",
+    "fromPad": "1",
+    "toRef": "J1",
+    "toPad": "2",
+    "layer": "B.Cu",
+    "width": 0.5
+   },
+   "secs": 0.012,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added trace\",\n  \"trace\": {\n    \"start\": {\n      \"x\": 135,\n      \"y\": 117.54,\n      \"unit\": \"mm\"\n    },\n    \"end\": {\n      \"x\": 105.6,\n      \"y\": 117.54,\n      \"unit\": \"mm\"\n    },\n    \"layer\": \"B.Cu\",\n    \"width\": 0.5,\n    \"net\": \"GND\"\n  },\n  \"fromPad\": {\n    \"ref\": \"D1\",\n    \"pad\": \"1\",\n    \"x\": 135,\n    \"y\": 117.54\n  },\n  \"toPad\": {\n    \"ref\": \"J1\",\n    \"pad\": \"2\",\n    \"x\": 105.6,\n    \"y\": 117.54\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F15",
+   "name": "save_project",
+   "arguments": {},
+   "secs": 0.011,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test.kicad_pcb\",\n  \"project\": {\n    \"name\": \"fp_test\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "F16",
+   "name": "run_drc",
+   "arguments": {
+    "reportPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\sandbox\\v0.0.3\\custom_footprints\\out\\drc_mcp.rpt"
+   },
+   "secs": 6.627,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Found 0 DRC violations\",\"summary\":{\"total\":0,\"by_severity\":{\"error\":0,\"warning\":0,\"info\":0},\"by_type\":{}},\"violationsFile\":\"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\fp_test_drc_violations.json\",\"reportPath\":\"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\sandbox\\\\v0.0.3\\\\custom_footprints\\\\out\\\\drc_mcp.rpt\",\"_backend\":\"swig\",\"_realtime\":false}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

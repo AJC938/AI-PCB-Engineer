@@ -1,0 +1,108 @@
+{
+ "overrides": {
+  "KICAD_MCP_TOOLBOXES": "gui-driver"
+ },
+ "started": "2026-11-08T03:09:16",
+ "initialize": {
+  "secs": 1.0,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 48,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "kicad_gui_tree",
+  "kicad_gui_click",
+  "kicad_run_action_plugin",
+  "kicad_gui_wait_for",
+  "kicad_gui_screenshot",
+  "kicad_pcb_snapshot",
+  "kicad_reload_and_open_plugin",
+  "kicad_run_drc",
+  "kicad_gui_tree_atspi",
+  "kicad_gui_click_atspi",
+  "install_gui_driver"
+ ],
+ "steps": [
+  {
+   "label": "G4",
+   "name": "kicad_gui_click",
+   "arguments": {
+    "name": "Zoom to Fit"
+   },
+   "secs": 3.981,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"id\": 20499,\n  \"kind\": \"menu\",\n  \"processed\": false,\n  \"requested\": \"Zoom to Fit\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "G5",
+   "name": "kicad_gui_click",
+   "arguments": {
+    "id": 20504
+   },
+   "secs": 0.158,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"id\": 20504,\n  \"kind\": \"menu\",\n  \"processed\": false,\n  \"requested\": 20504,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "G5b",
+   "name": "kicad_gui_click",
+   "arguments": {
+    "name": "Zoom to Fit"
+   },
+   "secs": 0.37,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"id\": 20499,\n  \"kind\": \"menu\",\n  \"processed\": false,\n  \"requested\": \"Zoom to Fit\",\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}
