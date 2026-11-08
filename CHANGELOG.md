@@ -3,6 +3,17 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: SemVer.
 
+## [Unreleased] — 0.1.0 Phase 1: Requirements & design planning (branch `design/v0.1.0-phase1`)
+- Product: Sensor Interface & Power Management Board for ESP32 (planning only. No schematic, PCB, MPN or order).
+- `docs/requirements/v0.1.0/`: design brief, 52 requirements, block diagrams, interface spec, power budget
+  (Arch. A 774 mA / Arch. B 274 mA), 22 risks, component selection plan, verification plan, 18 open
+  questions, Phase 1 summary.
+- `calculations/v0.1.0/phase1_calcs.py`: ESP32 thresholds, Echo divider window, trigger margin, power budget,
+  LDO vs buck, reverse-polarity drop, I2C pull-up limits. Every input tagged VERIFIED/SECONDARY/ASSUMED.
+- `datasheets/index_v0.1.0.md`: Espressif ESP32 DS v5.3, WROOM-32E DS v2.1, DevKitC V4 guide, NXP UM10204 Rev 7.0.
+  HC-SR04 data is secondary only.
+- Status: ready for review. **Not ready for design freeze** (13 blocking open questions).
+
 ## [0.0.3-rc1] — 2026-11-08 — MCP advanced capability evaluation (branch `evaluation/v0.0.3-mcp-capabilities`)
 
 ### Added

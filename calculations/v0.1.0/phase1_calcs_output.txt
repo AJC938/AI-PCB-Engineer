@@ -1,0 +1,96 @@
+
+==============================================================================
+1. ESP32 GPIO limits across the allowed supply range (VERIFIED table formulas)
+==============================================================================
+VDD=3.00 V: VIH(min)=2.250 V  VIL(max)=0.750 V  VIH(max)=3.30 V  VOH(min)=2.400 V
+VDD=3.30 V: VIH(min)=2.475 V  VIL(max)=0.825 V  VIH(max)=3.60 V  VOH(min)=2.640 V
+VDD=3.60 V: VIH(min)=2.700 V  VIL(max)=0.900 V  VIH(max)=3.90 V  VOH(min)=2.880 V
+Note: the datasheets give no 5 V tolerance; VIH(max)=VDD+0.3 V -> a 5 V signal must never reach a GPIO.
+
+==============================================================================
+2. HC-SR04 Echo -> ESP32: resistor-divider candidates (1 % resistors)
+==============================================================================
+Echo HIGH level is SECONDARY/UNVERIFIED: 'classic' modules reportedly output 5 V TTL (~= sensor VCC);
+'modern' modules reportedly output ~VCC. The swept range below is a planning assumption.
+Constraints: Vout(max) <= 3.30 V (VDD_min+0.3, conservative) and Vout(min) >= 2.700 V (0.75*VDD_max)
+   Rtop    Rbot  ratio  Vout_min  Vout_max margin_lo margin_hi I@5V25 mA
+   1000    1500  0.600     2.827     3.175     0.127     0.125     2.100
+   1200    1800  0.600     2.827     3.175     0.127     0.125     1.750
+   1600    2400  0.600     2.827     3.175     0.127     0.125     1.312
+   1800    2700  0.600     2.827     3.175     0.127     0.125     1.167
+   2000    3000  0.600     2.827     3.175     0.127     0.125     1.050
+   2200    3300  0.600     2.827     3.175     0.127     0.125     0.955
+   2400    3600  0.600     2.827     3.175     0.127     0.125     0.875
+   5100    7500  0.595     2.804     3.150     0.104     0.150     0.417
+(50 E24 pairs satisfy both limits; best-margin pairs shown. Margins are thin: window is 0.600 V wide.)
+
+Sensitivity of example 2.0k/3.0k (ratio 0.600) to the UNVERIFIED Echo level:
+  Echo HIGH = 5.25 V -> GPIO 3.150 V : OK; OK@3.3
+  Echo HIGH = 5.00 V -> GPIO 3.000 V : OK; OK@3.3
+  Echo HIGH = 4.75 V -> GPIO 2.850 V : OK; OK@3.3
+  Echo HIGH = 4.50 V -> GPIO 2.700 V : TOO LOW (no valid HIGH at VDD=3.6); OK@3.3
+  Echo HIGH = 4.00 V -> GPIO 2.400 V : TOO LOW (no valid HIGH at VDD=3.6); fails@3.3
+  Echo HIGH = 3.30 V -> GPIO 1.980 V : TOO LOW (no valid HIGH at VDD=3.6); fails@3.3
+Conclusion: a passive divider only works if Echo HIGH is close to 5 V. A 3.3 V-output ('modern') module
+powered from 3.3 V must NOT get a divider. Echo level must be measured on the chosen module.
+Divider RC (Thevenin 1200 ohm x 12 pF) = 14.4 ns -> negligible vs echo pulse widths (us-ms).
+
+==============================================================================
+3. ESP32 -> HC-SR04 Trigger
+==============================================================================
+ESP32 VOH(min) at 3.3 V = 2.64 V (VERIFIED formula).
+  vs TTL-type input, VIH=2.0 V (illustrative): meets threshold
+  vs CMOS input at 5 V, VIH=0.7*VCC (illustrative): DOES NOT meet threshold
+The sensor's actual trigger threshold is UNVERIFIED (no manufacturer datasheet): Trigger compatibility is TBD.
+
+==============================================================================
+4. Preliminary power budget (planning allocations)
+==============================================================================
+
+Architecture A: board powers DevKit through its 5V pin
+  5 V loads    624 mA + 3.3 V loads (via linear reg.)  150 mA = input    774 mA
+  Suggested protection/connector rating basis: >= 968 mA continuous (+25 % margin, ASSUMED policy)
+
+Architecture B: DevKit powered by its own USB
+  5 V loads    124 mA + 3.3 V loads (via linear reg.)  150 mA = input    274 mA
+  Suggested protection/connector rating basis: >= 342 mA continuous (+25 % margin, ASSUMED policy)
+
+ESP32 transient: WROOM-32E TX peak 379 mA, average 239 mA (VERIFIED); Espressif requires >= 0.5 A supply capability (VERIFIED).
+
+==============================================================================
+5. 3.3 V regulator: linear dissipation vs load (VIN max 5.25 V)
+==============================================================================
+ I_out mA  P_LDO W   P_buck W (eta=0.85, ASSUMED)
+       50    0.098                          0.029
+      100    0.195                          0.058
+      150    0.293                          0.087
+      200    0.390                          0.116
+      300    0.585                          0.175
+      500    0.975                          0.291
+Junction rise = P x RthJA of the chosen package (from its datasheet, TBD). At the 150 mA planning budget a
+linear regulator dissipates ~0.29 W; confirm against the selected part's RthJA and max Tj before selection.
+
+==============================================================================
+6. Reverse-polarity element: voltage drop at planning current (illustrative parameters, NOT parts)
+==============================================================================
+  Series Schottky, Vf 0.3 V (illustrative)      drop 0.300 V -> 5 V rail min  4.45 V at 774 mA
+  Series Schottky, Vf 0.5 V (illustrative)      drop 0.500 V -> 5 V rail min  4.25 V at 774 mA
+  P-MOSFET, Rds(on) 50 mOhm (illustrative)      drop 0.039 V -> 5 V rail min  4.71 V at 774 mA
+  P-MOSFET, Rds(on) 100 mOhm (illustrative)     drop 0.077 V -> 5 V rail min  4.67 V at 774 mA
+A Schottky drop pushes the 5 V rail toward 4.25-4.45 V at minimum input: check DevKit 5 V-pin regulator
+dropout and HC-SR04 minimum supply (both TBD) before choosing the topology.
+
+==============================================================================
+7. I2C pull-up range (UM10204 Rev 7.0, VDD = 3.3 V)
+==============================================================================
+Rp(min) = (VDD - VOL)/IOL = (3.3 - 0.4)/3 mA = 967 ohm (VERIFIED formula)
+  Standard-mode (100 kHz)  Cb=  50 pF -> Rp(max) = tr/(0.8473*Cb) =    23604 ohm
+  Standard-mode (100 kHz)  Cb= 100 pF -> Rp(max) = tr/(0.8473*Cb) =    11802 ohm
+  Standard-mode (100 kHz)  Cb= 200 pF -> Rp(max) = tr/(0.8473*Cb) =     5901 ohm
+  Standard-mode (100 kHz)  Cb= 400 pF -> Rp(max) = tr/(0.8473*Cb) =     2951 ohm
+  Fast-mode (400 kHz)      Cb=  50 pF -> Rp(max) = tr/(0.8473*Cb) =     7081 ohm
+  Fast-mode (400 kHz)      Cb= 100 pF -> Rp(max) = tr/(0.8473*Cb) =     3541 ohm
+  Fast-mode (400 kHz)      Cb= 200 pF -> Rp(max) = tr/(0.8473*Cb) =     1770 ohm
+  Fast-mode (400 kHz)      Cb= 400 pF -> Rp(max) = tr/(0.8473*Cb) =      885 ohm
+Bus capacitance depends on cable length and connected modules (TBD). Many breakout modules already carry
+pull-ups; the parallel combination must stay >= Rp(min). ESP32 internal pull-ups (45 kohm typ.) are too weak.
