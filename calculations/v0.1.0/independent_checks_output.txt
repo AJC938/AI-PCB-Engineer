@@ -1,0 +1,12 @@
+Monte Carlo, 200000 samples, seed 20261108
+check                  worst margin  violations  result
+echo_hi_margin                2.208 V         0  PASS
+esp_vih_margin                0.651 V         0  PASS
+esp_vmax_margin               0.300 V         0  PASS
+trig_margin                   0.400 V         0  PASS
+ldo_tj_margin                45.746 C         0  PASS
+ptc_margin                    0.127 A         0  PASS
+ldo_headroom                  0.983 V         0  PASS
+us_supply_lo                  1.467 V         0  PASS
+us_supply_hi                  0.252 V         0  PASS
+i2c_rpmin_margin           1111.334 ohm       0  PASS

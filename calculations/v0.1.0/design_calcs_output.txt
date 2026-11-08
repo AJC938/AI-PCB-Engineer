@@ -1,0 +1,117 @@
+
+================================================================================
+1. Load budget (Architecture B: ESP32 DevKit powered by its own USB; board powers peripherals)
+================================================================================
++3V3_P worst load  : I2C 100 + GP 50 + UART 100 + LED2 2.35 = 252.4 mA
++5V_P direct loads : US 20 + LED1 2.46 + LVC1T45 VCCB 4 uA + TVS leakage 0.8 mA (max at VWM)
+Input current (worst): 275.7 mA   (UART on 5 V moves 100 mA from 3V3 to 5V; total unchanged)
+3V3_ESP draw from DevKit (reference supply for U2/U3/U4 + pull-ups, worst): 3.37 mA
+
+================================================================================
+2. Overcurrent protection: MF-MSMF050 at T_amb max
+================================================================================
+Ihold @50 C = 0.40 A vs worst load 0.276 A -> margin x1.45  (PASS)
+Ihold @70 C = 0.33 A -> margin x1.20 (beyond design ambient)
+Itrip @23 C = 1.00 A; Vmax 15 V >= 5.25 V input (PASS)
+Dissipation at worst load with R1max: 76 mW
+
+================================================================================
+3. Reverse-polarity P-MOSFET AO3401A (drain = input side, source = +5V_P, gate -> 10k -> GND)
+================================================================================
+|VGS| at VIN_min with PTC R1max drop: 4.47 V >= 4.5 V spec point? no -> use 2.5 V spec (85 mOhm)
+RDS(on) used 85 mOhm x1.5 (hot, ASSUMED) -> drop 35.2 mV, P 9.69 mW, dT 1.21 C
+|VGS| max in operation = VIN_max 5.25 V; during TVS clamp 10.3 V -> < 12.0 V rating (PASS)
+Reverse input -5.25 V: VGS ~ 0 V (< VGS(th) 1.3 V) -> OFF; body diode reverse-biased; |VDS| 5.25 V << 30.0 V (PASS)
+
+================================================================================
+4. Rail voltages (min / nom / max)
+================================================================================
++5V_P : min 4.439  nom 4.818  max 5.250 V  (current 276 mA worst)
++3V3_P: min 3.215  nom 3.300  max 3.349 V  (current 252 mA max)
+LDO headroom at +5V_P min: 1.139 V vs dropout estimate 0.177 V -> PASS
+LDO VIN max 5.25 V <= 5.5 V recommended (PASS); abs max 6.0 V
+Ultrasonic supply 4.44..5.25 V within vendor 3.0..5.5 V (PASS)
+
+================================================================================
+5. LDO thermal (TLV1117LV33, SOT-223)
+================================================================================
+P_LDO worst = (5.25 - 3.250) x 0.252 + Iq = 0.505 W
+Tj = 50 + 0.505 x 62.9 = 81.8 C vs 125 C max -> margin 43.2 C
+RthJA is the JEDEC high-K value; a 2-layer board with a copper pour on the tab is required to approach it (layout V0.2.0).
+  sensitivity: RthJA 90 C/W -> Tj 95.5 C
+  sensitivity: RthJA 120 C/W -> Tj 110.6 C
+
+================================================================================
+6. TVS SMAJ6.0A
+================================================================================
+VWM 6.0 V >= VIN_max 5.25 V (PASS: no conduction in normal operation; VBR min 6.67 V)
+Clamp 10.3 V @ 38.8 A exceeds TLV1117LV abs max 6.0 V and LVC abs max 6.5 V at full surge current:
+  protects against ESD/short transients; NOT a guarantee for high-energy surges or sustained overvoltage (documented risk).
+
+================================================================================
+7. Ultrasonic ECHO -> SN74LVC1G17 (VCC = 3V3_ESP) -> GPIO34
+================================================================================
+Echo HIGH at buffer input (min): 4.394 V vs VT+ max 2.25 V (VCC=3.6, interpolated) -> margin 2.15 V
+Echo HIGH max 5.25 V <= VI max 5.5 V recommended (independent of VCC) (PASS)
+Echo LOW must be < VT- min 0.89 V (at VCC 3 V); module VOL not specified -> verify by measurement (S1)
+  VDD=3.0: buffer VOH >= 2.90 V vs ESP32 VIH 2.250 V (margin 0.65); VOH <= VCC = VDD < VDD+0.3 (PASS)
+  VDD=3.3: buffer VOH >= 3.20 V vs ESP32 VIH 2.475 V (margin 0.73); VOH <= VCC = VDD < VDD+0.3 (PASS)
+  VDD=3.6: buffer VOH >= 3.50 V vs ESP32 VIH 2.700 V (margin 0.80); VOH <= VCC = VDD < VDD+0.3 (PASS)
+Back-power with ESP32 off: buffer Ioff <= 10 uA (VERIFIED), output high-Z -> no drive into GPIO (PASS)
+Variant independence: a classic 5 V HC-SR04 (Echo ~5 V, SECONDARY) and the RCWL-1601 (Echo = VCC, VENDOR) both satisfy the window.
+
+================================================================================
+8. GPIO26 -> SN74LVC1T45 (A: VCCA=3V3_ESP, B: VCCB=+5V_P, DIR=H) -> TRIG
+================================================================================
+  VDD=3.0: ESP32 VOH min 2.40 V vs LVC1T45 VIH 2.0 V -> margin 0.40 V
+  VDD=3.3: ESP32 VOH min 2.64 V vs LVC1T45 VIH 2.0 V -> margin 0.64 V
+  VDD=3.6: ESP32 VOH min 2.88 V vs LVC1T45 VIH 2.0 V -> margin 0.88 V
+TRIG HIGH at sensor >= 4.34 V (VCCB-0.1 @100 uA; 100k pull-down = 52 uA). Sensor VCC = same rail,
+so TRIG HIGH = 98 % of sensor VCC: meets any CMOS/TTL threshold <= 0.9*VCC (sensor VIH not published: S2 test)
+10 us trigger pulse vs tpd < 10 ns: timing unaffected.
+
+================================================================================
+9. UART
+================================================================================
+RX: device TX (3.3 V or 5 V) -> 1k -> SN74LVC1G17 (VI <= 5.5 V) -> GPIO16: 5 V-logic TX accepted; output <= VDD (PASS)
+RX idle pull-up 100k to 3V3_ESP; when ESP32 off the buffer is unpowered and Ioff-protected (PASS)
+TX: GPIO17 -> 220 ohm -> connector. VOH min 2.64 V at 3.3 V: OK for 3.3 V devices (VIH 0.7*3.3 = 2.31 V); 5 V CMOS inputs (VIH 3.5 V) NOT supported
+TX short-to-GND current limited to 16.4 mA (< 40 mA IOH typical) 
+TX RC with 50 pF cable (ASSUMED): 11.0 ns -> fine up to >1 Mbaud
+
+================================================================================
+10. I2C pull-ups 2.2 k to 3V3_ESP (via bridged JP2)
+================================================================================
+Rp(min) at VDD 3.6 V = 1067 ohm; 2.2k -1% = 2178 ohm (PASS); with a 10k module pull-up in parallel = 1803 ohm (PASS)
+  Standard (100 kHz): max bus capacitance with 2.2k = 400 pF
+  Fast (400 kHz): max bus capacitance with 2.2k = 159 pF
+Sink current when low: 1.64 mA per line (< 3 mA spec)
+
+================================================================================
+11. GP inputs and back-power with ESP32 unpowered (board powered)
+================================================================================
+GP sensor output 3.3 V into unpowered ESP32 through 1000 ohm: <= 2.75 mA (ESP32 injection limit NOT published: residual risk, R-04)
+I2C: pull-ups follow 3V3_ESP, devices are open-drain -> no injection into ESP32. ECHO/RX: Ioff buffers -> none. TRIG: ESP32 is the source.
+
+================================================================================
+12. Capacitors
+================================================================================
+LDO output: 10 uF X5R at 3.3 V, assumed >= 40 % retained -> 4.0 uF effective vs >= 0.5 uF required (PASS, margin x8)
+Input/+5V_P: 2 x 10 uF + 100 nF; 10 uF + 100 nF at J3 (sensor burst currents); 100 nF at every logic VCC pin (TI recommendation).
+Rated voltage: 10 V (10 uF) and 16 V (100 nF) >= 5.25 V; TVS clamp 10.3 V transients slightly exceed 10 V rating (short events; documented)
+
+================================================================================
+13. LED currents
+================================================================================
+LED1 red / +5V_P: R 1500 ohm -> 1.41 .. 2.46 mA; P_R max 9.1 mW (0.1 W rating)
+LED2 green / +3V3_P: R 680 ohm -> 1.04 .. 2.30 mA; P_R max 3.6 mW (0.1 W rating)
+
+================================================================================
+14. Resistor dissipation (worst case, 0.1 W ERJ-3EKF)
+================================================================================
+  R1 gate: 2.76 mW
+  Pull-up 2.2k (line low): 5.89 mW
+  UART TX 220 (short): 58.91 mW
+  100k pull-downs: 0.28 mW
+
+All outputs CALCULATED from the tagged inputs above.

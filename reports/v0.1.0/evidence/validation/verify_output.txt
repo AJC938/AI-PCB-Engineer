@@ -1,0 +1,6 @@
+[1] nets checked: 27 design nets; actual nets 29; single-pin 'unconnected-' nets: ['unconnected-(U2-NC-Pad1)', 'unconnected-(U4-NC-Pad1)']
+[2] domain rules checked on 8 ESP32 nets
+[3] footprints verified: 50
+[4] parts with Manufacturer+MPN: 48
+
+RESULT: PASS

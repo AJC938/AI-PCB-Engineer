@@ -3,6 +3,18 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: SemVer.
 
+## [Unreleased] — 0.1.0 Engineering design, component selection & schematic (branch `design/v0.1.0-phase1`)
+- Architecture B selected (DevKit on its own USB. The board powers peripherals only). Variant-independent ultrasonic
+  interface (SN74LVC1T45 TRIG, SN74LVC1G17 ECHO/RX, logic referenced to 3V3_ESP).
+- `calculations/v0.1.0/design_calcs.py` + `independent_checks.py` (Monte Carlo, 10/10 PASS).
+- `datasheets/v0.1.0/DATASHEET_INDEX.md`: DS-01…DS-16 official sources with revisions.
+- `hardware/kicad/Sensor_Interface_Power_Board/`: complete A3 schematic built via KiCAD-MCP-Server (SWIG),
+  48 BOM parts with MPNs. ERC 0 (MCP and kicad-cli, no exclusions). Netlist verified by `build/verify_schematic.py`.
+- `reports/v0.1.0/`: 13 design reports + sanitized validation evidence.
+- Phase 1 docs: status pointer in OPEN_QUESTIONS. Risks R-30…R-35 added.
+- `.gitignore`: re-include `hardware/kicad/*/build/` (schematic generator scripts are design sources).
+- Status: schematic complete and digitally validated. **NOT TESTED physically. Not production-ready.**
+
 ## [Unreleased] — 0.1.0 Phase 1: Requirements & design planning (branch `design/v0.1.0-phase1`)
 - Product: Sensor Interface & Power Management Board for ESP32 (planning only. No schematic, PCB, MPN or order).
 - `docs/requirements/v0.1.0/`: design brief, 52 requirements, block diagrams, interface spec, power budget

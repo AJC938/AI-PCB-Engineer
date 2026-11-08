@@ -1,0 +1,195 @@
+{
+ "overrides": {
+  "KICAD_MCP_TOOLBOXES": "schematic,validation"
+ },
+ "started": "2026-11-08T20:02:46",
+ "initialize": {
+  "secs": 0.291,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 68,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "create_schematic",
+  "add_schematic_component",
+  "delete_schematic_component",
+  "edit_schematic_component",
+  "set_schematic_component_property",
+  "remove_schematic_component_property",
+  "get_schematic_component",
+  "add_schematic_wire",
+  "add_schematic_net_label",
+  "add_no_connect",
+  "connect_to_net",
+  "get_net_connections",
+  "get_wire_connections",
+  "get_schematic_pin_locations",
+  "connect_passthrough",
+  "list_schematic_components",
+  "list_schematic_nets",
+  "list_schematic_wires",
+  "list_schematic_labels",
+  "move_schematic_component",
+  "rotate_schematic_component",
+  "annotate_schematic",
+  "delete_schematic_wire",
+  "delete_schematic_net_label",
+  "move_schematic_net_label",
+  "export_schematic_svg",
+  "export_schematic_pdf",
+  "get_schematic_view",
+  "run_erc",
+  "generate_netlist",
+  "sync_schematic_to_board",
+  "backannotate_footprints",
+  "create_board_from_schematic",
+  "get_schematic_view_region",
+  "get_net_at_point",
+  "list_schematic_texts",
+  "add_schematic_text",
+  "get_backend_state",
+  "check_kicad_ui",
+  "validate_schematic",
+  "validate_symbol_library"
+ ],
+ "steps": [
+  {
+   "label": "hdr_J2",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "J2",
+    "name": "MPN",
+    "value": "HTSW-112-07-T-S"
+   },
+   "secs": 1.874,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated property MPN=\"HTSW-112-07-T-S\" on J2"
+  },
+  {
+   "label": "hdr_J3",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "J3",
+    "name": "MPN",
+    "value": "HTSW-104-07-T-S"
+   },
+   "secs": 0.165,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated property MPN=\"HTSW-104-07-T-S\" on J3"
+  },
+  {
+   "label": "hdr_J4",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "J4",
+    "name": "MPN",
+    "value": "HTSW-104-07-T-S"
+   },
+   "secs": 0.183,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated property MPN=\"HTSW-104-07-T-S\" on J4"
+  },
+  {
+   "label": "hdr_J5",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "J5",
+    "name": "MPN",
+    "value": "HTSW-104-07-T-S"
+   },
+   "secs": 0.257,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated property MPN=\"HTSW-104-07-T-S\" on J5"
+  },
+  {
+   "label": "hdr_J6",
+   "name": "set_schematic_component_property",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "J6",
+    "name": "MPN",
+    "value": "HTSW-104-07-T-S"
+   },
+   "secs": 0.353,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated property MPN=\"HTSW-104-07-T-S\" on J6"
+  },
+  {
+   "label": "validate",
+   "name": "validate_schematic",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 0.81,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"valid\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_sch\",\n  \"message\": \"Sensor_Interface_Power_Board.kicad_sch is valid\",\n  \"errorCount\": 0,\n  \"warningCount\": 0,\n  \"issues\": [],\n  \"kicadCli\": {\n    \"ran\": true,\n    \"ok\": true,\n    \"exitCode\": 0,\n    \"output\": \"Successfully saved schematic file using the latest format\"\n  },\n  \"componentCount\": 53,\n  \"semanticChecksRan\": true,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "erc",
+   "name": "run_erc",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 6.831,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "ERC result: 0 violation(s)\n  Errors: 0  Warnings: 0  Info: 0"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

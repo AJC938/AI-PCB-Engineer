@@ -1,0 +1,72 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig"
+ },
+ "started": "2026-11-08T19:58:16",
+ "initialize": {
+  "secs": 0.518,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 37,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "create",
+   "name": "create_project",
+   "arguments": {
+    "path": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board",
+    "name": "Sensor_Interface_Power_Board"
+   },
+   "secs": 3.629,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Created project: Sensor_Interface_Power_Board\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pcb\",\n    \"schematicPath\": \"%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

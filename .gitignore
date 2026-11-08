@@ -17,6 +17,8 @@ venv/
 .mypy_cache/
 dist/
 build/
+# KiCad project generator scripts are design sources (tracked)
+!hardware/kicad/*/build/
 
 # ---- Logs and temporary files ----
 *.log

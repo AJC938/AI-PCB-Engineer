@@ -1,0 +1,31 @@
+# Datasheet Index — V0.1.0 (component selection)
+
+Accessed 2026-11-08. PDFs are not committed (third-party copyright); each was downloaded directly from the
+listed manufacturer URL into a scratch area and read locally. Class: **OFFICIAL** = component manufacturer ·
+**VENDOR** = the product's own vendor (module level) · **SECONDARY** = third party.
+Earlier references: `datasheets/index_v0.1.0.md` (REF-01…07, Phase 1) and `datasheets/index.md` (V0.0.2).
+
+| ID | Part (MPN) | Manufacturer | Document / revision | Source URL | Class | Facts used (page) |
+|---|---|---|---|---|---|---|
+| DS-01 | ESP32 (ESP32-D0WD/-D0WDQ6 family) | Espressif | ESP32 Series Datasheet v5.3 | REF-01 | OFFICIAL | p.14 pin list: GPIO32/33 = ADC1_CH4/5, GPIO34 = ADC1_CH6. p.22 Table 3-1 strapping pins GPIO0, 2, 5, 12 (MTDI), 15 (MTDO). p.51 Table 5-1/5-2. p.52 Table 5-3 IO thresholds. p.61 note 2: GPIO34–39 input-only, no pull resistors |
+| DS-02 | ESP32-WROOM-32E (reference for the module family) | Espressif | Datasheet v2.1 | REF-02 | OFFICIAL | Table 14 VDD33 3.0–3.6 V, ≥ 0.5 A. Table 15 IO. Table 16 TX peak 379 mA |
+| DS-02b | ESP32-DevKitC V4 (closest documented DevKit) | Espressif | User guide (latest) | REF-03 | OFFICIAL | one-and-only-one power source. 2×19 headers. 3V3 = J2-1, 5V = J2-19, GND = J2-14/J3-1/J3-7. GPIO6–11 avoid. GPIO16/17 WROOM only |
+| DS-03 | AO3401A | Alpha & Omega Semiconductor | Rev 3.1, Dec 2023 | https://www.aosmd.com/res/datasheets/AO3401A.pdf | OFFICIAL | p.1 VDS −30 V, VGS ±12 V, ID −4 A, RDS(on) < 50/60/85 mΩ at VGS −10/−4.5/−2.5 V, RθJA 100 typ/125 max °C/W steady state. SOT-23 top view pin 1 G, 2 S, 3 D. p.2 VGS(th) −0.5…−1.3 V, VSD −1 V max |
+| DS-04 | MF-MSMF050-2 | Bourns | MF-MSMF series datasheet | https://www.bourns.com/docs/Product-Datasheets/mf-msmf.pdf | OFFICIAL | p.1 Vmax 15 V, Imax 100 A, Ihold 0.50 A, Itrip 1.00 A, Rmin 0.15 Ω, R1max 1.0 Ω, trip 0.15 s at 8 A, Pd 0.8 W. p.4 1812 size 4.37–4.73 × 3.07–3.41 mm. p.9 derating 0.50/0.44/0.40/0.37/0.33/0.29 A at 23/40/50/60/70/85 °C. p.11 order code MF-MSMF…-2 |
+| DS-05 | SMAJ6.0A-E3/61 | Vishay General Semiconductor | Doc. 88390, rev 09-Jan-2024 | https://www.vishay.com/docs/88390/smaj50a.pdf | OFFICIAL | p.1 400 W (10/1000 µs), SMA (DO-214AC). p.2 SMAJ6.0A: VBR 6.67–7.37 V @10 mA, VWM 6.0 V, ID 800 µA max @VWM, IPPM 38.8 A, VC 10.3 V. p.4 ordering code example …-E3/61 (7" reel) |
+| DS-06 | TLV1117LV33DCYR | Texas Instruments | SBVS160C, rev Jan 2023 | https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf | OFFICIAL | p.3 DCY pins 1 GND, 2 OUT (+tab), 3 IN. p.4 VIN abs 6 V, ROC 2–5.5 V, 1 A, RθJA 62.9 °C/W. p.5 ±1.5 %, load reg 35 mV max, VDO (≥3.3 V) 90 mV@200 mA typ / 700 mV@1 A max, IQ 100 µA max, ICL ≥ 1.1 A, TJ −40…125 °C. p.13 COUT ≥ 1 µF ceramic (effective > 0.5 µF). p.18 orderable TLV1117LV33DCYR active |
+| DS-07 | SN74LVC1G17DBVR | Texas Instruments | SCES351Y, rev Oct 2025 | https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf | OFFICIAL | p.3 DBV pins 1 NC, 2 A, 3 GND, 4 Y, 5 VCC. p.4 abs VI −0.5…6.5 V (independent of VCC). p.5 VCC 1.65–5.5 V, VI 0–5.5 V. p.6 VT+ max 1.92 V@3 V / 2.74 V@4.5 V, VT− min 0.89 V@3 V, VOH = VCC−0.1 @−100 µA, Ioff ±10 µA, ICC 10 µA |
+| DS-08 | SN74LVC1T45DBVR | Texas Instruments | SCES515N, rev Jun 2024 | https://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf | OFFICIAL | p.1 VCC isolation (either VCC at GND → both ports high-Z), Ioff. p.2 DBV pins 1 VCCA, 2 GND, 3 A, 4 B, 5 DIR, 6 VCCB. p.4–5 VIH 2.0 V (VCCI 3–3.6 V), VI 0–5.5 V, TA −40…85 °C. p.6 VOH VCCO−0.1, Ioff ±2 µA, ICC 4 µA. p.14 DIR H = A→B |
+| DS-09 | ERJ-3EKF series (0603, 1 %, 0.1 W) | Panasonic | Thick film chip resistors datasheet | https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf | OFFICIAL | p.1 ERJ-3E: 0603, 0.1 W, ±1 % (F), product code structure. p.2 E24/E96 values, −55…+155 °C |
+| DS-10a | CL10A106KP8NNNC | Samsung Electro-Mechanics | Online data sheet (component library) | https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN | OFFICIAL | 10 µF ±10 %, 10 Vdc, X5R, 0603 (1.6 × 0.8 × 0.8 mm). **No DC-bias curve available** (derating ASSUMED). Packaging suffix "C" not shown on page (order-time check) |
+| DS-10b | GRM188R71C104KA01D | Murata | Spec sheet (as of Feb 27 2016) | https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf | OFFICIAL | 0603, X7R, 0.1 µF, 16 V, ±10 %, −55…125 °C. Packaging "D" = 180 mm reel |
+| DS-11 | WP7113ID (red) | Kingbright | V.14A, 01/08/2026 | https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf | OFFICIAL | (V0.0.2) VF 1.9/2.3 V @10 mA, IF 30 mA, pitch 2.54, hole Ø0.9 |
+| DS-12 | WP7113SGD (green) | Kingbright | V.11B, 01/09/2021 | https://www.kingbrightusa.com/images/catalog/SPEC/WP7113SGD.pdf | OFFICIAL | VF 2.2/2.5 V @20 mA, IF 25 mA. Same T-1¾ package family as DS-11 (package drawing to be compared in V0.2.0) |
+| DS-13 | Adafruit 4007 (RCWL-1601 ultrasonic module) | Adafruit | Product page + dimension diagram | https://www.adafruit.com/product/4007 ; https://cdn-shop.adafruit.com/product-files/4007/4007_diagram.png | VENDOR | 3–5.5 V, 2.2 mA, "logic level will be the same" as supply, 2–450 cm, 50 ms cycle, 40 kHz, HC-SR04 software-compatible. Board 40 × 18 mm, 4-pin header. **Pin names and trigger threshold not published** |
+| DS-14 | 1715721 (MKDS 1,5/2-5,08) | Phoenix Contact | Product page | (V0.0.2) | OFFICIAL | 17.5 A, pitch 5.08, hole Ø1.3 |
+| DS-15 | HTSW-104-07-T-S, HTSW-112-07-T-S (selected; TSW rejected) | Samtec | TSW/HTSW catalog sheet | https://suddendocs.samtec.com/catalog_english/tsw_th.pdf | OFFICIAL | .100" pitch. Lead style −07 listed. Plating options −F/−GF/−L/−T (**−G not offered**, so −T matte tin chosen). −S single row. PBT, −55…105 °C (tin). TSW "Lead–Free Solderable: No, Lead Wave Only" (see risk R-30) |
+| DS-16 | 5015 (SMT test point) | Keystone Electronics | Catalog M65p55 | https://www.keyelco.com/userAssets/file/M65p55.pdf | OFFICIAL | Miniature SMT test points on tape (5015/5017…), phosphor bronze silver plated, pad layout drawing |
+
+Not obtainable: Würth WR-PHD (HTTP 403, bot protection, not bypassed). KEMET (expired TLS certificate,
+not bypassed). Murata 10 µF and Yageo RC (connection reset or timeout), replaced by DS-10a and DS-09.
+TDK (HTTP 403).

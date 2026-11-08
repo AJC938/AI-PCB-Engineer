@@ -42,3 +42,16 @@ Likelihood (L) and Impact (I): 1 (low) – 3 (high). Score = L × I. Owner for a
 
 **Highest-score risks (6):** R-01, R-03, R-09, R-12, R-18, R-21. All six depend on open questions
 OQ-01, OQ-06 and OQ-11 or on established workflow rules.
+
+## V0.1.0 design-phase additions (2026-11-08)
+| ID | Risk | L | I | Score | Mitigation | Status |
+|---|---|---|---|---|---|---|
+| R-30 | Samtec TSW headers are not lead-free solderable ("Lead Wave Only") | 3 | 1 | 3 | HTSW series selected (DDR-16, DS-15) | CLOSED by design |
+| R-31 | Power sequencing: with the board unpowered and the ESP32 on, the I2C pull-ups (3V3_ESP) back-feed unpowered I2C devices through their SDA/SCL clamps; the converse direction is blocked by Ioff buffers | 2 | 2 | 4 | Rule: power the board first or together with the DevKit. JP2 opens the pull-ups. Measure in V0.3.0 | OPEN (documented) |
+| R-32 | SMAJ6.0A clamp (≤ 10.3 V at IPP) exceeds the TLV1117LV (6 V) and LVC (6.5 V) abs max; the input is not overvoltage-protected | 1 | 3 | 3 | Regulated 5 V supply only (OQ-05). TVS is an ESD/hot-plug aid. Consider OVP in a later revision | ACCEPTED |
+| R-33 | GPIO16/17 (UART) are unavailable on WROVER-based boards | 1 | 2 | 2 | Reference is WROOM-32(E) (DDR-13). Remap required if a WROVER board is used | ACCEPTED |
+| R-34 | Ultrasonic module pin order is not published (Adafruit 4007) | 2 | 2 | 4 | Verify on receipt (NQ-01) before wiring. J3 order VCC/TRIG/ECHO/GND | OPEN |
+| R-35 | Clone 3V3 pin regulator behaviour unknown (sources 3V3_ESP, ≤ 3.4 mA) | 1 | 1 | 1 | Measure 3V3_ESP with the board attached (NQ-04) | OPEN |
+
+Resolution status of R-01…R-22 after the V0.1.0 design: see
+[`reports/v0.1.0/FINAL_V0.1.0_DESIGN_REPORT.md`](../../../reports/v0.1.0/FINAL_V0.1.0_DESIGN_REPORT.md).

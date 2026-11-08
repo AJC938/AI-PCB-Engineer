@@ -1,5 +1,8 @@
 # Open Questions — V0.1.0
 
+> **V0.1.0 design status (2026-11-08):** each question below has been answered, mitigated, or kept open in
+> [`reports/v0.1.0/OPEN_QUESTIONS.md`](../../../reports/v0.1.0/OPEN_QUESTIONS.md). This Phase 1 list is kept unchanged as the baseline.
+
 **Blocking** = must be answered before design freeze (schematic capture).
 
 | ID | Question | Why it matters | Information needed to resolve | Blocking |

@@ -1,0 +1,280 @@
+{
+ "overrides": {
+  "KICAD_MCP_TOOLBOXES": "schematic,validation"
+ },
+ "started": "2026-11-08T20:03:42",
+ "initialize": {
+  "secs": 0.614,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 68,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "create_schematic",
+  "add_schematic_component",
+  "delete_schematic_component",
+  "edit_schematic_component",
+  "set_schematic_component_property",
+  "remove_schematic_component_property",
+  "get_schematic_component",
+  "add_schematic_wire",
+  "add_schematic_net_label",
+  "add_no_connect",
+  "connect_to_net",
+  "get_net_connections",
+  "get_wire_connections",
+  "get_schematic_pin_locations",
+  "connect_passthrough",
+  "list_schematic_components",
+  "list_schematic_nets",
+  "list_schematic_wires",
+  "list_schematic_labels",
+  "move_schematic_component",
+  "rotate_schematic_component",
+  "annotate_schematic",
+  "delete_schematic_wire",
+  "delete_schematic_net_label",
+  "move_schematic_net_label",
+  "export_schematic_svg",
+  "export_schematic_pdf",
+  "get_schematic_view",
+  "run_erc",
+  "generate_netlist",
+  "sync_schematic_to_board",
+  "backannotate_footprints",
+  "create_board_from_schematic",
+  "get_schematic_view_region",
+  "get_net_at_point",
+  "list_schematic_texts",
+  "add_schematic_text",
+  "get_backend_state",
+  "check_kicad_ui",
+  "validate_schematic",
+  "validate_symbol_library"
+ ],
+ "steps": [
+  {
+   "label": "val_C1",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C1",
+    "value": "10uF"
+   },
+   "secs": 2.952,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C1: value=10uF"
+  },
+  {
+   "label": "val_C3",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C3",
+    "value": "10uF"
+   },
+   "secs": 0.136,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C3: value=10uF"
+  },
+  {
+   "label": "val_C8",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C8",
+    "value": "10uF"
+   },
+   "secs": 0.319,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C8: value=10uF"
+  },
+  {
+   "label": "val_C2",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C2",
+    "value": "100nF"
+   },
+   "secs": 0.294,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C2: value=100nF"
+  },
+  {
+   "label": "val_C4",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C4",
+    "value": "100nF"
+   },
+   "secs": 0.463,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C4: value=100nF"
+  },
+  {
+   "label": "val_C5",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C5",
+    "value": "100nF"
+   },
+   "secs": 0.204,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C5: value=100nF"
+  },
+  {
+   "label": "val_C6",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C6",
+    "value": "100nF"
+   },
+   "secs": 0.354,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C6: value=100nF"
+  },
+  {
+   "label": "val_C7",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C7",
+    "value": "100nF"
+   },
+   "secs": 0.214,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C7: value=100nF"
+  },
+  {
+   "label": "val_C9",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C9",
+    "value": "100nF"
+   },
+   "secs": 0.498,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C9: value=100nF"
+  },
+  {
+   "label": "val_C10",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C10",
+    "value": "100nF"
+   },
+   "secs": 0.384,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C10: value=100nF"
+  },
+  {
+   "label": "val_C11",
+   "name": "edit_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch",
+    "reference": "C11",
+    "value": "100nF"
+   },
+   "secs": 0.412,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully updated C11: value=100nF"
+  },
+  {
+   "label": "validate",
+   "name": "validate_schematic",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 1.625,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"valid\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_sch\",\n  \"message\": \"Sensor_Interface_Power_Board.kicad_sch is valid\",\n  \"errorCount\": 0,\n  \"warningCount\": 0,\n  \"issues\": [],\n  \"kicadCli\": {\n    \"ran\": true,\n    \"ok\": true,\n    \"exitCode\": 0,\n    \"output\": \"Successfully saved schematic file using the latest format\"\n  },\n  \"componentCount\": 53,\n  \"semanticChecksRan\": true,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "erc",
+   "name": "run_erc",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 7.878,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "ERC result: 0 violation(s)\n  Errors: 0  Warnings: 0  Info: 0"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}
