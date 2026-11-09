@@ -10,10 +10,11 @@
 	(title_block
 		(title "Sensor Interface & Power Management Board for ESP32")
 		(date "2026-11-09")
-		(rev "0.2.0")
+		(rev "A")
 		(company "AI-PCB-Engineer")
 		(comment 1 "2 layers FR-4 1.6 mm, 1 oz Cu, ENIG preferred, green mask, white silk")
 		(comment 2 "Architecture B: ESP32 DevKit on its own USB; board powers peripherals")
+		(comment 3 "Release v1.0.0 (Rev A) - fabrication-ready design, NOT physically tested")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -12364,7 +12365,7 @@
 			)
 		)
 	)
-	(gr_text "SENSOR IF + PWR BOARD  REV 0.2.0"
+	(gr_text "SENSOR IF + PWR BOARD REV A v1.0"
 		(at 115.539 127.4 0)
 		(layer "F.SilkS")
 		(uuid "53318198-d810-48ff-9631-a89eeadd2117")

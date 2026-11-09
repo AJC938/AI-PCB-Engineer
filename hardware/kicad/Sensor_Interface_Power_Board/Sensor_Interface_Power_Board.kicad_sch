@@ -7,10 +7,11 @@
 	(title_block
 		(title "Sensor Interface & Power Management Board for ESP32")
 		(date "2026-11-09")
-		(rev "0.2.0")
+		(rev "A")
 		(company "AI-PCB-Engineer")
 		(comment 1 "Architecture B: ESP32 DevKit on its own USB; board powers peripherals")
 		(comment 2 "V0.2.0: eFuse power entry (DDR-17), TRIG series R15 (DDR-18)")
+		(comment 3 "Release v1.0.0 (Rev A) - fabrication-ready design, NOT physically tested")
 	)
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x02"
