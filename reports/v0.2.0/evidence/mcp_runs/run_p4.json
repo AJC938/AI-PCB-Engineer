@@ -1,0 +1,1664 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "board,component,routing,drc,export"
+ },
+ "started": "2026-11-09T05:20:26",
+ "initialize": {
+  "secs": 0.259,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 125,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "rotate_component",
+  "delete_component",
+  "edit_component",
+  "set_footprint_type",
+  "find_component",
+  "get_component_properties",
+  "add_component_annotation",
+  "group_components",
+  "replace_component",
+  "get_component_pads",
+  "get_pads",
+  "get_net_pads",
+  "get_component_geometry",
+  "get_component_list",
+  "get_pad_position",
+  "get_ratsnest",
+  "estimate_airwire_lengths",
+  "check_placement_clearance",
+  "move_footprint_text",
+  "place_component_array",
+  "align_components",
+  "check_courtyard_overlaps",
+  "suggest_placement",
+  "duplicate_component",
+  "hierarchical_place",
+  "add_net",
+  "route_trace",
+  "route_arc_trace",
+  "add_via",
+  "add_copper_pour",
+  "delete_trace",
+  "query_traces",
+  "query_zones",
+  "add_gnd_stitching_vias",
+  "get_nets_list",
+  "modify_trace",
+  "create_netclass",
+  "set_net_color",
+  "route_differential_pair",
+  "refill_zones",
+  "route_pad_to_pad",
+  "copy_routing_pattern",
+  "set_design_rules",
+  "get_design_rules",
+  "run_drc",
+  "assign_net_to_class",
+  "set_layer_constraints",
+  "check_clearance",
+  "get_drc_violations",
+  "export_gerber",
+  "export_pdf",
+  "export_svg",
+  "export_3d",
+  "export_bom",
+  "export_netlist",
+  "export_position_file",
+  "export_vrml",
+  "export_gerbers",
+  "export_drill",
+  "export_ipc2581",
+  "export_odb",
+  "export_ipcd356",
+  "export_gencad",
+  "export_pos",
+  "export_pcb_pdf",
+  "export_pcb_svg",
+  "export_pcb_dxf",
+  "export_gerber_single",
+  "export_3d_cli",
+  "export_sch_bom",
+  "export_sch_pdf",
+  "export_sch_svg",
+  "export_sch_dxf",
+  "export_sch_hpgl",
+  "export_sch_ps",
+  "export_sch_python_bom",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "open",
+   "name": "open_project",
+   "arguments": {
+    "filename": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_pro"
+   },
+   "secs": 2.621,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Opened project: Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "ref_J2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J2",
+    "field": "Reference",
+    "x": 145.97,
+    "y": 157.287,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.636,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J2 Reference text\",\"text\":{\"reference\":\"J2\",\"field\":\"Reference\",\"position\":{\"x\":145.97,\"y\":157.287,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_J1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J1",
+    "field": "Reference",
+    "x": 105.905,
+    "y": 107.017,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.406,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J1 Reference text\",\"text\":{\"reference\":\"J1\",\"field\":\"Reference\",\"position\":{\"x\":105.905,\"y\":107.017,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_J3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J3",
+    "field": "Reference",
+    "x": 186.5,
+    "y": 106.787,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.625,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J3 Reference text\",\"text\":{\"reference\":\"J3\",\"field\":\"Reference\",\"position\":{\"x\":186.5,\"y\":106.787,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_U1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "U1",
+    "field": "Reference",
+    "x": 140.5,
+    "y": 107.457,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.467,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved U1 Reference text\",\"text\":{\"reference\":\"U1\",\"field\":\"Reference\",\"position\":{\"x\":140.5,\"y\":107.457,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_U5",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "U5",
+    "field": "Reference",
+    "x": 122.0,
+    "y": 108.307,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.854,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved U5 Reference text\",\"text\":{\"reference\":\"U5\",\"field\":\"Reference\",\"position\":{\"x\":122,\"y\":108.307,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_U2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "U2",
+    "field": "Reference",
+    "x": 172.0,
+    "y": 122.643,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.406,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved U2 Reference text\",\"text\":{\"reference\":\"U2\",\"field\":\"Reference\",\"position\":{\"x\":172,\"y\":122.643,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_U4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "U4",
+    "field": "Reference",
+    "x": 175.5,
+    "y": 132.643,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.933,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved U4 Reference text\",\"text\":{\"reference\":\"U4\",\"field\":\"Reference\",\"position\":{\"x\":175.5,\"y\":132.643,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_U3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "U3",
+    "field": "Reference",
+    "x": 171.5,
+    "y": 114.643,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.573,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved U3 Reference text\",\"text\":{\"reference\":\"U3\",\"field\":\"Reference\",\"position\":{\"x\":171.5,\"y\":114.643,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_LED2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "LED2",
+    "field": "Reference",
+    "x": 162.775,
+    "y": 113.847,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.59,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved LED2 Reference text\",\"text\":{\"reference\":\"LED2\",\"field\":\"Reference\",\"position\":{\"x\":162.775,\"y\":113.847,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_J6",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J6",
+    "field": "Reference",
+    "x": 186.5,
+    "y": 155.833,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.301,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J6 Reference text\",\"text\":{\"reference\":\"J6\",\"field\":\"Reference\",\"position\":{\"x\":186.5,\"y\":155.833,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_H4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "H4",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.549,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved H4 Reference text\",\"text\":{\"reference\":\"H4\",\"field\":\"Reference\",\"position\":{\"x\":186.5,\"y\":156.35,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_H2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "H2",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.566,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved H2 Reference text\",\"text\":{\"reference\":\"H2\",\"field\":\"Reference\",\"position\":{\"x\":186.5,\"y\":99.35,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_H3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "H3",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.473,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved H3 Reference text\",\"text\":{\"reference\":\"H3\",\"field\":\"Reference\",\"position\":{\"x\":103.5,\"y\":156.35,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_H1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "H1",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.442,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved H1 Reference text\",\"text\":{\"reference\":\"H1\",\"field\":\"Reference\",\"position\":{\"x\":103.5,\"y\":99.35,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_LED1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "LED1",
+    "field": "Reference",
+    "x": 160.775,
+    "y": 103.847,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.647,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved LED1 Reference text\",\"text\":{\"reference\":\"LED1\",\"field\":\"Reference\",\"position\":{\"x\":160.775,\"y\":103.847,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_JP1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "JP1",
+    "field": "Reference",
+    "x": 180.5,
+    "y": 121.807,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.758,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved JP1 Reference text\",\"text\":{\"reference\":\"JP1\",\"field\":\"Reference\",\"position\":{\"x\":180.5,\"y\":121.807,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_J4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J4",
+    "field": "Reference",
+    "x": 183.653,
+    "y": 126.31,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.722,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J4 Reference text\",\"text\":{\"reference\":\"J4\",\"field\":\"Reference\",\"position\":{\"x\":183.653,\"y\":126.31,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_J5",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "J5",
+    "field": "Reference",
+    "x": 183.653,
+    "y": 137.31,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.217,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved J5 Reference text\",\"text\":{\"reference\":\"J5\",\"field\":\"Reference\",\"position\":{\"x\":183.653,\"y\":137.31,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP7",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP7",
+    "field": "Reference",
+    "x": 168.273,
+    "y": 125.0,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.702,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP7 Reference text\",\"text\":{\"reference\":\"TP7\",\"field\":\"Reference\",\"position\":{\"x\":168.273,\"y\":125,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_JP2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "JP2",
+    "field": "Reference",
+    "x": 176.5,
+    "y": 136.807,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.74,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved JP2 Reference text\",\"text\":{\"reference\":\"JP2\",\"field\":\"Reference\",\"position\":{\"x\":176.5,\"y\":136.807,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP4",
+    "field": "Reference",
+    "x": 126.0,
+    "y": 155.207,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.669,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP4 Reference text\",\"text\":{\"reference\":\"TP4\",\"field\":\"Reference\",\"position\":{\"x\":126,\"y\":155.207,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP8",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP8",
+    "field": "Reference",
+    "x": 178.5,
+    "y": 103.707,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.754,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP8 Reference text\",\"text\":{\"reference\":\"TP8\",\"field\":\"Reference\",\"position\":{\"x\":178.5,\"y\":103.707,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_FID1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "FID1",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.659,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved FID1 Reference text\",\"text\":{\"reference\":\"FID1\",\"field\":\"Reference\",\"position\":{\"x\":109,\"y\":123.05,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_FID3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "FID3",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.477,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved FID3 Reference text\",\"text\":{\"reference\":\"FID3\",\"field\":\"Reference\",\"position\":{\"x\":112,\"y\":148.05,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "hide_FID2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "FID2",
+    "field": "Reference",
+    "visible": false
+   },
+   "secs": 0.776,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved FID2 Reference text\",\"text\":{\"reference\":\"FID2\",\"field\":\"Reference\",\"position\":{\"x\":160,\"y\":148.05,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C12",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C12",
+    "field": "Reference",
+    "x": 113.598,
+    "y": 109.5,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.712,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C12 Reference text\",\"text\":{\"reference\":\"C12\",\"field\":\"Reference\",\"position\":{\"x\":113.598,\"y\":109.5,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP2",
+    "field": "Reference",
+    "x": 131.0,
+    "y": 120.207,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.73,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP2 Reference text\",\"text\":{\"reference\":\"TP2\",\"field\":\"Reference\",\"position\":{\"x\":131,\"y\":120.207,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP3",
+    "field": "Reference",
+    "x": 152.5,
+    "y": 104.207,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.414,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP3 Reference text\",\"text\":{\"reference\":\"TP3\",\"field\":\"Reference\",\"position\":{\"x\":152.5,\"y\":104.207,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP5",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP5",
+    "field": "Reference",
+    "x": 120.0,
+    "y": 155.207,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.348,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP5 Reference text\",\"text\":{\"reference\":\"TP5\",\"field\":\"Reference\",\"position\":{\"x\":120,\"y\":155.207,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP6",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP6",
+    "field": "Reference",
+    "x": 164.0,
+    "y": 133.707,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.659,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP6 Reference text\",\"text\":{\"reference\":\"TP6\",\"field\":\"Reference\",\"position\":{\"x\":164,\"y\":133.707,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_TP1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "TP1",
+    "field": "Reference",
+    "x": 114.5,
+    "y": 102.707,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.364,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved TP1 Reference text\",\"text\":{\"reference\":\"TP1\",\"field\":\"Reference\",\"position\":{\"x\":114.5,\"y\":102.707,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C6",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C6",
+    "field": "Reference",
+    "x": 167.5,
+    "y": 107.577,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.719,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C6 Reference text\",\"text\":{\"reference\":\"C6\",\"field\":\"Reference\",\"position\":{\"x\":167.5,\"y\":107.577,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C11",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C11",
+    "field": "Reference",
+    "x": 171.0,
+    "y": 131.923,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.502,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C11 Reference text\",\"text\":{\"reference\":\"C11\",\"field\":\"Reference\",\"position\":{\"x\":171,\"y\":131.923,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C10",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C10",
+    "field": "Reference",
+    "x": 167.5,
+    "y": 117.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.438,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C10 Reference text\",\"text\":{\"reference\":\"C10\",\"field\":\"Reference\",\"position\":{\"x\":167.5,\"y\":117.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C2",
+    "field": "Reference",
+    "x": 134.5,
+    "y": 107.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.468,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C2 Reference text\",\"text\":{\"reference\":\"C2\",\"field\":\"Reference\",\"position\":{\"x\":134.5,\"y\":107.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C7",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C7",
+    "field": "Reference",
+    "x": 174.5,
+    "y": 108.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.453,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C7 Reference text\",\"text\":{\"reference\":\"C7\",\"field\":\"Reference\",\"position\":{\"x\":174.5,\"y\":108.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C9",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C9",
+    "field": "Reference",
+    "x": 177.574,
+    "y": 110.5,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.634,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C9 Reference text\",\"text\":{\"reference\":\"C9\",\"field\":\"Reference\",\"position\":{\"x\":177.574,\"y\":110.5,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C5",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C5",
+    "field": "Reference",
+    "x": 136.0,
+    "y": 120.623,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.653,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C5 Reference text\",\"text\":{\"reference\":\"C5\",\"field\":\"Reference\",\"position\":{\"x\":136,\"y\":120.623,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C4",
+    "field": "Reference",
+    "x": 149.5,
+    "y": 116.877,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.798,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C4 Reference text\",\"text\":{\"reference\":\"C4\",\"field\":\"Reference\",\"position\":{\"x\":149.5,\"y\":116.877,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R18",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R18",
+    "field": "Reference",
+    "x": 117.2,
+    "y": 119.123,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.563,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R18 Reference text\",\"text\":{\"reference\":\"R18\",\"field\":\"Reference\",\"position\":{\"x\":117.2,\"y\":119.123,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R16",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R16",
+    "field": "Reference",
+    "x": 113.2,
+    "y": 111.577,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.896,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R16 Reference text\",\"text\":{\"reference\":\"R16\",\"field\":\"Reference\",\"position\":{\"x\":113.2,\"y\":111.577,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C8",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C8",
+    "field": "Reference",
+    "x": 182.5,
+    "y": 108.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.444,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C8 Reference text\",\"text\":{\"reference\":\"C8\",\"field\":\"Reference\",\"position\":{\"x\":182.5,\"y\":108.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R7",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R7",
+    "field": "Reference",
+    "x": 176.5,
+    "y": 117.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.463,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R7 Reference text\",\"text\":{\"reference\":\"R7\",\"field\":\"Reference\",\"position\":{\"x\":176.5,\"y\":117.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R4",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R4",
+    "field": "Reference",
+    "x": 165.5,
+    "y": 112.077,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.982,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R4 Reference text\",\"text\":{\"reference\":\"R4\",\"field\":\"Reference\",\"position\":{\"x\":165.5,\"y\":112.077,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C1",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C1",
+    "field": "Reference",
+    "x": 132.5,
+    "y": 111.923,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.868,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C1 Reference text\",\"text\":{\"reference\":\"C1\",\"field\":\"Reference\",\"position\":{\"x\":132.5,\"y\":111.923,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C3",
+    "field": "Reference",
+    "x": 147.5,
+    "y": 121.723,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.263,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C3 Reference text\",\"text\":{\"reference\":\"C3\",\"field\":\"Reference\",\"position\":{\"x\":147.5,\"y\":121.723,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_C13",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "C13",
+    "field": "Reference",
+    "x": 129.5,
+    "y": 111.177,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.916,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved C13 Reference text\",\"text\":{\"reference\":\"C13\",\"field\":\"Reference\",\"position\":{\"x\":129.5,\"y\":111.177,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R5",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R5",
+    "field": "Reference",
+    "x": 179.0,
+    "y": 116.923,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 1.023,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R5 Reference text\",\"text\":{\"reference\":\"R5\",\"field\":\"Reference\",\"position\":{\"x\":179,\"y\":116.923,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R12",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R12",
+    "field": "Reference",
+    "x": 176.5,
+    "y": 124.327,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.909,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R12 Reference text\",\"text\":{\"reference\":\"R12\",\"field\":\"Reference\",\"position\":{\"x\":176.5,\"y\":124.327,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R2",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R2",
+    "field": "Reference",
+    "x": 156.324,
+    "y": 113.0,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.719,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R2 Reference text\",\"text\":{\"reference\":\"R2\",\"field\":\"Reference\",\"position\":{\"x\":156.324,\"y\":113,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R8",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R8",
+    "field": "Reference",
+    "x": 181.0,
+    "y": 135.827,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.535,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R8 Reference text\",\"text\":{\"reference\":\"R8\",\"field\":\"Reference\",\"position\":{\"x\":181,\"y\":135.827,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R17",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R17",
+    "field": "Reference",
+    "x": 114.2,
+    "y": 116.423,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.482,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R17 Reference text\",\"text\":{\"reference\":\"R17\",\"field\":\"Reference\",\"position\":{\"x\":114.2,\"y\":116.423,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R9",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R9",
+    "field": "Reference",
+    "x": 181.0,
+    "y": 142.173,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.825,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R9 Reference text\",\"text\":{\"reference\":\"R9\",\"field\":\"Reference\",\"position\":{\"x\":181,\"y\":142.173,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R11",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R11",
+    "field": "Reference",
+    "x": 181.0,
+    "y": 131.173,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.757,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R11 Reference text\",\"text\":{\"reference\":\"R11\",\"field\":\"Reference\",\"position\":{\"x\":181,\"y\":131.173,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R15",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R15",
+    "field": "Reference",
+    "x": 174.348,
+    "y": 115.0,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.646,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R15 Reference text\",\"text\":{\"reference\":\"R15\",\"field\":\"Reference\",\"position\":{\"x\":174.348,\"y\":115,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R19",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R19",
+    "field": "Reference",
+    "x": 127.5,
+    "y": 116.023,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.687,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R19 Reference text\",\"text\":{\"reference\":\"R19\",\"field\":\"Reference\",\"position\":{\"x\":127.5,\"y\":116.023,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R10",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R10",
+    "field": "Reference",
+    "x": 178.577,
+    "y": 128.5,
+    "unit": "mm",
+    "rotation": 90,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.828,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R10 Reference text\",\"text\":{\"reference\":\"R10\",\"field\":\"Reference\",\"position\":{\"x\":178.577,\"y\":128.5,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R13",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R13",
+    "field": "Reference",
+    "x": 181.0,
+    "y": 148.827,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.713,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R13 Reference text\",\"text\":{\"reference\":\"R13\",\"field\":\"Reference\",\"position\":{\"x\":181,\"y\":148.827,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R14",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R14",
+    "field": "Reference",
+    "x": 181.0,
+    "y": 154.673,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.629,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R14 Reference text\",\"text\":{\"reference\":\"R14\",\"field\":\"Reference\",\"position\":{\"x\":181,\"y\":154.673,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R3",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R3",
+    "field": "Reference",
+    "x": 159.0,
+    "y": 124.473,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.754,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R3 Reference text\",\"text\":{\"reference\":\"R3\",\"field\":\"Reference\",\"position\":{\"x\":159,\"y\":124.473,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "ref_R6",
+   "name": "move_footprint_text",
+   "arguments": {
+    "reference": "R6",
+    "field": "Reference",
+    "x": 181.5,
+    "y": 116.827,
+    "unit": "mm",
+    "rotation": 0,
+    "layer": "F.SilkS",
+    "visible": true
+   },
+   "secs": 0.511,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved R6 Reference text\",\"text\":{\"reference\":\"R6\",\"field\":\"Reference\",\"position\":{\"x\":181.5,\"y\":116.827,\"unit\":\"mm\"},\"layer\":\"F.Silkscreen\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt1",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "SENSOR IF + PWR BOARD  REV 0.2.0",
+    "position": {
+     "x": 115.539,
+     "y": 127.4,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.485,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"SENSOR IF + PWR BOARD  REV 0.2.0\",\"position\":{\"x\":115.539,\"y\":127.4,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt2",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J1: 1=+5V IN  2=GND  (5V +-5%)",
+    "position": {
+     "x": 114.944,
+     "y": 129.15,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.574,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J1: 1=+5V IN  2=GND  (5V +-5%)\",\"position\":{\"x\":114.944,\"y\":129.15,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt3",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J2 ESP32: 1=3V3  2=GND",
+    "position": {
+     "x": 111.42,
+     "y": 130.9,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.475,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J2 ESP32: 1=3V3  2=GND\",\"position\":{\"x\":111.42,\"y\":130.9,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt4",
+   "name": "add_board_text",
+   "arguments": {
+    "text": " 3=IO26 TRIG   4=IO34 ECHO",
+    "position": {
+     "x": 112.849,
+     "y": 132.65,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.567,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\" 3=IO26 TRIG   4=IO34 ECHO\",\"position\":{\"x\":112.849,\"y\":132.65,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt5",
+   "name": "add_board_text",
+   "arguments": {
+    "text": " 5=IO21 SDA    6=IO22 SCL",
+    "position": {
+     "x": 112.396,
+     "y": 134.4,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.687,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\" 5=IO21 SDA    6=IO22 SCL\",\"position\":{\"x\":112.396,\"y\":134.4,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt6",
+   "name": "add_board_text",
+   "arguments": {
+    "text": " 7=IO17 TX     8=IO16 RX",
+    "position": {
+     "x": 111.825,
+     "y": 136.15,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.618,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\" 7=IO17 TX     8=IO16 RX\",\"position\":{\"x\":111.825,\"y\":136.15,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt7",
+   "name": "add_board_text",
+   "arguments": {
+    "text": " 9=IO32  10=IO33  11,12=GND",
+    "position": {
+     "x": 113.611,
+     "y": 137.9,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.489,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\" 9=IO32  10=IO33  11,12=GND\",\"position\":{\"x\":113.611,\"y\":137.9,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt8",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J3 SONAR: 1=+5V 2=TRIG 3=ECHO 4=GND",
+    "position": {
+     "x": 117.825,
+     "y": 139.65,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.444,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J3 SONAR: 1=+5V 2=TRIG 3=ECHO 4=GND\",\"position\":{\"x\":117.825,\"y\":139.65,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt9",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J4 UART: 1=GND 2=VCC 3=TX 4=RX",
+    "position": {
+     "x": 115.325,
+     "y": 141.4,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.5,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J4 UART: 1=GND 2=VCC 3=TX 4=RX\",\"position\":{\"x\":115.325,\"y\":141.4,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt10",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J5 I2C: 1=GND 2=3V3 3=SDA 4=SCL",
+    "position": {
+     "x": 115.611,
+     "y": 143.15,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.589,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J5 I2C: 1=GND 2=3V3 3=SDA 4=SCL\",\"position\":{\"x\":115.611,\"y\":143.15,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt11",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "J6 GP: 1=GND 2=3V3 3=IO32 4=IO33",
+    "position": {
+     "x": 116.039,
+     "y": 144.9,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.092,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"J6 GP: 1=GND 2=3V3 3=IO32 4=IO33\",\"position\":{\"x\":116.039,\"y\":144.9,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt12",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "JP1 UART VCC: 1-2=3V3  2-3=5V",
+    "position": {
+     "x": 114.754,
+     "y": 146.65,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.031,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"JP1 UART VCC: 1-2=3V3  2-3=5V\",\"position\":{\"x\":114.754,\"y\":146.65,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt13",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "JP2 I2C PULL-UP: CUT=OFF",
+    "position": {
+     "x": 124.958,
+     "y": 148.4,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.034,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"JP2 I2C PULL-UP: CUT=OFF\",\"position\":{\"x\":124.958,\"y\":148.4,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "txt14",
+   "name": "add_board_text",
+   "arguments": {
+    "text": "POWER THIS BOARD BEFORE/WITH ESP32",
+    "position": {
+     "x": 129.744,
+     "y": 150.15,
+     "unit": "mm"
+    },
+    "layer": "F.SilkS",
+    "size": 1.0,
+    "thickness": 0.15,
+    "rotation": 0
+   },
+   "secs": 0.034,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added text annotation\",\"text\":{\"text\":\"POWER THIS BOARD BEFORE/WITH ESP32\",\"position\":{\"x\":129.744,\"y\":150.15,\"unit\":\"mm\"},\"layer\":\"F.SilkS\",\"size\":1,\"thickness\":0.15,\"rotation\":0,\"mirror\":false},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "save",
+   "name": "save_project",
+   "arguments": {},
+   "secs": 0.03,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

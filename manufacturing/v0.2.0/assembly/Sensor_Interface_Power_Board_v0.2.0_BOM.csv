@@ -1,0 +1,34 @@
+Item,Qty,References,Value,Description,Manufacturer,MPN,Package,Mount,Side,DNP,Substitution
+1,3,C1 C3 C8,10uF,Unpolarized capacitor,Samsung Electro-Mechanics,CL10A106KP8NNNC,C_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+2,8,C2 C4 C5 C6 C7 C9 C10 C11,100nF,Unpolarized capacitor,Murata,GRM188R71C104KA01D,C_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+3,1,C12,1uF 50V,Unpolarized capacitor,Samsung Electro-Mechanics,CL10A105KB8NNNC,C_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+4,1,C13,47nF,Unpolarized capacitor,Samsung Electro-Mechanics,CL10B473KB8NNNC,C_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+5,1,J1,5V_IN,"Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Phoenix Contact,1715721,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",THT,Top,No,NO SUBSTITUTION without written approval
+6,1,J2,ESP32_IF,"Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)",Samtec,HTSW-112-07-T-S,PinHeader_1x12_P2.54mm_Vertical,THT,Top,No,NO SUBSTITUTION without written approval
+7,1,J3,ULTRASONIC,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",Samtec,HTSW-104-07-T-S,PinHeader_1x04_P2.54mm_Vertical,THT,Top,No,NO SUBSTITUTION without written approval
+8,1,J4,UART,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",Samtec,HTSW-104-07-T-S,PinHeader_1x04_P2.54mm_Vertical,THT,Top,No,NO SUBSTITUTION without written approval
+9,1,J5,I2C,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",Samtec,HTSW-104-07-T-S,PinHeader_1x04_P2.54mm_Vertical,THT,Top,No,NO SUBSTITUTION without written approval
+10,1,J6,GP_3V3,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",Samtec,HTSW-104-07-T-S,PinHeader_1x04_P2.54mm_Vertical,THT,Top,No,NO SUBSTITUTION without written approval
+11,1,LED1,RED 5V,Light emitting diode,Kingbright,WP7113ID,LED_D5.0mm,THT,Top,No,NO SUBSTITUTION without written approval
+12,1,LED2,GREEN 3V3,Light emitting diode,Kingbright,WP7113SGD,LED_D5.0mm,THT,Top,No,NO SUBSTITUTION without written approval
+13,1,R2,1.5k,Resistor,Panasonic,ERJ-3EKF1501V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+14,1,R3,680,Resistor,Panasonic,ERJ-3EKF6800V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+15,4,R4 R5 R7 R12,100k,Resistor,Panasonic,ERJ-3EKF1003V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+16,5,R6 R11 R13 R14 R15,1k,Resistor,Panasonic,ERJ-3EKF1001V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+17,2,R8 R9,2.2k,Resistor,Panasonic,ERJ-3EKF2201V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+18,1,R10,220,Resistor,Panasonic,ERJ-3EKF2200V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+19,1,R16,73.2k,Resistor,Panasonic,ERJ-3EKF7322V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+20,1,R17,5.9k,Resistor,Panasonic,ERJ-3EKF5901V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+21,1,R18,21.5k,Resistor,Panasonic,ERJ-3EKF2152V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+22,1,R19,20k,Resistor,Panasonic,ERJ-3EKF2002V,R_0603_1608Metric,SMT,Top,No,NO SUBSTITUTION without written approval
+23,1,TP1,VIN,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+24,1,TP2,+5V,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+25,1,TP3,+3V3,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+26,1,TP4,3V3_ESP,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+27,2,TP5 TP6,GND,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+28,1,TP7,ECHO_ESP,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+29,1,TP8,TRIG_5V,test point,Keystone Electronics,5015,TestPoint_Keystone_5015_Micro_Mini,SMT,Top,No,NO SUBSTITUTION without written approval
+30,1,U1,TLV1117LV33,"1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223",Texas Instruments,TLV1117LV33DCYR,SOT-223-3_TabPin2,SMT,Top,No,NO SUBSTITUTION without written approval
+31,2,U2 U4,SN74LVC1G17DBVR,"Single Schmitt Buffer Gate, Low-Voltage CMOS",Texas Instruments,SN74LVC1G17DBVR,SOT-23-5,SMT,Top,No,NO SUBSTITUTION without written approval
+32,1,U3,SN74LVC1T45DBVR,"Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6",Texas Instruments,SN74LVC1T45DBVR,SOT-23-6,SMT,Top,No,NO SUBSTITUTION without written approval
+33,1,U5,TPS26600PWPR,"60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16",Texas Instruments,TPS26600PWPR,TI_PWP0016A_HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm,SMT,Top,No,NO SUBSTITUTION without written approval

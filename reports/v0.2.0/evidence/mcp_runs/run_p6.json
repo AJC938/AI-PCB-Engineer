@@ -1,0 +1,104 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "board"
+ },
+ "started": "2026-11-09T05:24:36",
+ "initialize": {
+  "secs": 0.245,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 52,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "aux",
+   "name": "set_board_origin",
+   "arguments": {
+    "boardPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pcb",
+    "type": "aux",
+    "x": 100.0,
+    "y": 164.0,
+    "unit": "mm"
+   },
+   "secs": 1.505,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Set aux origin to (100.0, 164.0) mm in Sensor_Interface_Power_Board.kicad_pcb. Note: if this board is open in the KiCad GUI, a later GUI save will overwrite this file-based edit.\",\"origin\":{\"type\":\"aux\",\"x\":100,\"y\":164,\"unit\":\"mm\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "get",
+   "name": "get_board_origin",
+   "arguments": {
+    "boardPath": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pcb"
+   },
+   "secs": 0.088,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"aux\":{\"x\":100,\"y\":164},\"grid\":{\"x\":0,\"y\":0},\"unit\":\"mm\",\"_backend\":\"swig\",\"_realtime\":false}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

@@ -1,0 +1,605 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "board,component,routing,drc,export"
+ },
+ "started": "2026-11-09T05:15:16",
+ "initialize": {
+  "secs": 0.306,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 125,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "rotate_component",
+  "delete_component",
+  "edit_component",
+  "set_footprint_type",
+  "find_component",
+  "get_component_properties",
+  "add_component_annotation",
+  "group_components",
+  "replace_component",
+  "get_component_pads",
+  "get_pads",
+  "get_net_pads",
+  "get_component_geometry",
+  "get_component_list",
+  "get_pad_position",
+  "get_ratsnest",
+  "estimate_airwire_lengths",
+  "check_placement_clearance",
+  "move_footprint_text",
+  "place_component_array",
+  "align_components",
+  "check_courtyard_overlaps",
+  "suggest_placement",
+  "duplicate_component",
+  "hierarchical_place",
+  "add_net",
+  "route_trace",
+  "route_arc_trace",
+  "add_via",
+  "add_copper_pour",
+  "delete_trace",
+  "query_traces",
+  "query_zones",
+  "add_gnd_stitching_vias",
+  "get_nets_list",
+  "modify_trace",
+  "create_netclass",
+  "set_net_color",
+  "route_differential_pair",
+  "refill_zones",
+  "route_pad_to_pad",
+  "copy_routing_pattern",
+  "set_design_rules",
+  "get_design_rules",
+  "run_drc",
+  "assign_net_to_class",
+  "set_layer_constraints",
+  "check_clearance",
+  "get_drc_violations",
+  "export_gerber",
+  "export_pdf",
+  "export_svg",
+  "export_3d",
+  "export_bom",
+  "export_netlist",
+  "export_position_file",
+  "export_vrml",
+  "export_gerbers",
+  "export_drill",
+  "export_ipc2581",
+  "export_odb",
+  "export_ipcd356",
+  "export_gencad",
+  "export_pos",
+  "export_pcb_pdf",
+  "export_pcb_svg",
+  "export_pcb_dxf",
+  "export_gerber_single",
+  "export_3d_cli",
+  "export_sch_bom",
+  "export_sch_pdf",
+  "export_sch_svg",
+  "export_sch_dxf",
+  "export_sch_hpgl",
+  "export_sch_ps",
+  "export_sch_python_bom",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "open",
+   "name": "open_project",
+   "arguments": {
+    "filename": "%USERPROFILE%/dev/AI-PCB-Engineer/hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pro"
+   },
+   "secs": 3.63,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Opened project: Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "del_+3V3_P",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "+3V3_P",
+    "includeVias": true
+   },
+   "secs": 0.347,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 32 traces on net '+3V3_P'\",\n  \"deletedCount\": 32,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_+5V_P",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "+5V_P",
+    "includeVias": true
+   },
+   "secs": 0.604,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 46 traces on net '+5V_P'\",\n  \"deletedCount\": 46,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_3V3_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "3V3_ESP",
+    "includeVias": true
+   },
+   "secs": 0.522,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 49 traces on net '3V3_ESP'\",\n  \"deletedCount\": 49,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_EF_DVDT",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "EF_DVDT",
+    "includeVias": true
+   },
+   "secs": 0.784,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 6 traces on net 'EF_DVDT'\",\n  \"deletedCount\": 6,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_EF_ILIM",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "EF_ILIM",
+    "includeVias": true
+   },
+   "secs": 0.375,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 2 traces on net 'EF_ILIM'\",\n  \"deletedCount\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_EF_OVP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "EF_OVP",
+    "includeVias": true
+   },
+   "secs": 0.685,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 7 traces on net 'EF_OVP'\",\n  \"deletedCount\": 7,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_EF_RTN",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "EF_RTN",
+    "includeVias": true
+   },
+   "secs": 0.466,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 14 traces on net 'EF_RTN'\",\n  \"deletedCount\": 14,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_EF_UVLO",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "EF_UVLO",
+    "includeVias": true
+   },
+   "secs": 0.465,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 6 traces on net 'EF_UVLO'\",\n  \"deletedCount\": 6,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_GND",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "GND",
+    "includeVias": true
+   },
+   "secs": 0.755,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 66 traces on net 'GND'\",\n  \"deletedCount\": 66,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_GP_IO1",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "GP_IO1",
+    "includeVias": true
+   },
+   "secs": 0.523,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 2 traces on net 'GP_IO1'\",\n  \"deletedCount\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_GP_IO1_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "GP_IO1_ESP",
+    "includeVias": true
+   },
+   "secs": 0.606,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 3 traces on net 'GP_IO1_ESP'\",\n  \"deletedCount\": 3,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_GP_IO2",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "GP_IO2",
+    "includeVias": true
+   },
+   "secs": 0.69,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 2 traces on net 'GP_IO2'\",\n  \"deletedCount\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_GP_IO2_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "GP_IO2_ESP",
+    "includeVias": true
+   },
+   "secs": 0.653,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 3 traces on net 'GP_IO2_ESP'\",\n  \"deletedCount\": 3,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_I2C_PU",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "I2C_PU",
+    "includeVias": true
+   },
+   "secs": 0.573,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 4 traces on net 'I2C_PU'\",\n  \"deletedCount\": 4,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_I2C_SCL",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "I2C_SCL",
+    "includeVias": true
+   },
+   "secs": 0.855,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 8 traces on net 'I2C_SCL'\",\n  \"deletedCount\": 8,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_I2C_SDA",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "I2C_SDA",
+    "includeVias": true
+   },
+   "secs": 0.874,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 15 traces on net 'I2C_SDA'\",\n  \"deletedCount\": 15,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_LED1_A",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "LED1_A",
+    "includeVias": true
+   },
+   "secs": 0.842,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 7 traces on net 'LED1_A'\",\n  \"deletedCount\": 7,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_LED2_A",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "LED2_A",
+    "includeVias": true
+   },
+   "secs": 0.36,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 3 traces on net 'LED2_A'\",\n  \"deletedCount\": 3,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_RX",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_RX",
+    "includeVias": true
+   },
+   "secs": 0.958,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 2 traces on net 'UART_RX'\",\n  \"deletedCount\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_RX_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_RX_ESP",
+    "includeVias": true
+   },
+   "secs": 0.792,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 10 traces on net 'UART_RX_ESP'\",\n  \"deletedCount\": 10,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_RX_IN",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_RX_IN",
+    "includeVias": true
+   },
+   "secs": 0.759,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 11 traces on net 'UART_RX_IN'\",\n  \"deletedCount\": 11,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_TX",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_TX",
+    "includeVias": true
+   },
+   "secs": 0.825,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 2 traces on net 'UART_TX'\",\n  \"deletedCount\": 2,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_TX_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_TX_ESP",
+    "includeVias": true
+   },
+   "secs": 0.771,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 17 traces on net 'UART_TX_ESP'\",\n  \"deletedCount\": 17,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_UART_VCC",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "UART_VCC",
+    "includeVias": true
+   },
+   "secs": 0.649,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 5 traces on net 'UART_VCC'\",\n  \"deletedCount\": 5,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_ECHO_5V",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_ECHO_5V",
+    "includeVias": true
+   },
+   "secs": 0.782,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 6 traces on net 'US_ECHO_5V'\",\n  \"deletedCount\": 6,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_ECHO_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_ECHO_ESP",
+    "includeVias": true
+   },
+   "secs": 0.74,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 16 traces on net 'US_ECHO_ESP'\",\n  \"deletedCount\": 16,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_ECHO_IN",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_ECHO_IN",
+    "includeVias": true
+   },
+   "secs": 0.61,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 8 traces on net 'US_ECHO_IN'\",\n  \"deletedCount\": 8,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_TRIG_5V",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_TRIG_5V",
+    "includeVias": true
+   },
+   "secs": 0.6,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 14 traces on net 'US_TRIG_5V'\",\n  \"deletedCount\": 14,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_TRIG_B",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_TRIG_B",
+    "includeVias": true
+   },
+   "secs": 0.597,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 7 traces on net 'US_TRIG_B'\",\n  \"deletedCount\": 7,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_US_TRIG_ESP",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "US_TRIG_ESP",
+    "includeVias": true
+   },
+   "secs": 0.548,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 7 traces on net 'US_TRIG_ESP'\",\n  \"deletedCount\": 7,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "del_VIN_RAW",
+   "name": "delete_trace",
+   "arguments": {
+    "net": "VIN_RAW",
+    "includeVias": true
+   },
+   "secs": 0.632,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Deleted 14 traces on net 'VIN_RAW'\",\n  \"deletedCount\": 14,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "save",
+   "name": "save_project",
+   "arguments": {},
+   "secs": 0.386,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

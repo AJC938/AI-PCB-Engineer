@@ -1,0 +1,283 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "schematic,validation"
+ },
+ "started": "2026-11-09T05:00:57",
+ "initialize": {
+  "secs": 0.288,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 68,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "get_board_info",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "get_component_geometry",
+  "add_net",
+  "route_trace",
+  "create_schematic",
+  "add_schematic_component",
+  "delete_schematic_component",
+  "edit_schematic_component",
+  "set_schematic_component_property",
+  "remove_schematic_component_property",
+  "get_schematic_component",
+  "add_schematic_wire",
+  "add_schematic_net_label",
+  "add_no_connect",
+  "connect_to_net",
+  "get_net_connections",
+  "get_wire_connections",
+  "get_schematic_pin_locations",
+  "connect_passthrough",
+  "list_schematic_components",
+  "list_schematic_nets",
+  "list_schematic_wires",
+  "list_schematic_labels",
+  "move_schematic_component",
+  "rotate_schematic_component",
+  "annotate_schematic",
+  "delete_schematic_wire",
+  "delete_schematic_net_label",
+  "move_schematic_net_label",
+  "export_schematic_svg",
+  "export_schematic_pdf",
+  "get_schematic_view",
+  "run_erc",
+  "generate_netlist",
+  "sync_schematic_to_board",
+  "backannotate_footprints",
+  "create_board_from_schematic",
+  "get_schematic_view_region",
+  "get_net_at_point",
+  "list_schematic_texts",
+  "add_schematic_text",
+  "get_backend_state",
+  "check_kicad_ui",
+  "validate_schematic",
+  "validate_symbol_library"
+ ],
+ "steps": [
+  {
+   "label": "add_H1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:MountingHole",
+    "reference": "H1",
+    "value": "M3",
+    "position": {
+     "x": 152.4,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+   },
+   "secs": 1.878,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added H1 (Mechanical:MountingHole) to schematic"
+  },
+  {
+   "label": "add_H2",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:MountingHole",
+    "reference": "H2",
+    "value": "M3",
+    "position": {
+     "x": 165.1,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+   },
+   "secs": 0.472,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added H2 (Mechanical:MountingHole) to schematic"
+  },
+  {
+   "label": "add_H3",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:MountingHole",
+    "reference": "H3",
+    "value": "M3",
+    "position": {
+     "x": 177.8,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+   },
+   "secs": 0.442,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added H3 (Mechanical:MountingHole) to schematic"
+  },
+  {
+   "label": "add_H4",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:MountingHole",
+    "reference": "H4",
+    "value": "M3",
+    "position": {
+     "x": 190.5,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "MountingHole:MountingHole_3.2mm_M3"
+   },
+   "secs": 0.773,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added H4 (Mechanical:MountingHole) to schematic"
+  },
+  {
+   "label": "add_FID1",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:Fiducial",
+    "reference": "FID1",
+    "value": "Fiducial",
+    "position": {
+     "x": 210.82,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "Fiducial:Fiducial_1mm_Mask2mm"
+   },
+   "secs": 1.777,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added FID1 (Mechanical:Fiducial) to schematic"
+  },
+  {
+   "label": "add_FID2",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:Fiducial",
+    "reference": "FID2",
+    "value": "Fiducial",
+    "position": {
+     "x": 223.52,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "Fiducial:Fiducial_1mm_Mask2mm"
+   },
+   "secs": 1.244,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added FID2 (Mechanical:Fiducial) to schematic"
+  },
+  {
+   "label": "add_FID3",
+   "name": "add_schematic_component",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch",
+    "symbol": "Mechanical:Fiducial",
+    "reference": "FID3",
+    "value": "Fiducial",
+    "position": {
+     "x": 236.22,
+     "y": 248.92
+    },
+    "angle": 0,
+    "footprint": "Fiducial:Fiducial_1mm_Mask2mm"
+   },
+   "secs": 0.751,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "Successfully added FID3 (Mechanical:Fiducial) to schematic"
+  },
+  {
+   "label": "validate",
+   "name": "validate_schematic",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 0.755,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"valid\": true,\n  \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_sch\",\n  \"message\": \"Sensor_Interface_Power_Board.kicad_sch is valid\",\n  \"errorCount\": 0,\n  \"warningCount\": 0,\n  \"issues\": [],\n  \"kicadCli\": {\n    \"ran\": true,\n    \"ok\": true,\n    \"exitCode\": 0,\n    \"output\": \"Successfully saved schematic file using the latest format\"\n  },\n  \"componentCount\": 64,\n  \"semanticChecksRan\": true,\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "erc",
+   "name": "run_erc",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 4.096,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "ERC result: 0 violation(s)\n  Errors: 0  Warnings: 0  Info: 0"
+  },
+  {
+   "label": "netlist",
+   "name": "generate_netlist",
+   "arguments": {
+    "schematicPath": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch"
+   },
+   "secs": 0.626,
+   "isError": null,
+   "rpc_error": null,
+   "success": null,
+   "backend": null,
+   "text": "=== Netlist for %USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_sch ===\n\nComponents (61):\n  C1: 10uF (Capacitor_SMD:C_0603_1608Metric)\n  C2: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C3: 10uF (Capacitor_SMD:C_0603_1608Metric)\n  C4: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C5: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C6: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C7: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C8: 10uF (Capacitor_SMD:C_0603_1608Metric)\n  C9: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C10: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C11: 100nF (Capacitor_SMD:C_0603_1608Metric)\n  C12: 1uF 50V (Capacitor_SMD:C_0603_1608Metric)\n  C13: 47nF (Capacitor_SMD:C_0603_1608Metric)\n  FID1: Fiducial (Fiducial:Fiducial_1mm_Mask2mm)\n  FID2: Fiducial (Fiducial:Fiducial_1mm_Mask2mm)\n  FID3: Fiducial (Fiducial:Fiducial_1mm_Mask2mm)\n  H1: M3 (MountingHole:MountingHole_3.2mm_M3)\n  H2: M3 (MountingHole:MountingHole_3.2mm_M3)\n  H3: M3 (MountingHole:MountingHole_3.2mm_M3)\n  H4: M3 (MountingHole:MountingHole_3.2mm_M3)\n  J1: 5V_IN (TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal)\n  J2: ESP32_IF (Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical)\n  J3: ULTRASONIC (Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical)\n  J4: UART (Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical)\n  J5: I2C (Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical)\n  J6: GP_3V3 (Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical)\n  JP1: UART_VCC_SEL (Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm)\n  JP2: I2C_PU_EN (Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm)\n  LED1: RED 5V (LED_THT:LED_D5.0mm)\n  LED2: GREEN 3V3 (LED_THT:LED_D5.0mm)\n  R2: 1.5k (Resistor_SMD:R_0603_1608Metric)\n  R3: 680 (Resistor_SMD:R_0603_1608Metric)\n  R4: 100k (Resistor_SMD:R_0603_1608Metric)\n  R5: 100k (Resistor_SMD:R_0603_1608Metric)\n  R6: 1k (Resistor_SMD:R_0603_1608Metric)\n  R7: 100k (Resistor_SMD:R_0603_1608Metric)\n  R8: 2.2k (Resistor_SMD:R_0603_1608Metric)\n  R9: 2.2k (Resistor_SMD:R_0603_1608Metric)\n  R10: 220 (Resistor_SMD:R_0603_1608Metric)\n  R11: 1k (Resistor_SMD:R_0603_1608Metric)\n  R12: 100k (Resistor_SMD:R_0603_1608Metric)\n  R13: 1k (Resistor_SMD:R_0603_1608Metric)\n  R14: 1k (Resistor_SMD:R_0603_1608Metric)\n  R15: 1k (Resistor_SMD:R_0603_1608Metric)\n  R16: 73.2k (Resistor_SMD:R_0603_1608Metric)\n  R17: 5.9k (Resistor_SMD:R_0603_1608Metric)\n  R18: 21.5k (Resistor_SMD:R_0603_1608Metric)\n  R19: 20k (Resistor_SMD:R_0603_1608Metric)\n  TP1: VIN (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP2: +5V (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP3: +3V3 (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP4: 3V3_ESP (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP5: GND (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP6: GND (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP7: ECHO_ESP (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  TP8: TRIG_5V (TestPoint:TestPoint_Keystone_5015_Micro_Mini)\n  U1: TLV1117LV33 (Package_TO_SOT_SMD:SOT-223-3_TabPin2)\n  U2: SN74LVC1G17DBVR (Package_TO_SOT_SMD:SOT-23-5)\n  U3: SN74LVC1T45DBVR (Package_TO_SOT_SMD:SOT-23-6)\n  U4: SN74LVC1G17DBVR (Package_TO_SOT_SMD:SOT-23-5)\n  U5: TPS26600PWPR (Sensor_Interface_Power_Board:TI_PWP0016A_HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm)\n\nNets (38):\n  +3V3_P: C3/1, C4/1, J5/2, J6/2, JP1/1, R3/1, TP3/1, U1/2\n  +5V_P: C1/1, C2/1, C5/1, C7/1, C8/1, C9/1, J3/1, JP1/3, R2/1, TP2/1, U1/3, U3/6, U5/15, U5/16\n  3V3_ESP: C10/1, C11/1, C6/1, J2/1, JP2/1, R12/2, TP4/1, U2/5, U3/1, U3/5, U4/5\n  EF_DVDT: C13/1, U5/12\n  EF_ILIM: R19/1, U5/11\n  EF_OVP: R17/2, R18/1, U5/5\n  EF_RTN: C13/2, R18/2, R19/2, U5/17, U5/6, U5/8\n  EF_UVLO: R16/2, R17/1, U5/3\n  GND: C1/2, C10/2, C11/2, C12/2, C2/2, C3/2, C4/2, C5/2, C6/2, C7/2, C8/2, C9/2, J1/2, J2/11, J2/12, J2/2, J3/4, J4/1, J5/1, J6/1, LED1/1, LED2/1, R4/2, R5/2, R7/2, TP5/1, TP6/1, U1/1, U2/3, U3/2, U4/3, U5/9\n  GP_IO1: J6/3, R13/1\n  GP_IO1_ESP: J2/9, R13/2\n  GP_IO2: J6/4, R14/1\n  GP_IO2_ESP: J2/10, R14/2\n  I2C_PU: JP2/2, R8/1, R9/1\n  I2C_SCL: J2/6, J5/4, R9/2\n  I2C_SDA: J2/5, J5/3, R8/2\n  LED1_A: LED1/2, R2/2\n  LED2_A: LED2/2, R3/2\n  UART_RX: J4/4, R11/1\n  UART_RX_ESP: J2/8, U4/4\n  UART_RX_IN: R11/2, R12/1, U4/2\n  UART_TX: J4/3, R10/2\n  UART_TX_ESP: J2/7, R10/1\n  UART_VCC: J4/2, JP1/2\n  US_ECHO_5V: J3/3, R6/1\n  US_ECHO_ESP: J2/4, TP7/1, U2/4\n  US_ECHO_IN: R6/2, R7/1, U2/2\n  US_TRIG_5V: J3/2, R15/2, R5/1, TP8/1\n  US_TRIG_B: R15/1, U3/4\n  US_TRIG_ESP: J2/3, R4/1, U3/3\n  VIN_RAW: C12/1, J1/1, R16/1, TP1/1, U5/1, U5/2\n  unconnected-(U2-NC-Pad1): U2/1\n  unconnected-(U4-NC-Pad1): U4/1\n  unconnected-(U5-IMON-Pad10): U5/10\n  unconnected-(U5-NC-Pad4): U5/4\n  unconnected-(U5-NC-Pad13): U5/13\n  unconnected-(U5-~{FLT}-Pad14): U5/14\n  unconnected-(U5-~{SHDN}-Pad7): U5/7"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

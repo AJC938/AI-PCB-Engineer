@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>%USERPROFILE%\dev\AI-PCB-Engineer\hardware\kicad\Sensor_Interface_Power_Board\Sensor_Interface_Power_Board.kicad_sch</source>
-    <date>2026-11-09T04:53:55</date>
+    <date>2026-11-09T05:29:25</date>
     <tool>Eeschema 10.0.8</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -414,6 +414,167 @@
         </unit>
       </units>
     </comp>
+    <comp ref="FID1">
+      <value>Fiducial</value>
+      <footprint>Fiducial:Fiducial_1mm_Mask2mm</footprint>
+      <description>Fiducial Marker</description>
+      <fields>
+        <field name="Footprint">Fiducial:Fiducial_1mm_Mask2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Fiducial Marker</field>
+      </fields>
+      <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26d6d264-831c-4fd1-9c9b-8bcb2a0e604e</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FID2">
+      <value>Fiducial</value>
+      <footprint>Fiducial:Fiducial_1mm_Mask2mm</footprint>
+      <description>Fiducial Marker</description>
+      <fields>
+        <field name="Footprint">Fiducial:Fiducial_1mm_Mask2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Fiducial Marker</field>
+      </fields>
+      <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e4cdbdd-76ac-4b32-b590-ab542d027abc</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FID3">
+      <value>Fiducial</value>
+      <footprint>Fiducial:Fiducial_1mm_Mask2mm</footprint>
+      <description>Fiducial Marker</description>
+      <fields>
+        <field name="Footprint">Fiducial:Fiducial_1mm_Mask2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Fiducial Marker</field>
+      </fields>
+      <libsource lib="Mechanical" part="Fiducial" description="Fiducial Marker"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="fiducial marker"/>
+      <property name="ki_fp_filters" value="Fiducial*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>66dde617-801f-455f-a0e8-0a83e681277e</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>415f8bf4-373d-4dfc-8ef7-c562624e299f</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c53bf1c-b91d-4301-be5f-f7633b773414</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H3">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fc3ca21-d048-4a4b-a563-8155d875083f</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H4">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>788607e9-bac4-4927-ae0a-9d17c2beffe3</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
     <comp ref="J1">
       <value>5V_IN</value>
       <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
@@ -624,6 +785,7 @@
       <libsource lib="Jumper" part="SolderJumper_3_Bridged12" description="3-pole Solder Jumper, pins 1+2 closed/bridged"/>
       <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
       <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <property name="ki_keywords" value="Solder Jumper SPDT"/>
       <property name="ki_fp_filters" value="SolderJumper*Bridged12*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -650,6 +812,7 @@
       <libsource lib="Jumper" part="SolderJumper_2_Bridged" description="Solder Jumper, 2-pole, closed/bridged"/>
       <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
       <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="exclude_from_bom"/>
       <property name="ki_keywords" value="solder jumper SPST"/>
       <property name="ki_fp_filters" value="SolderJumper*Bridged*"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1889,6 +2052,32 @@
         <pin num="6" name="VCCB" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Mechanical" part="Fiducial">
+      <description>Fiducial Marker</description>
+      <footprints>
+        <fp>Fiducial*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">FID</field>
+        <field name="Value">Fiducial</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Fiducial Marker</field>
+      </fields>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+    </libpart>
     <libpart lib="Power_Management" part="TPS26600PWP">
       <description>60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16</description>
       <docs>https://www.ti.com/lit/ds/symlink/tps2660.pdf</docs>
@@ -1960,6 +2149,9 @@
     </library>
     <library logical="Logic_LevelTranslator">
       <uri>${KICAD10_SYMBOL_DIR}/Logic_LevelTranslator.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>${KICAD10_SYMBOL_DIR}/Mechanical.kicad_sym</uri>
     </library>
     <library logical="Power_Management">
       <uri>${KICAD10_SYMBOL_DIR}/Power_Management.kicad_sym</uri>

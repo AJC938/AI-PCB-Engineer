@@ -1,0 +1,335 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "board,component,routing,drc,export"
+ },
+ "started": "2026-11-09T05:12:36",
+ "initialize": {
+  "secs": 0.31,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 125,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "rotate_component",
+  "delete_component",
+  "edit_component",
+  "set_footprint_type",
+  "find_component",
+  "get_component_properties",
+  "add_component_annotation",
+  "group_components",
+  "replace_component",
+  "get_component_pads",
+  "get_pads",
+  "get_net_pads",
+  "get_component_geometry",
+  "get_component_list",
+  "get_pad_position",
+  "get_ratsnest",
+  "estimate_airwire_lengths",
+  "check_placement_clearance",
+  "move_footprint_text",
+  "place_component_array",
+  "align_components",
+  "check_courtyard_overlaps",
+  "suggest_placement",
+  "duplicate_component",
+  "hierarchical_place",
+  "add_net",
+  "route_trace",
+  "route_arc_trace",
+  "add_via",
+  "add_copper_pour",
+  "delete_trace",
+  "query_traces",
+  "query_zones",
+  "add_gnd_stitching_vias",
+  "get_nets_list",
+  "modify_trace",
+  "create_netclass",
+  "set_net_color",
+  "route_differential_pair",
+  "refill_zones",
+  "route_pad_to_pad",
+  "copy_routing_pattern",
+  "set_design_rules",
+  "get_design_rules",
+  "run_drc",
+  "assign_net_to_class",
+  "set_layer_constraints",
+  "check_clearance",
+  "get_drc_violations",
+  "export_gerber",
+  "export_pdf",
+  "export_svg",
+  "export_3d",
+  "export_bom",
+  "export_netlist",
+  "export_position_file",
+  "export_vrml",
+  "export_gerbers",
+  "export_drill",
+  "export_ipc2581",
+  "export_odb",
+  "export_ipcd356",
+  "export_gencad",
+  "export_pos",
+  "export_pcb_pdf",
+  "export_pcb_svg",
+  "export_pcb_dxf",
+  "export_gerber_single",
+  "export_3d_cli",
+  "export_sch_bom",
+  "export_sch_pdf",
+  "export_sch_svg",
+  "export_sch_dxf",
+  "export_sch_hpgl",
+  "export_sch_ps",
+  "export_sch_python_bom",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "open",
+   "name": "open_project",
+   "arguments": {
+    "filename": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_pro"
+   },
+   "secs": 2.771,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Opened project: Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "pour0",
+   "name": "add_copper_pour",
+   "arguments": {
+    "layer": "F.Cu",
+    "net": "+3V3_P",
+    "clearance": 0.3,
+    "outline": [
+     {
+      "x": 142.0,
+      "y": 104.0
+     },
+     {
+      "x": 157.0,
+      "y": 104.0
+     },
+     {
+      "x": 157.0,
+      "y": 122.5
+     },
+     {
+      "x": 151.0,
+      "y": 122.5
+     },
+     {
+      "x": 151.0,
+      "y": 117.4
+     },
+     {
+      "x": 146.0,
+      "y": 117.4
+     },
+     {
+      "x": 146.0,
+      "y": 122.5
+     },
+     {
+      "x": 142.0,
+      "y": 122.5
+     }
+    ]
+   },
+   "secs": 0.75,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added copper pour\",\n  \"pour\": {\n    \"layer\": \"F.Cu\",\n    \"net\": \"+3V3_P\",\n    \"clearance\": 0.3,\n    \"minWidth\": 0.2,\n    \"priority\": 0,\n    \"fillType\": \"solid\",\n    \"pointCount\": 8\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "pour1",
+   "name": "add_copper_pour",
+   "arguments": {
+    "layer": "F.Cu",
+    "net": "EF_RTN",
+    "clearance": 0.3,
+    "outline": [
+     {
+      "x": 116.2,
+      "y": 116.9
+     },
+     {
+      "x": 131.0,
+      "y": 116.9
+     },
+     {
+      "x": 131.0,
+      "y": 119.6
+     },
+     {
+      "x": 116.2,
+      "y": 119.6
+     }
+    ]
+   },
+   "secs": 0.466,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added copper pour\",\n  \"pour\": {\n    \"layer\": \"F.Cu\",\n    \"net\": \"EF_RTN\",\n    \"clearance\": 0.3,\n    \"minWidth\": 0.2,\n    \"priority\": 0,\n    \"fillType\": \"solid\",\n    \"pointCount\": 4\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "pour2",
+   "name": "add_copper_pour",
+   "arguments": {
+    "layer": "F.Cu",
+    "net": "GND",
+    "clearance": 0.3,
+    "outline": [
+     {
+      "x": 100.0,
+      "y": 100.0
+     },
+     {
+      "x": 112.0,
+      "y": 100.0
+     },
+     {
+      "x": 112.0,
+      "y": 124.0
+     },
+     {
+      "x": 157.5,
+      "y": 124.0
+     },
+     {
+      "x": 157.5,
+      "y": 100.0
+     },
+     {
+      "x": 190.0,
+      "y": 100.0
+     },
+     {
+      "x": 190.0,
+      "y": 164.0
+     },
+     {
+      "x": 100.0,
+      "y": 164.0
+     }
+    ]
+   },
+   "secs": 0.735,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added copper pour\",\n  \"pour\": {\n    \"layer\": \"F.Cu\",\n    \"net\": \"GND\",\n    \"clearance\": 0.3,\n    \"minWidth\": 0.2,\n    \"priority\": 0,\n    \"fillType\": \"solid\",\n    \"pointCount\": 8\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "pour3",
+   "name": "add_copper_pour",
+   "arguments": {
+    "layer": "B.Cu",
+    "net": "GND",
+    "clearance": 0.3,
+    "outline": [
+     {
+      "x": 100.0,
+      "y": 100.0
+     },
+     {
+      "x": 190.0,
+      "y": 100.0
+     },
+     {
+      "x": 190.0,
+      "y": 164.0
+     },
+     {
+      "x": 100.0,
+      "y": 164.0
+     }
+    ]
+   },
+   "secs": 0.293,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Added copper pour\",\n  \"pour\": {\n    \"layer\": \"B.Cu\",\n    \"net\": \"GND\",\n    \"clearance\": 0.3,\n    \"minWidth\": 0.2,\n    \"priority\": 0,\n    \"fillType\": \"solid\",\n    \"pointCount\": 4\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  },
+  {
+   "label": "save",
+   "name": "save_project",
+   "arguments": {},
+   "secs": 0.474,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

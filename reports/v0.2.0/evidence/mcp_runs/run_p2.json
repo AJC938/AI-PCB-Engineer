@@ -1,0 +1,1372 @@
+{
+ "overrides": {
+  "KICAD_BACKEND": "swig",
+  "KICAD_MCP_TOOLBOXES": "board,component,routing,drc,export"
+ },
+ "started": "2026-11-09T05:02:24",
+ "initialize": {
+  "secs": 0.257,
+  "serverInfo": {
+   "name": "kicad-mcp-server",
+   "version": "2.8.3",
+   "description": "MCP server for KiCAD PCB design operations"
+  }
+ },
+ "tool_count": 125,
+ "tools": [
+  "search_tools",
+  "list_toolboxes",
+  "open_toolbox",
+  "close_toolbox",
+  "create_project",
+  "open_project",
+  "open_board",
+  "reload_board",
+  "close_project",
+  "save_project",
+  "save_board",
+  "save_as",
+  "is_dirty",
+  "discard_or_reload",
+  "get_project_info",
+  "snapshot_project",
+  "set_board_size",
+  "set_board_origin",
+  "get_board_origin",
+  "add_layer",
+  "set_active_layer",
+  "get_board_info",
+  "get_layer_list",
+  "add_board_outline",
+  "clear_board_outline",
+  "replace_board_outline",
+  "list_graphics",
+  "delete_graphic",
+  "update_graphic",
+  "add_mounting_hole",
+  "add_board_text",
+  "add_zone",
+  "get_board_extents",
+  "get_board_2d_view",
+  "import_svg_logo",
+  "place_component",
+  "move_component",
+  "batch_move_components",
+  "rotate_component",
+  "delete_component",
+  "edit_component",
+  "set_footprint_type",
+  "find_component",
+  "get_component_properties",
+  "add_component_annotation",
+  "group_components",
+  "replace_component",
+  "get_component_pads",
+  "get_pads",
+  "get_net_pads",
+  "get_component_geometry",
+  "get_component_list",
+  "get_pad_position",
+  "get_ratsnest",
+  "estimate_airwire_lengths",
+  "check_placement_clearance",
+  "move_footprint_text",
+  "place_component_array",
+  "align_components",
+  "check_courtyard_overlaps",
+  "suggest_placement",
+  "duplicate_component",
+  "hierarchical_place",
+  "add_net",
+  "route_trace",
+  "route_arc_trace",
+  "add_via",
+  "add_copper_pour",
+  "delete_trace",
+  "query_traces",
+  "query_zones",
+  "add_gnd_stitching_vias",
+  "get_nets_list",
+  "modify_trace",
+  "create_netclass",
+  "set_net_color",
+  "route_differential_pair",
+  "refill_zones",
+  "route_pad_to_pad",
+  "copy_routing_pattern",
+  "set_design_rules",
+  "get_design_rules",
+  "run_drc",
+  "assign_net_to_class",
+  "set_layer_constraints",
+  "check_clearance",
+  "get_drc_violations",
+  "export_gerber",
+  "export_pdf",
+  "export_svg",
+  "export_3d",
+  "export_bom",
+  "export_netlist",
+  "export_position_file",
+  "export_vrml",
+  "export_gerbers",
+  "export_drill",
+  "export_ipc2581",
+  "export_odb",
+  "export_ipcd356",
+  "export_gencad",
+  "export_pos",
+  "export_pcb_pdf",
+  "export_pcb_svg",
+  "export_pcb_dxf",
+  "export_gerber_single",
+  "export_3d_cli",
+  "export_sch_bom",
+  "export_sch_pdf",
+  "export_sch_svg",
+  "export_sch_dxf",
+  "export_sch_hpgl",
+  "export_sch_ps",
+  "export_sch_python_bom",
+  "add_schematic_component",
+  "add_schematic_net_label",
+  "connect_to_net",
+  "connect_passthrough",
+  "list_schematic_components",
+  "annotate_schematic",
+  "sync_schematic_to_board",
+  "create_board_from_schematic",
+  "get_backend_state",
+  "check_kicad_ui",
+  "launch_kicad_ui"
+ ],
+ "steps": [
+  {
+   "label": "open",
+   "name": "open_project",
+   "arguments": {
+    "filename": "%USERPROFILE%\\dev\\AI-PCB-Engineer\\hardware\\kicad\\Sensor_Interface_Power_Board\\Sensor_Interface_Power_Board.kicad_pro"
+   },
+   "secs": 2.631,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Opened project: Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pro\",\n    \"boardPath\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false,\n  \"sessionBackend\": \"swig\"\n}"
+  },
+  {
+   "label": "rules",
+   "name": "set_design_rules",
+   "arguments": {
+    "clearance": 0.2,
+    "trackWidth": 0.25,
+    "viaDiameter": 0.6,
+    "viaDrill": 0.3,
+    "minTrackWidth": 0.2,
+    "minViaDiameter": 0.6,
+    "minViaDrill": 0.3,
+    "minHoleDiameter": 0.3,
+    "requireCourtyard": true,
+    "courtyardClearance": 0.0
+   },
+   "secs": 0.007,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Updated design rules\",\"rules\":{\"clearance\":0.2,\"trackWidth\":0.25,\"viaDiameter\":0.6,\"viaDrill\":0.3,\"microViaDiameter\":0.2,\"microViaDrill\":0.1,\"minTrackWidth\":0.2,\"minViaDiameter\":0.6,\"minThroughDrill\":0.3,\"minMicroViaDiameter\":0.2,\"minMicroViaDrill\":0.1,\"holeClearance\":0.25,\"holeToHoleMin\":0.25,\"viasMinAnnularWidth\":0.1},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "outline",
+   "name": "add_board_outline",
+   "arguments": {
+    "shape": "rectangle",
+    "params": {
+     "x": 100.0,
+     "y": 100.0,
+     "width": 90.0,
+     "height": 64.0,
+     "unit": "mm"
+    }
+   },
+   "secs": 0.654,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Added board outline: rectangle\",\"outline\":{\"shape\":\"rectangle\",\"width\":90,\"height\":64,\"center\":{\"x\":145,\"y\":132,\"unit\":\"mm\"},\"radius\":null,\"cornerRadius\":0,\"points\":[]},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J1",
+    "position": {
+     "x": 105.6,
+     "y": 111.0,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.508,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J1\",\"component\":{\"reference\":\"J1\",\"position\":{\"x\":105.6,\"y\":111,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP1",
+    "position": {
+     "x": 114.5,
+     "y": 105.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.482,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP1\",\"component\":{\"reference\":\"TP1\",\"position\":{\"x\":114.5,\"y\":105,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C12",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C12",
+    "position": {
+     "x": 116.0,
+     "y": 109.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.534,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C12\",\"component\":{\"reference\":\"C12\",\"position\":{\"x\":116,\"y\":109.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_U5",
+   "name": "move_component",
+   "arguments": {
+    "reference": "U5",
+    "position": {
+     "x": 122.0,
+     "y": 112.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.57,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: U5\",\"component\":{\"reference\":\"U5\",\"position\":{\"x\":122,\"y\":112,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R16",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R16",
+    "position": {
+     "x": 113.2,
+     "y": 114.0,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.429,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R16\",\"component\":{\"reference\":\"R16\",\"position\":{\"x\":113.2,\"y\":114,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R17",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R17",
+    "position": {
+     "x": 115.2,
+     "y": 114.0,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.88,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R17\",\"component\":{\"reference\":\"R17\",\"position\":{\"x\":115.2,\"y\":114,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R18",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R18",
+    "position": {
+     "x": 117.2,
+     "y": 116.7,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.738,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R18\",\"component\":{\"reference\":\"R18\",\"position\":{\"x\":117.2,\"y\":116.7,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R19",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R19",
+    "position": {
+     "x": 127.5,
+     "y": 113.6,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.421,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R19\",\"component\":{\"reference\":\"R19\",\"position\":{\"x\":127.5,\"y\":113.6,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C13",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C13",
+    "position": {
+     "x": 129.5,
+     "y": 113.6,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.684,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C13\",\"component\":{\"reference\":\"C13\",\"position\":{\"x\":129.5,\"y\":113.6,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C1",
+    "position": {
+     "x": 132.5,
+     "y": 109.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.523,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C1\",\"component\":{\"reference\":\"C1\",\"position\":{\"x\":132.5,\"y\":109.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C2",
+    "position": {
+     "x": 134.5,
+     "y": 109.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.546,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C2\",\"component\":{\"reference\":\"C2\",\"position\":{\"x\":134.5,\"y\":109.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP2",
+    "position": {
+     "x": 131.5,
+     "y": 119.8,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.499,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP2\",\"component\":{\"reference\":\"TP2\",\"position\":{\"x\":131.5,\"y\":119.8,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_U1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "U1",
+    "position": {
+     "x": 140.5,
+     "y": 112.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.629,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: U1\",\"component\":{\"reference\":\"U1\",\"position\":{\"x\":140.5,\"y\":112,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C5",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C5",
+    "position": {
+     "x": 136.0,
+     "y": 118.2,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.648,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C5\",\"component\":{\"reference\":\"C5\",\"position\":{\"x\":136,\"y\":118.2,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C3",
+    "position": {
+     "x": 147.5,
+     "y": 118.8,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.402,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C3\",\"component\":{\"reference\":\"C3\",\"position\":{\"x\":147.5,\"y\":118.8,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C4",
+    "position": {
+     "x": 149.5,
+     "y": 118.8,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.66,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C4\",\"component\":{\"reference\":\"C4\",\"position\":{\"x\":149.5,\"y\":118.8,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP3",
+    "position": {
+     "x": 152.5,
+     "y": 106.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.647,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP3\",\"component\":{\"reference\":\"TP3\",\"position\":{\"x\":152.5,\"y\":106.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_LED1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "LED1",
+    "position": {
+     "x": 159.5,
+     "y": 108.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.87,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: LED1\",\"component\":{\"reference\":\"LED1\",\"position\":{\"x\":159.5,\"y\":108,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R2",
+    "position": {
+     "x": 159.0,
+     "y": 113.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.753,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R2\",\"component\":{\"reference\":\"R2\",\"position\":{\"x\":159,\"y\":113,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_LED2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "LED2",
+    "position": {
+     "x": 159.5,
+     "y": 118.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.813,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: LED2\",\"component\":{\"reference\":\"LED2\",\"position\":{\"x\":159.5,\"y\":118,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R3",
+    "position": {
+     "x": 159.0,
+     "y": 122.8,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.896,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R3\",\"component\":{\"reference\":\"R3\",\"position\":{\"x\":159,\"y\":122.8,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J3",
+    "position": {
+     "x": 186.5,
+     "y": 109.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.681,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J3\",\"component\":{\"reference\":\"J3\",\"position\":{\"x\":186.5,\"y\":109.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C8",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C8",
+    "position": {
+     "x": 181.5,
+     "y": 110.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.763,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C8\",\"component\":{\"reference\":\"C8\",\"position\":{\"x\":181.5,\"y\":110.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C9",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C9",
+    "position": {
+     "x": 179.5,
+     "y": 110.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.75,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C9\",\"component\":{\"reference\":\"C9\",\"position\":{\"x\":179.5,\"y\":110.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_U3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "U3",
+    "position": {
+     "x": 171.5,
+     "y": 112.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.601,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: U3\",\"component\":{\"reference\":\"U3\",\"position\":{\"x\":171.5,\"y\":112,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C6",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C6",
+    "position": {
+     "x": 167.5,
+     "y": 110.0,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.587,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C6\",\"component\":{\"reference\":\"C6\",\"position\":{\"x\":167.5,\"y\":110,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C7",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C7",
+    "position": {
+     "x": 175.5,
+     "y": 110.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.487,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C7\",\"component\":{\"reference\":\"C7\",\"position\":{\"x\":175.5,\"y\":110.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R4",
+    "position": {
+     "x": 167.5,
+     "y": 114.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.581,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R4\",\"component\":{\"reference\":\"R4\",\"position\":{\"x\":167.5,\"y\":114.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R15",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R15",
+    "position": {
+     "x": 177.5,
+     "y": 114.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.544,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R15\",\"component\":{\"reference\":\"R15\",\"position\":{\"x\":177.5,\"y\":114,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R5",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R5",
+    "position": {
+     "x": 181.0,
+     "y": 114.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.462,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R5\",\"component\":{\"reference\":\"R5\",\"position\":{\"x\":181,\"y\":114.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP8",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP8",
+    "position": {
+     "x": 178.5,
+     "y": 106.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.38,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP8\",\"component\":{\"reference\":\"TP8\",\"position\":{\"x\":178.5,\"y\":106,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_U2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "U2",
+    "position": {
+     "x": 172.0,
+     "y": 120.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.616,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: U2\",\"component\":{\"reference\":\"U2\",\"position\":{\"x\":172,\"y\":120,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C10",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C10",
+    "position": {
+     "x": 167.5,
+     "y": 119.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.69,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C10\",\"component\":{\"reference\":\"C10\",\"position\":{\"x\":167.5,\"y\":119.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R6",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R6",
+    "position": {
+     "x": 181.5,
+     "y": 118.5,
+     "unit": "mm"
+    },
+    "rotation": 180
+   },
+   "secs": 0.871,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R6\",\"component\":{\"reference\":\"R6\",\"position\":{\"x\":181.5,\"y\":118.5,\"unit\":\"mm\"},\"rotation\":180,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R7",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R7",
+    "position": {
+     "x": 176.5,
+     "y": 119.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 1.032,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R7\",\"component\":{\"reference\":\"R7\",\"position\":{\"x\":176.5,\"y\":119.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP7",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP7",
+    "position": {
+     "x": 172.0,
+     "y": 125.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.397,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP7\",\"component\":{\"reference\":\"TP7\",\"position\":{\"x\":172,\"y\":125,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J4",
+    "position": {
+     "x": 186.5,
+     "y": 121.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 1.001,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J4\",\"component\":{\"reference\":\"J4\",\"position\":{\"x\":186.5,\"y\":121.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_JP1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "JP1",
+    "position": {
+     "x": 180.5,
+     "y": 124.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.705,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: JP1\",\"component\":{\"reference\":\"JP1\",\"position\":{\"x\":180.5,\"y\":124,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R10",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R10",
+    "position": {
+     "x": 181.0,
+     "y": 127.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.808,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R10\",\"component\":{\"reference\":\"R10\",\"position\":{\"x\":181,\"y\":127,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R11",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R11",
+    "position": {
+     "x": 181.0,
+     "y": 129.5,
+     "unit": "mm"
+    },
+    "rotation": 180
+   },
+   "secs": 0.917,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R11\",\"component\":{\"reference\":\"R11\",\"position\":{\"x\":181,\"y\":129.5,\"unit\":\"mm\"},\"rotation\":180,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_U4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "U4",
+    "position": {
+     "x": 175.5,
+     "y": 130.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.996,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: U4\",\"component\":{\"reference\":\"U4\",\"position\":{\"x\":175.5,\"y\":130,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R12",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R12",
+    "position": {
+     "x": 176.5,
+     "y": 126.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 1.01,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R12\",\"component\":{\"reference\":\"R12\",\"position\":{\"x\":176.5,\"y\":126,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_C11",
+   "name": "move_component",
+   "arguments": {
+    "reference": "C11",
+    "position": {
+     "x": 171.0,
+     "y": 129.5,
+     "unit": "mm"
+    },
+    "rotation": 270
+   },
+   "secs": 0.899,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: C11\",\"component\":{\"reference\":\"C11\",\"position\":{\"x\":171,\"y\":129.5,\"unit\":\"mm\"},\"rotation\":270,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J5",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J5",
+    "position": {
+     "x": 186.5,
+     "y": 133.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.788,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J5\",\"component\":{\"reference\":\"J5\",\"position\":{\"x\":186.5,\"y\":133.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R8",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R8",
+    "position": {
+     "x": 181.0,
+     "y": 137.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.488,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R8\",\"component\":{\"reference\":\"R8\",\"position\":{\"x\":181,\"y\":137.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R9",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R9",
+    "position": {
+     "x": 181.0,
+     "y": 140.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.743,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R9\",\"component\":{\"reference\":\"R9\",\"position\":{\"x\":181,\"y\":140.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_JP2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "JP2",
+    "position": {
+     "x": 176.5,
+     "y": 139.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.866,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: JP2\",\"component\":{\"reference\":\"JP2\",\"position\":{\"x\":176.5,\"y\":139,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J6",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J6",
+    "position": {
+     "x": 186.5,
+     "y": 145.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.736,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J6\",\"component\":{\"reference\":\"J6\",\"position\":{\"x\":186.5,\"y\":145.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R13",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R13",
+    "position": {
+     "x": 181.0,
+     "y": 150.5,
+     "unit": "mm"
+    },
+    "rotation": 180
+   },
+   "secs": 0.458,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R13\",\"component\":{\"reference\":\"R13\",\"position\":{\"x\":181,\"y\":150.5,\"unit\":\"mm\"},\"rotation\":180,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_R14",
+   "name": "move_component",
+   "arguments": {
+    "reference": "R14",
+    "position": {
+     "x": 181.0,
+     "y": 153.0,
+     "unit": "mm"
+    },
+    "rotation": 180
+   },
+   "secs": 0.798,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: R14\",\"component\":{\"reference\":\"R14\",\"position\":{\"x\":181,\"y\":153,\"unit\":\"mm\"},\"rotation\":180,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_J2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "J2",
+    "position": {
+     "x": 132.0,
+     "y": 160.0,
+     "unit": "mm"
+    },
+    "rotation": 90
+   },
+   "secs": 0.864,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: J2\",\"component\":{\"reference\":\"J2\",\"position\":{\"x\":132,\"y\":160,\"unit\":\"mm\"},\"rotation\":90,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP4",
+    "position": {
+     "x": 126.0,
+     "y": 157.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.504,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP4\",\"component\":{\"reference\":\"TP4\",\"position\":{\"x\":126,\"y\":157.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP5",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP5",
+    "position": {
+     "x": 120.0,
+     "y": 157.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.862,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP5\",\"component\":{\"reference\":\"TP5\",\"position\":{\"x\":120,\"y\":157.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_TP6",
+   "name": "move_component",
+   "arguments": {
+    "reference": "TP6",
+    "position": {
+     "x": 164.0,
+     "y": 136.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.733,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: TP6\",\"component\":{\"reference\":\"TP6\",\"position\":{\"x\":164,\"y\":136,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_H1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "H1",
+    "position": {
+     "x": 103.5,
+     "y": 103.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.44,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: H1\",\"component\":{\"reference\":\"H1\",\"position\":{\"x\":103.5,\"y\":103.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_H2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "H2",
+    "position": {
+     "x": 186.5,
+     "y": 103.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.513,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: H2\",\"component\":{\"reference\":\"H2\",\"position\":{\"x\":186.5,\"y\":103.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_H3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "H3",
+    "position": {
+     "x": 103.5,
+     "y": 160.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.498,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: H3\",\"component\":{\"reference\":\"H3\",\"position\":{\"x\":103.5,\"y\":160.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_H4",
+   "name": "move_component",
+   "arguments": {
+    "reference": "H4",
+    "position": {
+     "x": 186.5,
+     "y": 160.5,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.501,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: H4\",\"component\":{\"reference\":\"H4\",\"position\":{\"x\":186.5,\"y\":160.5,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_FID1",
+   "name": "move_component",
+   "arguments": {
+    "reference": "FID1",
+    "position": {
+     "x": 109.0,
+     "y": 125.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.458,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: FID1\",\"component\":{\"reference\":\"FID1\",\"position\":{\"x\":109,\"y\":125,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_FID2",
+   "name": "move_component",
+   "arguments": {
+    "reference": "FID2",
+    "position": {
+     "x": 160.0,
+     "y": 150.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.659,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: FID2\",\"component\":{\"reference\":\"FID2\",\"position\":{\"x\":160,\"y\":150,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "mv_FID3",
+   "name": "move_component",
+   "arguments": {
+    "reference": "FID3",
+    "position": {
+     "x": 112.0,
+     "y": 150.0,
+     "unit": "mm"
+    },
+    "rotation": 0
+   },
+   "secs": 0.618,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\"success\":true,\"message\":\"Moved component: FID3\",\"component\":{\"reference\":\"FID3\",\"position\":{\"x\":112,\"y\":150,\"unit\":\"mm\"},\"rotation\":0,\"layer\":\"F.Cu\"},\"_backend\":\"swig\",\"_realtime\":false}"
+  },
+  {
+   "label": "save",
+   "name": "save_project",
+   "arguments": {},
+   "secs": 0.27,
+   "isError": null,
+   "rpc_error": null,
+   "success": true,
+   "backend": "swig",
+   "text": "{\n  \"success\": true,\n  \"message\": \"Saved project to: %USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\",\n  \"project\": {\n    \"name\": \"Sensor_Interface_Power_Board\",\n    \"path\": \"%USERPROFILE%\\\\dev\\\\AI-PCB-Engineer\\\\hardware\\\\kicad\\\\Sensor_Interface_Power_Board\\\\Sensor_Interface_Power_Board.kicad_pcb\"\n  },\n  \"_backend\": \"swig\",\n  \"_realtime\": false\n}"
+  }
+ ],
+ "alive_at_end": true,
+ "exit_code": 0
+}

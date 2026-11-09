@@ -8,8 +8,12 @@
 	)
 	(paper "A4")
 	(title_block
-		(title "Sensor_Interface_Power_Board")
+		(title "Sensor Interface & Power Management Board for ESP32")
 		(date "2026-11-09")
+		(rev "0.2.0")
+		(company "AI-PCB-Engineer")
+		(comment 1 "2 layers FR-4 1.6 mm, 1 oz Cu, ENIG preferred, green mask, white silk")
+		(comment 2 "Architecture B: ESP32 DevKit on its own USB; board powers peripherals")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -54,6 +58,7 @@
 		)
 		(capping no)
 		(filling no)
+		(aux_axis_origin 100 164)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
