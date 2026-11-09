@@ -1,263 +1,127 @@
-# Sensor Interface & Power Management Board
+# AI-PCB-Engineer
 
-A modular PCB designed to provide protected power distribution, voltage regulation, signal conditioning, and
-sensor connectivity for ESP32-based embedded systems.
+An open-source electronics project delivering a protected sensor interface and peripheral power board for an **external ESP32 DevKit**.
 
-![3D render of the Rev A board](media/renders/3d_isometric.png)
+![Sensor Interface & Power Management Board — CAD visualization](docs/visual-review/images/AI-PCB-Engineer-Cover.png)
 
-| | |
-|---|---|
-| **Release** | v1.0.0, board **Rev A** |
-| **Status** | **DIGITALLY VALIDATED DESIGN — NOT PHYSICALLY FABRICATED OR TESTED** |
-| **Tool** | KiCad 10.0.8 |
-| **Licence** | Hardware CERN-OHL-P-2.0 · software MIT · third-party material under its own terms (see [License](#22-license)) |
+> **Featured hardware:** Sensor Interface & Power Management Board for ESP32 · Rev A · V1.0.0
+> CAD visualization only — **not fabricated or physically tested**.
 
-> **v1.0.0 means "fabrication-ready open hardware design release".** The schematic, layout and manufacturing
-> files passed every digital check (ERC, DRC, schematic parity, file audits). No board has been manufactured,
-> assembled, powered or measured yet. Treat the first build as a prototype.
+## What is this PCB?
 
-**Quick links:**
-[KiCad project](hardware/kicad/Sensor_Interface_Power_Board/) ·
-[Fabrication ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Fabrication.zip) ·
-[Assembly ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Assembly.zip) ·
-[Complete manufacturing ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip) ·
-[BOM](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_BOM.csv) ·
-[CPL](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_CPL.csv) ·
-[Schematic PDF](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_schematic.pdf) ·
-[STEP](manufacturing/Sensor_Interface_Power_Board/RevA/3d/Sensor_Interface_Power_Board_RevA.step) ·
-[Datasheets](datasheets/) ·
-[Validation reports](reports/v0.3.0/) ·
-[Quick start](docs/getting-started/QUICK_START.md)
+The board organizes power and signal connections between an ESP32 DevKit and compatible peripherals. It provides protected 5 V distribution, a regulated 3.3 V peripheral rail, conditioned sensor signals, and I²C, UART, and GPIO headers. The ESP32 is a separate development board and is powered through its own USB connection.
 
-## 1. Overview
-The board sits next to an **ESP32 DevKit** (designed against the ESP32-DevKitC V4 / ESP32-WROOM-32E pin labels)
-and connects to it with 12 wires. It takes an external 5 V supply through an eFuse that provides overvoltage,
-undervoltage, reverse-polarity and overcurrent protection. It generates a separate 3.3 V rail for peripherals and
-translates the 5 V signals of an HC-SR04-style ultrasonic sensor to the ESP32's 3.3 V logic. It also brings out
-labelled I²C, UART and GPIO headers. **The ESP32 is not on this board** and keeps its own USB power.
+## Problem and solution
 
-## 2. Design Objectives
-- Protect the peripherals and the regulator from wrong or out-of-range 5 V inputs.
-- Keep the ESP32's own supply independent: no back-feed between board rails and the DevKit.
-- Make the 5 V ultrasonic sensor safe for 3.3 V GPIOs in both directions.
-- Two layers, single-sided assembly, standard design rules, so any PCB factory can build and assemble it.
-- Every design value traceable to a datasheet, a calculation or a recorded decision.
+ESP32 GPIO uses 3.3 V logic and is not 5 V tolerant. Some 5 V ultrasonic modules can return a 5 V ECHO signal, which may exceed an ESP32 input's limits. Loose jumper-wire circuits also make power and signal wiring easier to get wrong.
 
-## 3. Key Features
-- **TPS26600 eFuse input:** OVP 5.39–5.82 V, UVLO 4.25–4.56 V, reverse-polarity blocking, 0.51–0.69 A current limit with auto-retry, ~2 ms soft start.
-- **3.3 V / 250 mA peripheral rail** (TLV1117LV33, SOT-223 with 251 mm² heat-spreading copper).
-- **Ultrasonic interface:** SN74LVC1T45 3.3 → 5 V TRIG driver, SN74LVC1G17 5 V-tolerant ECHO buffer, fail-safe pull-downs.
-- **I²C** header with switchable 2.2 kΩ pull-ups, **UART** header with 3.3 V / 5 V VCC selection and buffered RX, **2 GPIO** with 1 kΩ series protection.
-- 8 test points, 2 power LEDs, 4 × M3 holes, 3 fiducials, full pin legend on the silkscreen.
+This board provides a documented connector layout and dedicated signal conditioning: an SN74LVC1T45 translates ESP32 TRIG to the sensor's 5 V logic side, while an SN74LVC1G17 conditions ECHO for the ESP32. It also supplies protected 5 V and regulated 3.3 V peripheral power. Compatibility depends on the module's actual pinout and electrical characteristics; follow the [connector guide](docs/pinout/CONNECTION_GUIDE.md).
 
-## 4. System Architecture
+**Power regulation** creates a regulated supply rail. **Signal conditioning** adapts signal levels for compatible communication. They are separate circuits on this board.
+
+## How it works
+
 ```mermaid
 flowchart LR
-  PSU[5 V supply] -->|J1| EF[eFuse U5] -->|+5V_P| LDO[LDO U1] -->|+3V3_P| P3[J4/J5/J6 power]
-  EF -->|+5V_P| US[J3 ultrasonic]
-  ESP[ESP32 DevKit<br/>own USB power] <-->|J2: 3V3 ref, GND, 8 signals| COND[Level translation<br/>and buffers]
-  COND <--> US
-  COND <--> UART[J4 UART]
-  ESP <-->|I²C, GPIO| P3
+  IN[5 V DC input] --> EF[TPS26600 eFuse] --> R5[Protected +5V_P]
+  R5 --> LDO[TLV1117LV33] --> R3[+3V3_P peripheral rail]
+  R5 --> USV[Ultrasonic VCC]
+  ESP[External ESP32 DevKit<br/>powered separately by USB] --> IF[ESP32 signal interface]
+  IF -->|TRIG, 3.3 V| TX[SN74LVC1T45]
+  TX -->|TRIG, 5 V| US[Ultrasonic connector]
+  US -->|ECHO, up to 5 V| RX[SN74LVC1G17]
+  RX -->|conditioned ECHO| IF
+  IF --> COM[I2C · UART · GPIO connectors]
+  R3 -->|J5/J6; J4 via JP1| PER[Peripheral power]
+  R5 --> IF
+  R3 --> COM
+  ESP ---|GND reference| US
 ```
-Details: [docs/system-architecture/BOARD_ARCHITECTURE.md](docs/system-architecture/BOARD_ARCHITECTURE.md).
 
-## 5. Electrical Architecture
-| Rail | Source | Use |
-|---|---|---|
-| `VIN_RAW` | J1, 5 V ±5 % | eFuse input |
-| `+5V_P` | eFuse output | LDO input, ultrasonic VCC, 5 V side of the TRIG translator, LED1 |
-| `+3V3_P` | board LDO | I²C, UART (default) and GPIO header supply, LED2 |
-| `3V3_ESP` | DevKit 3V3 pin via J2-1 | **logic reference only** for U2–U4 and pull-ups |
-| `EF_RTN` | eFuse reference island | **not ground**, never connect to GND |
+`+3V3_P` powers peripherals. `3V3_ESP` is a separate ESP32 logic reference; the two rails are not connected together. See the [system architecture](docs/system-architecture/BOARD_ARCHITECTURE.md) and [electrical design](docs/electrical-design/ELECTRICAL_DESIGN.md).
 
-`+3V3_P` and `3V3_ESP` are never connected. The DevKit 5V pin is not used. Full description:
-[docs/electrical-design/ELECTRICAL_DESIGN.md](docs/electrical-design/ELECTRICAL_DESIGN.md).
+## PCB gallery
 
-## 6. Supported Interfaces
-| Connector | Function | Pins (1 → n) |
-|---|---|---|
-| J1 | 5 V power input (screw terminal, 5.08 mm) | +5V, GND |
-| J2 | ESP32 interface (1×12, 2.54 mm) | 3V3_ESP, GND, TRIG, ECHO, SDA, SCL, TX, RX, IO1, IO2, GND, GND |
-| J3 | Ultrasonic sensor (1×4) | +5V, TRIG, ECHO, GND |
-| J4 | UART (1×4) | GND, VCC (3.3 V / 5 V), TX, RX |
-| J5 | I²C (1×4) | GND, 3V3, SDA, SCL |
-| J6 | GPIO (1×4, 3.3 V only) | GND, 3V3, IO1, IO2 |
+Captured from the actual V1.0.0 project in KiCad applications. These are GUI screenshots, not command-line exports.
 
-Pin-by-pin tables with voltage, direction and destination:
-[docs/pinout/CONNECTION_GUIDE.md](docs/pinout/CONNECTION_GUIDE.md).
-
-## 7. ESP32 Compatibility
-Designed for the **ESP32-DevKitC V4 (ESP32-WROOM-32E)** pin labels: GPIO26 (TRIG), GPIO34 (ECHO, input-only),
-GPIO21/22 (I²C), GPIO17/16 (UART2 TX/RX), GPIO32/33 (GPIO), 3V3 and GND. Any ESP32 board that exposes these
-GPIOs and a 3.3 V pin can be wired the same way by label, but other boards have **not** been checked. The
-DevKit is connected by wires, so its mechanical dimensions do not matter.
-
-## 8. Ultrasonic Interface
-For HC-SR04-style 5 V modules. TRIG is driven at 5 V (≥ 4.54 V high) through a level translator and 1 kΩ. ECHO
-(0–5 V) is buffered to 3.3 V by a 5.5 V-tolerant Schmitt buffer. **Connect the module with four separate jumper
-wires, matched by the printed labels (VCC, Trig, Echo, GND).** Module pin order is not universal and has not been verified.
-
-## 9. Power Distribution
-- Input **5.0 V ±5 %**, isolated supply recommended, ≥ 0.7 A capability.
-- Total input current limited to 0.51–0.69 A by the eFuse.
-- **+3V3_P: ≤ 250 mA continuous at ≤ 50 °C ambient** (LDO thermal limit, calculated).
-- **Power-up rule R-31:** power the board **before or together with** the ESP32 (also printed on the board).
-
-## 10. PCB Specifications
-| Item | Value |
+| Full schematic | PCB top layout |
 |---|---|
-| Size | 90.0 × 64.0 mm, 4 × M3 mounting holes |
-| Layers / material | 2 layers, FR-4, 1.6 mm, 1 oz copper |
-| Finish | ENIG preferred (lead-free HASL acceptable) |
-| Min track / clearance / hole | 0.25 mm / 0.20 mm / 0.3 mm |
-| Assembly | Top side only: 44 SMT + 8 THT parts (52 placements, 33 BOM lines) |
-| Routing | 331 track segments, 57 vias, solid GND plane on the bottom |
+| ![Full schematic](docs/visual-review/images/screenshots/01-schematic-full.png) | ![PCB top](docs/visual-review/images/screenshots/03-pcb-top-layout.png) |
 
-## 11. Images and 3D Renders
-| Top (3D) | Bottom (3D) |
+| PCB bottom copper | 3D top view |
 |---|---|
-| ![top](media/renders/3d_top.png) | ![bottom](media/renders/3d_bottom.png) |
+| ![PCB bottom](docs/visual-review/images/screenshots/04-pcb-bottom-layout.png) | ![3D top](docs/visual-review/images/screenshots/05-pcb-3d-viewer.png) |
 
-All renders are generated by KiCad from the design, with library 3D models (shape only). More views:
-[docs/visual-review/VISUAL_REVIEW.md](docs/visual-review/VISUAL_REVIEW.md).
-
-## 12. Schematic Preview
-![Schematic](media/renders/schematic_overview.png)
-
-[Full schematic PDF](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_schematic.pdf)
-
-## 13. PCB Layout Preview
-![PCB top](media/renders/pcb_top_2d.png)
-
-Layout notes: [docs/pcb-layout/PCB_LAYOUT.md](docs/pcb-layout/PCB_LAYOUT.md).
-
-## 14. Component List
-Main parts (full BOM with all 33 lines, sourcing notes and verified alternatives:
-[BOM CSV](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_BOM.csv)):
-
-| Ref | Part | Function |
-|---|---|---|
-| U5 | TI TPS26600PWPR | eFuse: OVP, UVLO, reverse polarity, current limit |
-| U1 | TI TLV1117LV33DCYR | 3.3 V LDO |
-| U3 | TI SN74LVC1T45DBVR | TRIG level translator 3.3 → 5 V |
-| U2, U4 | TI SN74LVC1G17DBVR | ECHO and UART RX buffers (5.5 V-tolerant inputs) |
-| J1 | Phoenix Contact 1715721 | 5 V screw terminal |
-| J2–J6 | Samtec HTSW-112/104-07-T-S | 2.54 mm headers |
-| LED1, LED2 | Kingbright WP7113ID / WP7113SGD | +5 V / +3.3 V indicators |
-
-**Sourcing note (2026-11-09):** TPS26600PWPR is active but had no distributor stock confirmed on that date. See
-[reports/v0.3.0/BOM_SOURCING_AUDIT.md](reports/v0.3.0/BOM_SOURCING_AUDIT.md).
-
-## 15. Manufacturing Files
-| Package | Contents |
+| 3D bottom view | Connector details |
 |---|---|
-| [Sensor_Interface_PCB_RevA_Fabrication.zip](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Fabrication.zip) | Gerber X2, Excellon, drill maps, IPC-D-356, fabrication notes |
-| [Sensor_Interface_PCB_RevA_Assembly.zip](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Assembly.zip) | BOM, CPL, assembly drawings, schematic, assembly notes, connector pinout |
-| [Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip) | all of the above + STEP |
-| [SHA256SUMS.txt](manufacturing/Sensor_Interface_Power_Board/RevA/checksums/SHA256SUMS.txt) | checksums of every package and file |
+| ![3D bottom](docs/visual-review/images/screenshots/06-pcb-3d-bottom.png) | ![Connector details](docs/visual-review/images/screenshots/07-connectors.png) |
 
-Unzipped sources: [manufacturing/Sensor_Interface_Power_Board/RevA/](manufacturing/Sensor_Interface_Power_Board/RevA/).
+[Power management schematic close-up](docs/visual-review/images/screenshots/02-power-management.png) · [All visual-review assets](docs/visual-review/VISUAL_REVIEW.md)
 
-## 16. How to Open the KiCad Project
-1. Install **KiCad 10.0.x** (KiCad 9 cannot open these files).
-2. Open [`hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pro`](hardware/kicad/Sensor_Interface_Power_Board/).
-3. No setup is needed. The only custom footprint (U5, TI PWP0016A) is in the project library
-   `Sensor_Interface_Power_Board.pretty`, loaded through `${KIPRJMOD}`. Symbols are embedded. 3D models come from
-   the standard KiCad 10 library.
-4. To regenerate all outputs and re-run all checks: `scripts/release/build_release.sh` (Bash + KiCad 10).
+## Key specifications
 
-## 17. How to Manufacture the PCB
-Upload the Fabrication ZIP to any PCB manufacturer with these options: 2 layers, FR-4, 1.6 mm, 1 oz, 90 × 64 mm,
-ENIG, electrical test. Step-by-step guide: [docs/manufacturing/HOW_TO_MANUFACTURE.md](docs/manufacturing/HOW_TO_MANUFACTURE.md).
-
-## 18. How to Request Full Assembly
-Choose **turnkey, top-side, lead-free SMT + THT** assembly and upload the BOM and CPL. Ask the factory to confirm
-THT soldering of the 8 through-hole parts, sourcing of every exact MPN (especially TPS26600PWPR) and **no
-substitution without your written approval**. Details:
-[docs/assembly/FULL_ASSEMBLY_REQUIREMENTS.md](docs/assembly/FULL_ASSEMBLY_REQUIREMENTS.md). Researched (not
-confirmed) suppliers: [manufacturer-profiles/](manufacturing/Sensor_Interface_Power_Board/manufacturer-profiles/).
-
-## 19. Safety and Power Requirements
-- 5 V DC only, isolated supply recommended. Never apply more than 50 V to J1, even reversed.
-- **Reverse polarity is blocked only when no other earthed equipment shares the ground.** If the supply's
-  negative terminal is earthed and the ESP32 is plugged into an earthed PC, a reversed J1 short-circuits the
-  supply through the ground wires and the USB cable. Check polarity, power the board first, connect USB last.
-- No surge/ESD protection is claimed. The LDO can run hot (~95 °C estimated) at full rating.
-
-Full text: [docs/safety/SAFETY_AND_POWER.md](docs/safety/SAFETY_AND_POWER.md).
-
-## 20. Verification Status
-| Check | Result |
+| Item | Rev A specification |
 |---|---|
-| ERC (all severities) | 0 |
-| DRC (all severities, zones refilled) | 0 errors, 0 warnings |
-| Unconnected items / schematic parity | 0 / 0 |
-| Netlist and power-domain verifier | PASS |
-| Manufacturing package audit, ZIP extraction test | PASS |
-| **Physical fabrication, assembly, power-up, measurements** | **NOT DONE** |
+| Board | 90 × 64 mm; 2 layers; FR-4; 1.6 mm; 1 oz copper |
+| Component instances | 44 SMT + 8 THT = 52 |
+| Input | Regulated 5 V DC, ±5%; ≥0.7 A recommended supply capacity |
+| Peripheral rails | Protected +5V_P; regulated +3V3_P |
+| 3.3 V peripheral load | 250 mA maximum, **calculated** at ambient ≤50 °C; not measured |
+| Interfaces | ESP32 header, ultrasonic, I²C, UART, general-purpose GPIO |
+| Primary protection | TPS26600 eFuse; current limit 0.51–0.69 A per release data |
+| Validation | ERC 0; DRC 0 errors / 0 warnings; 0 unconnected; schematic parity 0 |
 
-Digital evidence: [docs/validation/DIGITAL_VALIDATION.md](docs/validation/DIGITAL_VALIDATION.md) ·
-physical test plan: [docs/validation/PHYSICAL_VALIDATION_STATUS.md](docs/validation/PHYSICAL_VALIDATION_STATUS.md) ·
-engineering audit: [reports/v0.3.0/FINAL_ENGINEERING_AUDIT.md](reports/v0.3.0/FINAL_ENGINEERING_AUDIT.md).
+See [release notes](release/v1.0.0/RELEASE_NOTES_V1.0.0.md) and [digital validation evidence](docs/validation/DIGITAL_VALIDATION.md).
 
-## 21. Known Limitations
-1. **Not fabricated, not tested.** All performance figures are datasheet values or calculations.
-2. Reverse-polarity protection does not cover earth-referenced ground loops (see §19).
-3. No surge protection. A fast overvoltage step (> ~24 V/ms) while powered is not covered.
-4. +3V3_P limited to 250 mA at ≤ 50 °C (thermal, calculated).
-5. Power-sequencing rule R-31 (board first or together with the ESP32).
-6. Ultrasonic module pin order, mating connectors and enclosure fit not verified.
-7. TPS26600PWPR stock was not confirmed at release time.
-8. J6 GPIOs and all J2 signals are 3.3 V only.
+## Main components
 
-## 22. License
-The repository is **not** under a single licence. The distinction:
+- **TPS26600PWPR** — input eFuse with adjustable protection and current management.
+- **TLV1117LV33** — regulates protected 5 V to the peripheral 3.3 V rail.
+- **SN74LVC1T45** — translates ESP32 TRIG logic to the 5 V sensor side.
+- **SN74LVC1G17** — conditions the ECHO input for the ESP32 logic domain.
+- **J1–J6** — power input, ESP32, ultrasonic, UART, I²C, and GPIO connections.
 
-### Hardware: `CERN-OHL-P-2.0`
-Original hardware design files and associated hardware documentation are distributed under the **CERN Open
-Hardware Licence Version 2 – Permissive** ([LICENSE-HARDWARE](LICENSE-HARDWARE), official text). This covers only
-material identified as project hardware source in [LICENSE_SCOPE.md](LICENSE_SCOPE.md):
-- KiCad schematic, PCB and project;
-- manufacturing outputs and packages;
-- renders;
-- hardware documentation and reports.
+[Complete BOM (CSV)](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_BOM.csv) · [Connector pinout](docs/pinout/CONNECTION_GUIDE.md)
 
-It permits copying, modification, manufacturing and selling, including commercially. When you convey the source,
-keep the notices ([NOTICE.md](NOTICE.md)). When you convey a modified version, add a modification notice
-([MODIFICATIONS.md](MODIFICATIONS.md)).
+## Downloads
 
-### Software: `MIT`
-Original project software and scripts (`*.py`, `*.sh`: release, build, verification and calculation scripts) and
-the AI-toolchain material are distributed under the **MIT License** ([LICENSE-CODE](LICENSE-CODE)).
+| File | Download |
+|---|---|
+| KiCad project | [Project file](hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pro) · [Schematic](hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_sch) · [PCB](hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.kicad_pcb) |
+| Complete manufacturing package | [ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip) |
+| Fabrication package | [ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Fabrication.zip) |
+| Assembly package | [ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Assembly.zip) |
+| Copper Gerbers | [Top copper](manufacturing/Sensor_Interface_Power_Board/RevA/fabrication/Sensor_Interface_Power_Board-F_Cu.gtl) · [Bottom copper](manufacturing/Sensor_Interface_Power_Board/RevA/fabrication/Sensor_Interface_Power_Board-B_Cu.gbl) |
+| Drill files | [Plated](manufacturing/Sensor_Interface_Power_Board/RevA/fabrication/Sensor_Interface_Power_Board-PTH.drl) · [Non-plated](manufacturing/Sensor_Interface_Power_Board/RevA/fabrication/Sensor_Interface_Power_Board-NPTH.drl) |
+| Assembly data | [BOM](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_BOM.csv) · [CPL](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_CPL.csv) |
+| 3D model | [STEP](manufacturing/Sensor_Interface_Power_Board/RevA/3d/Sensor_Interface_Power_Board_RevA.step) |
+| Schematic | [PDF](manufacturing/Sensor_Interface_Power_Board/RevA/assembly/Sensor_Interface_Power_Board_RevA_schematic.pdf) |
 
-### Third-party materials
-Third-party material remains under its own terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md):
-- The U5 footprint is a modified KiCad library footprint and stays under
-  `CC-BY-SA-4.0 WITH KiCad-libraries-exception`.
-- KiCad library data embedded in the design and generated files is covered by that exception.
-- Datasheets are **not** redistributed; only links are given.
-- Trademarks belong to their owners.
+## How to use
 
-Machine-readable map: [REUSE.toml](REUSE.toml). Plain-language guide:
-[docs/licensing/LICENSING_GUIDE.md](docs/licensing/LICENSING_GUIDE.md).
+1. Supply the PCB with the specified regulated 5 V input.
+2. Power the external ESP32 DevKit separately through its own USB connector.
+3. Connect ESP32 signals using the documented interface and pinout.
+4. Connect a compatible sensor using its documented connector labels and electrical requirements.
+5. Follow the [power and safety requirements](docs/safety/SAFETY_AND_POWER.md), including sequencing rule R-31.
 
-The design is provided "as is" (CERN-OHL-P §5, MIT). CERN does not endorse this project. The project is **not**
-OSHWA-certified.
+## Manufacturing
 
-## 23. Revision History
-| Version | Date | Board rev | Summary |
-|---|---|---|---|
-| **1.0.0** | 2026-11-09 | **A** | Fabrication-ready open-hardware release: final engineering audit, Rev A label, regenerated and audited manufacturing packages, documentation |
-| 0.2.0 | 2026-11-09 | 0.2.0 | Complete PCB layout, eFuse power entry, manufacturing package |
-| 0.1.0 | 2026-11-08 | — | Requirements, component selection, complete schematic |
-| 0.0.1–0.0.3 | 2026-11-07/08 | — | Toolchain setup and MCP capability evaluation |
+Download the [complete manufacturing ZIP](manufacturing/Sensor_Interface_Power_Board/RevA/packages/Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip) or the separate fabrication and assembly packages. Ask a compatible supplier to confirm its capabilities, file requirements, and component sourcing before placing an order. The TPS26600PWPR stock status was uncertain at release; substitutions require written approval. See the [manufacturing guide](manufacturing/Sensor_Interface_Power_Board/RevA/fabrication/FABRICATION_NOTES.md) and [assembly requirements](docs/assembly/FULL_ASSEMBLY_REQUIREMENTS.md).
 
-Full history: [CHANGELOG.md](CHANGELOG.md). Design reports per version: [reports/](reports/).
+## Validation and limitations
 
----
-### About the design process
-The board was designed with an AI-assisted workflow (Claude Code → KiCAD-MCP-Server → KiCad 10) under the rules in
-[CLAUDE.md](CLAUDE.md) and [docs/ENGINEERING_RULES.md](docs/ENGINEERING_RULES.md). Every result was checked
-independently with `kicad-cli` and scripts. Toolchain setup: [docs/ai-workflow/AI_TOOLCHAIN_SETUP.md](docs/ai-workflow/AI_TOOLCHAIN_SETUP.md).
-Repository map: [docs/README.md](docs/README.md). Contributing: [CONTRIBUTING.md](CONTRIBUTING.md).
+**DIGITALLY VALIDATED — NOT FABRICATED OR PHYSICALLY TESTED.** ERC/DRC results are digital checks; no thermal, electrical, or functional measurements have been made.
+
+- Reverse-polarity protection has a ground-loop limitation when other earthed equipment shares ground.
+- Surge protection has not been demonstrated; do not infer a surge rating.
+- The 3.3 V peripheral rail is limited to 250 mA calculated at ambient ≤50 °C.
+- Follow power-sequencing rule R-31: power this board before or together with the ESP32.
+- Sensor mating pin order has not been verified; check the module's own documentation.
+- TPS26600PWPR availability was not confirmed on 2026-11-09.
+
+Details: [physical validation status](docs/validation/PHYSICAL_VALIDATION_STATUS.md), [safety notes](docs/safety/SAFETY_AND_POWER.md), and [release notes](release/v1.0.0/RELEASE_NOTES_V1.0.0.md).
+
+## License
+
+Hardware design files and hardware documentation: [CERN-OHL-P-2.0](LICENSE-HARDWARE). Code: [MIT](LICENSE-CODE). Third-party material remains under its own terms; see [license scope](LICENSE_SCOPE.md) and [third-party notices](THIRD_PARTY_NOTICES.md).

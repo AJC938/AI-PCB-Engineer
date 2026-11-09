@@ -1,10 +1,18 @@
 # Visual Review — Rev A
 
-Every image on this page was generated from the actual Rev A design files by KiCad 10.0.8
-(`kicad-cli pcb render` for 3D, `kicad-cli pcb/sch export pdf` rasterized by `scripts/release/make_2d_views.py`).
-No photograph exists, because no board has been manufactured. 3D component bodies are KiCad library models and
-**represent shape only, not the exact purchased parts.** For example, LED2 is green in the BOM but uses the generic red LED model.
+The generated renders below were produced from the Rev A design files using KiCad 10.0.8 command-line exports. The separate `images/screenshots/` gallery contains seven **actual GUI screenshots** captured from the released project in KiCad Schematic Editor, PCB Editor, and 3D Viewer.
 
+No photograph exists because no board has been manufactured. 3D component bodies are KiCad library models and **represent shape only, not the exact purchased parts**. For example, LED2 is green in the BOM but uses the generic red LED model.
+
+## Actual KiCad GUI screenshots
+
+| Schematic | Power | PCB top | PCB bottom |
+|---|---|---|---|
+| ![Full schematic](images/screenshots/01-schematic-full.png) | ![Power management](images/screenshots/02-power-management.png) | ![PCB top](images/screenshots/03-pcb-top-layout.png) | ![PCB bottom](images/screenshots/04-pcb-bottom-layout.png) |
+
+| 3D top | 3D bottom | Connector details |
+|---|---|---|
+| ![3D top](images/screenshots/05-pcb-3d-viewer.png) | ![3D bottom](images/screenshots/06-pcb-3d-bottom.png) | ![Connectors](images/screenshots/07-connectors.png) |
 ## 3D
 | Isometric | Isometric (rear) |
 |---|---|
@@ -44,7 +52,7 @@ Power-architecture and signal-conditioning diagrams are drawn in Mermaid (render
 [BOARD_ARCHITECTURE.md](../system-architecture/BOARD_ARCHITECTURE.md) and
 [CONNECTION_GUIDE.md](../pinout/CONNECTION_GUIDE.md). They are based on the netlist.
 
-## Owner review checklist (before publishing)
-- [ ] Renders match expectations (board outline, connector positions, silkscreen legend readable)
-- [ ] Silkscreen label shows "REV A v1.0"
-- [ ] No image contains personal information
+## Owner review checklist
+- [x] Actual GUI captures reviewed for board outline, connector positions and silkscreen legibility
+- [x] Silkscreen label shows "REV A v1.0"
+- [x] No image contains personal information
