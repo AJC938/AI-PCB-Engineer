@@ -1,0 +1,25 @@
+MPN,Description,Sourcing notes (checked 2026-11-09),Verified alternative
+CL10A106KP8NNNC,"MLCC 10 uF +-10 % 10 V X5R, 0603",Multi-source high-volume part; stock not verified,None verified (any change needs approval)
+GRM188R71C104KA01D,"MLCC 100 nF +-10 % 16 V X7R, 0603",Multi-source high-volume part; stock not verified,None verified (any change needs approval)
+CL10A105KB8NNNC,"MLCC 1.0 uF +-10 % 50 V X5R, 0603 (eFuse input, 50 V rating required)",Samsung spec page read 2026-11-09; stock not verified,None verified (must stay >= 50 V)
+CL10B473KB8NNNC,"MLCC 47 nF +-10 % 50 V X7R, 0603 (eFuse dVdT)",Samsung spec page read 2026-11-09; stock not verified,None verified (any change needs approval)
+1715721,"PCB terminal block MKDS 1,5/2-5,08, 2 positions, 5.08 mm pitch, screw, THT",Phoenix page not readable from research network; stock not verified,None verified
+HTSW-112-07-T-S,"Pin header 1x12, 2.54 mm, tin, THT, vertical, lead-free process",Samtec page not readable for this length; stock not verified,None verified
+HTSW-104-07-T-S,"Pin header 1x4, 2.54 mm, tin, THT, vertical, lead-free process","samtec.com 2026-11-09: ""Ships Tomorrow: 3268 pieces""",None verified
+WP7113ID,"LED 5 mm red, THT (+5V_P indicator)",Stock not verified,None verified
+WP7113SGD,"LED 5 mm green, THT (+3V3_P indicator)",Stock not verified,None verified
+ERJ-3EKF1501V,"Resistor 1.5 kOhm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF6800V,"Resistor 680 Ohm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF1003V,"Resistor 100 kOhm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF1001V,"Resistor 1 kOhm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF2201V,"Resistor 2.2 kOhm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF2200V,"Resistor 220 Ohm +-1 % 0.1 W thick film, 0603",Multi-source high-volume family; stock not verified,None verified (1 % 0603 same value needs approval)
+ERJ-3EKF7322V,"Resistor 73.2 kOhm +-1 % 0.1 W thick film, 0603 (eFuse UVLO/OVP divider, 1 % required)",Multi-source high-volume family; stock not verified,None verified (1 % or better required)
+ERJ-3EKF5901V,"Resistor 5.9 kOhm +-1 % 0.1 W thick film, 0603 (eFuse UVLO/OVP divider, 1 % required)",Multi-source high-volume family; stock not verified,None verified (1 % or better required)
+ERJ-3EKF2152V,"Resistor 21.5 kOhm +-1 % 0.1 W thick film, 0603 (eFuse UVLO/OVP divider, 1 % required)",Multi-source high-volume family; stock not verified,None verified (1 % or better required)
+ERJ-3EKF2002V,"Resistor 20 kOhm +-1 % 0.1 W thick film, 0603 (eFuse current limit, 1 % required)",Multi-source high-volume family; stock not verified,None verified (1 % or better required)
+5015,"Test point, SMT, micro-mini",Keystone page not readable from research network; stock not verified,None verified
+TLV1117LV33DCYR,"LDO regulator 3.3 V 1 A, SOT-223 (DCY)",TI addendum: Active / Production; stock not verified,None verified (no DCYT variant in TI addendum)
+SN74LVC1G17DBVR,"Single Schmitt-trigger buffer, SOT-23-5 (DBV)",TI addendum: Active / Production; stock not verified,SN74LVC1G17DBVT (same device; 250-pc reel; TI addendum Active)
+SN74LVC1T45DBVR,"Single-bit dual-supply level translator, SOT-23-6 (DBV)",TI store: ACTIVE but out of stock (2026-11-09). Distributor search snapshots show stock (undated; not verified),SN74LVC1T45DBVT (same device; 250-pc reel; TI addendum Active)
+TPS26600PWPR,"eFuse 60 V 2 A, reverse polarity protection, adjustable OVP/UVLO/current limit, HTSSOP-16 PowerPAD (PWP)","HIGH RISK. TI store: ACTIVE, out of stock (2026-11-09). DigiKey 6199305: 0 in stock, 2,000 expected 2026-12-14, 26-week standard lead time (page read 2026-11-09). LCSC C544399 listed, stock not readable. Confirm in the quote or consign",TPS26600PWPT (same device; 250-pc reel; also out of stock at TI 2026-11-09)

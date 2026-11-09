@@ -28,3 +28,6 @@
 *.jpg  binary
 *.step binary
 *.wrl  binary
+# Release packages are byte-exact: the published SHA-256 checksums must match on every platform
+manufacturing/Sensor_Interface_Power_Board/** -text
+*.zip  binary

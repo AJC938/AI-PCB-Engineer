@@ -1,0 +1,20 @@
+G1: PASS  9 Gerber layers, X2 FileFunction, mm, 4.6: OK
+G2: PASS  Edge.Cuts x 0.000..90.000, y 0.000..64.000 (w 90.000, h 64.000)
+G3: PASS  F.Paste flashes 107 vs SMD paste pads 107 (custom 0); B.Paste items 0
+G4: PASS  all Gerber coordinates inside 90x64 outline: OK
+G5: PASS  job file: layers 2, thickness 1.6, size {'X': 90.1, 'Y': 64.1}
+G6: PASS  B.Silkscreen printing ops 0; F.Silkscreen printing ops 8446; silk label 'REV A v1.0' present
+D1: PASS  PTH by diameter file {0.3: 57, 0.9: 4, 1.0: 28, 1.3: 2} vs board {1.0: 28, 1.3: 2, 0.9: 4, 0.3: 57}
+D2: PASS  NPTH file {3.2: 4} vs board {3.2: 4}
+D3: PASS  Excellon METRIC/decimal True; hits 95 vs board holes 95; unmatched []
+C1: PASS  CPL refs 55 = BOM placements 52 + fiducials 3
+C2: PASS  CPL X/Y vs board (origin bottom-left, Y up): mismatches []
+C3: PASS  CPL rotation vs footprint orientation: mismatches []
+C4: PASS  all CPL parts on top: exceptions []
+B1: PASS  BOM placements 52 (expected 52); MPN+Manufacturer on all lines: True
+B2: PASS  BOM lines 33 (expected 33); Qty = reference count: True
+B3: PASS  every BOM line Mount SMT/THT and Side Top: True
+B4: PASS  BOM release columns present (missing []); lines with generic/empty description or notes []
+N1: PASS  IPC-D-356 nets 39; routed nets missing: []
+F1: PASS  package files present: OK
+RESULT: PASS (19/19)

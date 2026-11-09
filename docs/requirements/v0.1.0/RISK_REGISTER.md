@@ -68,3 +68,12 @@ Resolution status of R-01…R-22 after the V0.1.0 design: see
 | R-41 | LDO thermal estimate borrows LM1117 SOT-223 data (+10 % margin) | 1 | 2 | 2 | 251 mm² copper (target 194); V0.3.0 thermal measurement | OPEN (test) |
 
 Resolution status of R-01…R-35 after V0.2.0: see [`reports/v0.2.0/FINAL_V0.2.0_REPORT.md`](../../../reports/v0.2.0/FINAL_V0.2.0_REPORT.md).
+
+## V0.3.0 final-audit update (2026-11-09)
+| ID | Risk | L | I | Score | Mitigation | Status |
+|---|---|---|---|---|---|---|
+| R-36 | (update) TPS26600PWPR: TI store out of stock; DigiKey 0 in stock, 2,000 expected 2026-12-14, 26-week lead time | 2 | 3 | 6 | confirm in quote; PWPT carrier variant with approval; consign; Rev B only as a last resort | OPEN (sourcing) |
+| R-37 | (update) ground-loop reverse polarity (earthed supply − and earthed USB host) bypasses the eFuse | 1 | 3 | 3 | isolated supply; polarity check; board first, LED1 on, then USB (R-31); documented in README, safety guide, connection guide | ACCEPTED (documented) |
+| R-42 | Users load +3V3_P above the thermal rating | 2 | 2 | 4 | rating 250 mA at ≤ 50 °C published; LDO thermal shutdown as backstop | MITIGATED (doc) |
+| R-43 | Line-ending conversion by git changes released text files and breaks the published checksums | 2 | 2 | 4 | `.gitattributes`: release folder `-text`; `sha256sum -c` in the checklist | CLOSED |
+| R-44 | Licence variant not confirmed by the owner before the stable tag | 1 | 2 | 2 | CERN-OHL-S-2.0 prepared; `v1.0.0-rc1` until confirmed | OPEN (owner) |

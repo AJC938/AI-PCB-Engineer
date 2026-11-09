@@ -85,3 +85,15 @@ Every work report contains:
     confirm the fill with pcbnew `IsFilled()` and run kicad-cli DRC both with and without `--refill-zones`.
 20. For multi-net boards, compute routes outside MCP (`build/route_pcb.py`) and write them with `route_trace` /
     `add_via`. Model custom-shape pads by their bounding box and fiducials by their mask opening plus local clearance.
+
+### Added by V0.3.0 (`reports/v0.3.0/FINAL_V0.3.0_REPORT.md`)
+21. Release outputs are produced only by `scripts/release/build_release.sh` (kicad-cli; DRC with `--refill-zones`
+    but never `--save-board`). Run `scripts/release/make_packages.py` afterwards so that the ZIPs and checksums
+    always match the folder contents. Never hand-edit a released file.
+22. `manufacturing/Sensor_Interface_Power_Board/**` is byte-exact in git (`-text`). Write notes with LF endings
+    before packaging. Run `scripts/release/sanitize_paths.py` on any evidence that contains tool output.
+23. A `~<name>.kicad_pro.lck` alone means that the KiCad project manager has the project open. The schematic and PCB
+    may only be edited when their own `~*.kicad_sch.lck` / `~*.kicad_pcb.lck` are absent. Never touch `.kicad_pro`
+    while it is locked, and tell the owner to reload.
+24. Gerber diffs between revisions: compare after removing `%TF`/`G04` header lines and use the same plot options
+    (`--subtract-soldermask` was used for V0.2.0 and Rev A), otherwise clear-polarity items show up as false differences.

@@ -1,0 +1,34 @@
+
+========================================================================================
+1. LDO thermal model (independent re-derivation)
+========================================================================================
++3V3_P copper 251.2 mm2 = 0.389 in2 -> RthJA (interp. x1.10) = 88.6 C/W
+Design load 252.4 mA: P = 0.505 W -> Tj @50C = 94.7 C (V0.2.0 reported 94.7 C)
+
+========================================================================================
+2. Continuous +3V3_P output rating vs ambient (VIN = 5.25 V worst case)
+========================================================================================
+ Ta[C]  Imax for Tj<=110C   Imax for Tj<=125C
+    25       480 mA               565 mA
+    40       395 mA               480 mA
+    50       339 mA               423 mA
+    60       282 mA               367 mA
+Published rating (docs): +3V3_P <= 250 mA continuous at Ta <= 50 C (Tj ~95 C CALCULATED).
+
+========================================================================================
+3. Fault cases
+========================================================================================
++3V3_P shorted: eFuse limits input to <= 0.69 A -> LDO P <= 3.62 W -> Tj reaches
+  TSD 165 C (SBVS160C p.5): TLV1117LV thermal shutdown cycles (current limit 1.1 A typ p.1; short duration 'Indefinite' p.4).
++5V_P shorted: TPS26600 current limit 0.51-0.69 A, P = VIN x I <= 3.62 W ->
+  thermal shutdown, auto-retry (MODE = RTN, TI SLVSDG2G Table 2). Board-level: self-protecting, NOT TESTED.
+Total +5V_P budget before current limit (min): 510 mA; available for LDO + J3 sensor: 488 mA
+
+========================================================================================
+4. Reverse polarity: which paths are inside the eFuse protection
+========================================================================================
+Floating (isolated) source reversed: VIN_RAW = -V vs board GND; TPS26600 blocks to -60 V; no other path -> PROTECTED (design).
+Earth-referenced source (negative terminal earthed) reversed while the ESP32 USB host is earthed:
+  source +  -> J1-2 (board GND) -> J2-2/11/12 -> DevKit GND -> USB GND -> host earth -> source -  (loop)
+  The eFuse is NOT in this loop. Current is limited only by the source current limit and the cable/USB path.
+  -> NOT PROTECTED. Mitigation: isolated supply, polarity check before USB connection (power-up order R-31).
