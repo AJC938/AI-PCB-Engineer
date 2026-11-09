@@ -12,4 +12,4 @@ acceptable) · solder mask both sides · white silkscreen top only · flying-pro
 Origin of all coordinates: board bottom-left corner, mm. Read FABRICATION_NOTES.md §6 before accepting any
 manufacturer DFM change (the U5 exposed pad must stay isolated from GND).
 Source and documentation: the AI-PCB-Engineer repository, `hardware/kicad/Sensor_Interface_Power_Board/`.
-Licence: CERN-OHL-S-2.0 (see LICENSE-HARDWARE in the repository).
+Licence: CERN-OHL-P-2.0 (LICENSE-HARDWARE.txt in this package). Notices, disclaimer and limitations: NOTICE.md.

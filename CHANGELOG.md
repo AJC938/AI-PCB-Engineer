@@ -27,8 +27,20 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: Se
 - `scripts/release/`: build, audit (19 checks), BOM enrichment, packaging, path sanitizer and revision scripts.
 - `docs/`: quick start, architecture, electrical design, connection guide, layout, manufacturing, assembly, safety, validation status, visual review, licensing.
 - `media/renders/`: KiCad-generated 3D and 2D images.
-- `LICENSE-HARDWARE` (CERN-OHL-S-2.0), `LICENSE-CODE` (MIT), `CONTRIBUTING.md`, `release/v1.0.0/` notes and checklist.
+- `CONTRIBUTING.md`, `release/v1.0.0/` notes and checklist. (The release candidate `v1.0.0-rc1` carried a
+  CERN-OHL-S-2.0 draft licence; it was superseded before the stable release, see Licensing.)
 - `.gitattributes`: release folder byte-exact, so the published checksums match on every platform.
+
+### Licensing (final, owner-approved 2026-11-09)
+- Hardware: **CERN-OHL-P-2.0**. `LICENSE-HARDWARE` is the official OHWR text, byte-identical.
+- Software: **MIT**. `LICENSE-CODE` is the OSI text.
+- Added `LICENSE_SCOPE.md` (file and directory scope map, decision for hardware-generating code), `REUSE.toml` and
+  `LICENSES/`, `NOTICE.md`, `MODIFICATIONS.md` (CERN-OHL-P §3.3 modification notices), `THIRD_PARTY_NOTICES.md`,
+  `docs/licensing/`.
+- Third-party audit: the U5 project footprint is derived from a KiCad library footprint and stays under
+  `CC-BY-SA-4.0 WITH KiCad-libraries-exception`. No datasheet PDF is redistributed.
+- Manufacturing ZIPs now include `NOTICE.md` and `LICENSE-HARDWARE.txt`. Engineering files are byte-identical to `v1.0.0-rc1`.
+- `scripts/release/audit_licensing.py` (9 checks).
 
 ### Validation
 ERC 0. DRC 0/0 with zone refill and parity. Verifier PASS. Package audit 19/19. ZIP tests PASS. `sha256sum -c` 28/28. Fresh MCP reopen 7/7.

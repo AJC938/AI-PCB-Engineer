@@ -14,3 +14,7 @@ physically tested.**
 Board: 90.0 × 64.0 mm, 2 layers, FR-4 1.6 mm, 1 oz, ENIG preferred. Assembly: top side only, 44 SMT + 8 THT, lead-free.
 The quote must confirm: THT soldering method, availability of every exact MPN (especially TPS26600PWPR),
 CPL rotation convention, finish, price, lead time and shipping. No substitution without written approval.
+
+Licence: CERN-OHL-P-2.0 (LICENSE-HARDWARE.txt in this package). Copyright, acknowledgements, third-party
+attribution, disclaimer and design limitations: NOTICE.md. Commercial manufacturing is permitted; recipients of
+boards must have access to NOTICE.md (CERN-OHL-P §4).

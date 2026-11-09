@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Rasterize genuine KiCad plots into review images (no artwork is drawn by this script).
 
 Inputs are PDFs exported by kicad-cli (see build_release.sh): the board top/bottom plots and the schematic PDF.

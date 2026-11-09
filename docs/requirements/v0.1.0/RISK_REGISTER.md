@@ -77,3 +77,10 @@ Resolution status of R-01…R-35 after V0.2.0: see [`reports/v0.2.0/FINAL_V0.2.0
 | R-42 | Users load +3V3_P above the thermal rating | 2 | 2 | 4 | rating 250 mA at ≤ 50 °C published; LDO thermal shutdown as backstop | MITIGATED (doc) |
 | R-43 | Line-ending conversion by git changes released text files and breaks the published checksums | 2 | 2 | 4 | `.gitattributes`: release folder `-text`; `sha256sum -c` in the checklist | CLOSED |
 | R-44 | Licence variant not confirmed by the owner before the stable tag | 1 | 2 | 2 | CERN-OHL-S-2.0 prepared; `v1.0.0-rc1` until confirmed | OPEN (owner) |
+
+## V1.0.0 release update (2026-11-09)
+| ID | Risk | L | I | Score | Mitigation | Status |
+|---|---|---|---|---|---|---|
+| R-44 | (update) Licence variant | — | — | — | Owner approved CERN-OHL-P-2.0 (hardware) + MIT (code) | CLOSED |
+| R-45 | Third-party library material presented as project-original | 1 | 2 | 2 | U5 footprint kept under CC-BY-SA-4.0 WITH KiCad-libraries-exception; THIRD_PARTY_NOTICES.md; audit_licensing.py L5/L9 | MITIGATED |
+

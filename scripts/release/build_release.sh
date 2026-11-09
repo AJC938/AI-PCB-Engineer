@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 # Rebuild the V1.0.0 (Rev A) validation evidence and manufacturing outputs from the KiCad sources.
 #
 # Usage (from the repository root, Git Bash on Windows or any POSIX shell):

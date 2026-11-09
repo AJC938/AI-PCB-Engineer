@@ -1,10 +1,13 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Build, test and checksum the three Rev A manufacturing ZIP packages.
 
 1. Builds deterministic ZIPs (sorted entries, fixed timestamp, POSIX paths, one top-level folder):
      Sensor_Interface_PCB_RevA_Fabrication.zip            bare-board fabrication only
      Sensor_Interface_PCB_RevA_Assembly.zip               BOM, CPL, drawings, notes
      Sensor_Interface_PCB_RevA_Complete_Manufacturing.zip fabrication + assembly + 3D
-   Each ZIP contains README.md (from scripts/release/package_readmes/) and MANIFEST-SHA256.txt.
+   Each ZIP contains README.md (from scripts/release/package_readmes/), NOTICE.md and LICENSE-HARDWARE.txt
+   (repository root; CERN-OHL-P-2.0 notices for source and product recipients) and MANIFEST-SHA256.txt.
 2. Tests every ZIP: CRC test, extraction into a fresh temporary directory, byte-identical comparison with the
    source files, no absolute/parent/backslash paths, no machine-specific strings in any member.
 3. Writes <rev>/checksums/SHA256SUMS.txt for the ZIPs and every file of the release folder.
@@ -20,6 +23,10 @@ import zipfile
 rev_dir = os.path.abspath(sys.argv[1])
 here = os.path.dirname(os.path.abspath(__file__))
 readmes = os.path.join(here, "package_readmes")
+repo_root = os.path.abspath(os.path.join(here, "..", ".."))
+for f in ("NOTICE.md", "LICENSE-HARDWARE"):
+    if ("@@" + "HOLDER@@").encode() in open(os.path.join(repo_root, f), "rb").read():
+        sys.exit(f"ABORT: {f} still contains the copyright-holder placeholder")
 pkg_dir = os.path.join(rev_dir, "packages")
 sum_dir = os.path.join(rev_dir, "checksums")
 os.makedirs(pkg_dir, exist_ok=True)
@@ -63,6 +70,9 @@ fails = []
 for name, (readme, members) in PACKAGES.items():
     zpath = os.path.join(pkg_dir, name + ".zip")
     entries = [(f"{name}/README.md", open(os.path.join(readmes, readme), "rb").read())]
+    # Licence notices required for recipients of the source and of products (CERN-OHL-P-2.0 §3.1, §4)
+    for arc, src in (("NOTICE.md", "NOTICE.md"), ("LICENSE-HARDWARE.txt", "LICENSE-HARDWARE")):
+        entries.append((f"{name}/{arc}", open(os.path.join(repo_root, src), "rb").read()))
     for sub, src in members:
         entries.append((f"{name}/{sub}{os.path.basename(src)}", open(src, "rb").read()))
     manifest = "".join(f"{sha(b)}  {arc[len(name) + 1:]}\n" for arc, b in sorted(entries))

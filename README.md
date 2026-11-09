@@ -10,7 +10,7 @@ sensor connectivity for ESP32-based embedded systems.
 | **Release** | v1.0.0, board **Rev A** |
 | **Status** | **DIGITALLY VALIDATED DESIGN — NOT PHYSICALLY FABRICATED OR TESTED** |
 | **Tool** | KiCad 10.0.8 |
-| **Licence** | Hardware CERN-OHL-S-2.0 · scripts MIT (see [License](#22-license)) |
+| **Licence** | Hardware CERN-OHL-P-2.0 · software MIT · third-party material under its own terms (see [License](#22-license)) |
 
 > **v1.0.0 means "fabrication-ready open hardware design release".** The schematic, layout and manufacturing
 > files passed every digital check (ERC, DRC, schematic parity, file audits). No board has been manufactured,
@@ -212,15 +212,38 @@ engineering audit: [reports/v0.3.0/FINAL_ENGINEERING_AUDIT.md](reports/v0.3.0/FI
 8. J6 GPIOs and all J2 signals are 3.3 V only.
 
 ## 22. License
-| Scope | Licence | File |
-|---|---|---|
-| Hardware design: KiCad schematic, PCB, project footprint library, manufacturing outputs, hardware documentation | **CERN-OHL-S-2.0** (SPDX `CERN-OHL-S-2.0`) | [LICENSE-HARDWARE](LICENSE-HARDWARE) |
-| Scripts and code (`scripts/`, `ai/workflows/`, `hardware/kicad/*/build/`, `calculations/`) | **MIT** (SPDX `MIT`) | [LICENSE-CODE](LICENSE-CODE) |
+The repository is **not** under a single licence. The distinction:
 
-Third-party material: footprints and 3D models from the KiCad standard libraries are CC-BY-SA 4.0 with the KiCad
-library exception (designs and generated files that use them are not affected). Datasheets are **not**
-redistributed; only links are given. Component names and trademarks belong to their owners. This project is
-**not** OSHWA-certified. Details: [docs/LICENSING.md](docs/LICENSING.md).
+### Hardware: `CERN-OHL-P-2.0`
+Original hardware design files and associated hardware documentation are distributed under the **CERN Open
+Hardware Licence Version 2 – Permissive** ([LICENSE-HARDWARE](LICENSE-HARDWARE), official text). This covers only
+material identified as project hardware source in [LICENSE_SCOPE.md](LICENSE_SCOPE.md):
+- KiCad schematic, PCB and project;
+- manufacturing outputs and packages;
+- renders;
+- hardware documentation and reports.
+
+It permits copying, modification, manufacturing and selling, including commercially. When you convey the source,
+keep the notices ([NOTICE.md](NOTICE.md)). When you convey a modified version, add a modification notice
+([MODIFICATIONS.md](MODIFICATIONS.md)).
+
+### Software: `MIT`
+Original project software and scripts (`*.py`, `*.sh`: release, build, verification and calculation scripts) and
+the AI-toolchain material are distributed under the **MIT License** ([LICENSE-CODE](LICENSE-CODE)).
+
+### Third-party materials
+Third-party material remains under its own terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md):
+- The U5 footprint is a modified KiCad library footprint and stays under
+  `CC-BY-SA-4.0 WITH KiCad-libraries-exception`.
+- KiCad library data embedded in the design and generated files is covered by that exception.
+- Datasheets are **not** redistributed; only links are given.
+- Trademarks belong to their owners.
+
+Machine-readable map: [REUSE.toml](REUSE.toml). Plain-language guide:
+[docs/licensing/LICENSING_GUIDE.md](docs/licensing/LICENSING_GUIDE.md).
+
+The design is provided "as is" (CERN-OHL-P §5, MIT). CERN does not endorse this project. The project is **not**
+OSHWA-certified.
 
 ## 23. Revision History
 | Version | Date | Board rev | Summary |

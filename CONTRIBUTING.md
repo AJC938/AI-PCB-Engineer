@@ -24,5 +24,7 @@ The design has not been physically tested by the maintainers. If you build one:
 - Never commit secrets, personal data or machine-specific absolute paths.
 
 ## Licensing of contributions
-Hardware and documentation contributions are accepted under CERN-OHL-S-2.0, and code contributions under MIT
-(see [docs/LICENSING.md](docs/LICENSING.md)).
+Hardware and hardware-documentation contributions are accepted under CERN-OHL-P-2.0, and code contributions under
+MIT (see [LICENSE_SCOPE.md](LICENSE_SCOPE.md)). Record every hardware modification in
+[MODIFICATIONS.md](MODIFICATIONS.md) as described in
+[docs/licensing/CONTRIBUTOR_NOTICES.md](docs/licensing/CONTRIBUTOR_NOTICES.md).

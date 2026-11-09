@@ -13,3 +13,7 @@ Rules for the assembler:
 - Confirm polarity of U1–U5, LED1/LED2 and pin 1 of J1–J6 against the assembly drawing at first article.
 - Apply your own package zero-orientation offsets to the CPL rotations (KiCad library orientation).
 Combine this package with the Fabrication package, or use the Complete Manufacturing package.
+
+Licence: CERN-OHL-P-2.0 (LICENSE-HARDWARE.txt in this package). Copyright, acknowledgements, third-party
+attribution, disclaimer and design limitations: NOTICE.md. Commercial manufacturing is permitted; recipients of
+boards must have access to NOTICE.md (CERN-OHL-P §4).

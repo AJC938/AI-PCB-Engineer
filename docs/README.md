@@ -13,7 +13,7 @@
 | [validation/DIGITAL_VALIDATION.md](validation/DIGITAL_VALIDATION.md) | ERC/DRC/audit evidence |
 | [validation/PHYSICAL_VALIDATION_STATUS.md](validation/PHYSICAL_VALIDATION_STATUS.md) | Physical status (not tested) and test plan |
 | [visual-review/VISUAL_REVIEW.md](visual-review/VISUAL_REVIEW.md) | All renders and plots |
-| [LICENSING.md](LICENSING.md) | Licence scope and third-party material |
+| [licensing/LICENSING_GUIDE.md](licensing/LICENSING_GUIDE.md), [licensing/CONTRIBUTOR_NOTICES.md](licensing/CONTRIBUTOR_NOTICES.md) | Licences in plain language; attribution and modification notices. Scope map: [`LICENSE_SCOPE.md`](../LICENSE_SCOPE.md) |
 | [ai-workflow/AI_TOOLCHAIN_SETUP.md](ai-workflow/AI_TOOLCHAIN_SETUP.md) | The Claude Code → MCP → KiCad toolchain |
 | [requirements/v0.1.0/](requirements/v0.1.0/) | Original requirements, risk register, open questions |
 | [ENGINEERING_RULES.md](ENGINEERING_RULES.md), [SYSTEM_ARCHITECTURE.md](SYSTEM_ARCHITECTURE.md), [DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md) | Project rules and toolchain architecture |

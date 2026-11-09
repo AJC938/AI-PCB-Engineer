@@ -33,3 +33,6 @@ manufacturing/Sensor_Interface_Power_Board/** -text
 *.zip  binary
 # Shell scripts must keep LF endings on every platform (Bash fails on CRLF)
 *.sh   text eol=lf
+# Licence texts are kept byte-identical to the official sources on every platform
+LICENSE-*      -text
+LICENSES/**    -text

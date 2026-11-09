@@ -1,0 +1,33 @@
+# SPDX licence manifest (REUSE Specification 3.x, REUSE.toml format).
+# Human-readable explanation: LICENSE_SCOPE.md. Licence texts: LICENSE-HARDWARE, LICENSE-CODE, LICENSES/.
+# Annotation order is general -> specific; when several tables match a file, the last matching table applies.
+# Files that carry their own SPDX header (scripts/release/*, calculations/v0.3.0/*) use that header.
+version = 1
+
+# 1. Default: original hardware design source and hardware documentation of this project.
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "2026 AI-PCB-Engineer contributors"
+SPDX-License-Identifier = "CERN-OHL-P-2.0"
+
+# 2. Original software: scripts, calculation programs, test/build/validation tools.
+[[annotations]]
+path = ["**/*.py", "**/*.sh"]
+SPDX-FileCopyrightText = "2026 AI-PCB-Engineer contributors"
+SPDX-License-Identifier = "MIT"
+
+# 3. AI toolchain and development-environment material (software tooling, not hardware design).
+[[annotations]]
+path = ["ai/**", "env/**", "docs/ai-workflow/**", "docs/SYSTEM_ARCHITECTURE.md", "CLAUDE.md",
+        ".mcp.example.json", ".env.example", ".gitignore", ".gitattributes", "REUSE.toml"]
+SPDX-FileCopyrightText = "2026 AI-PCB-Engineer contributors"
+SPDX-License-Identifier = "MIT"
+
+# 4. Third-party: project footprint for U5, DERIVED from the KiCad library footprint
+#    Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm (kicad-footprints),
+#    modified 2026-11-09 to the TI PWP0016A land pattern. It keeps the upstream licence (ShareAlike).
+[[annotations]]
+path = "hardware/kicad/Sensor_Interface_Power_Board/Sensor_Interface_Power_Board.pretty/**"
+SPDX-FileCopyrightText = ["KiCad Library contributors (original footprint)",
+                          "2026 AI-PCB-Engineer contributors (modifications: TI PWP0016A pads, exposed pad, mask and paste)"]
+SPDX-License-Identifier = "CC-BY-SA-4.0 WITH KiCad-libraries-exception"

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Set the board revision label for the V1.0.0 release (Rev A). Non-electrical change (DDR-22).
 
 Edits, by exact string match with expected counts (the script aborts without writing if any count differs):

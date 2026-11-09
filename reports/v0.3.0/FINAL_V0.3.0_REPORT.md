@@ -2,6 +2,10 @@
 
 2026-11-09 · branch `release/v0.3.0-finalization` (from V0.2.0 `d859317`) · release **v1.0.0, board Rev A**
 
+> **Superseded licence note (added 2026-11-09 for v1.0.0):** this report was written before the licence decision.
+> The final release uses **CERN-OHL-P-2.0** for hardware and **MIT** for code (`LICENSE_SCOPE.md`,
+> `reports/v1.0.0/LICENSE_AND_RELEASE_AUDIT.md`). The CERN-OHL-S-2.0 mentions below describe the release candidate only.
+
 ## 1. Status
 **V0.3.0: COMPLETE (digital scope).** The release candidate `v1.0.0-rc1` is tagged locally. The stable tag
 `v1.0.0` waits on one owner decision, the licence variant (CERN-OHL-S-2.0 prepared). It is a licensing choice

@@ -1,0 +1,10 @@
+L1: PASS  LICENSE-HARDWARE sha256 6e471d647db50527… = official; identical to LICENSES/CERN-OHL-P-2.0.txt
+L2: PASS  LICENSE-CODE line 1 = 'Copyright 2026 AI-PCB-Engineer contributors'; body identical to the OSI MIT text: True
+L3: PASS  files with the holder placeholder: []
+L4: PASS  404 files resolved to a licence; unmapped []
+L5: PASS  scope rules; licence counts {'MIT': 54, 'CERN-OHL-P-2.0': 349, 'CC-BY-SA-4.0 WITH KiCad-libraries-exception': 1}; violations []
+L6: PASS  SPDX identifiers naming CERN-OHL-S/W: []
+L7: PASS  18 PDFs, all KiCad exports; others: []
+L8: PASS  3 ZIPs carry NOTICE.md + LICENSE-HARDWARE.txt: OK
+L9: PASS  U5 footprint provenance recorded (descr, THIRD_PARTY_NOTICES.md, MODIFICATIONS.md)
+RESULT: PASS (9/9)

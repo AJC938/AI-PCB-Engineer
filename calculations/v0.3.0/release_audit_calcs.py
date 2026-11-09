@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """V0.3.0 final engineering audit calculations (release Rev A / V1.0.0).
 
 Every input is labelled: VERIFIED (datasheet / board read-back), CALCULATED, or ASSUMED.

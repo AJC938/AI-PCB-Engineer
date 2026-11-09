@@ -97,3 +97,9 @@ Every work report contains:
     while it is locked, and tell the owner to reload.
 24. Gerber diffs between revisions: compare after removing `%TF`/`G04` header lines and use the same plot options
     (`--subtract-soldermask` was used for V0.2.0 and Rev A), otherwise clear-polarity items show up as false differences.
+
+### Added by V1.0.0 (`reports/v1.0.0/LICENSE_AND_RELEASE_AUDIT.md`)
+25. Licences: hardware CERN-OHL-P-2.0, code MIT, per `LICENSE_SCOPE.md` / `REUSE.toml`. Before any release run
+    `scripts/release/audit_licensing.py` (9 checks). Never relicense third-party material: a footprint or model
+    derived from a KiCad library stays `CC-BY-SA-4.0 WITH KiCad-libraries-exception`, and is recorded in
+    `THIRD_PARTY_NOTICES.md` and `MODIFICATIONS.md`. Every hardware modification gets a dated row in `MODIFICATIONS.md`.

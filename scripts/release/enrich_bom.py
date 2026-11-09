@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Add release columns to the generated BOM without changing any part data.
 
 Replaces the generic KiCad library 'Description' with an engineering description and adds

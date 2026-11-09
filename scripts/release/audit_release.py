@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Independent audit of the Rev A (V1.0.0) manufacturing outputs against the saved board (pcbnew, read-only).
 
 Derived from hardware/kicad/<board>/build/audit_fab_outputs.py (V0.2.0, 11 checks) with extra checks.

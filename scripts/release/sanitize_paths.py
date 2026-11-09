@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 AI-PCB-Engineer contributors
+# SPDX-License-Identifier: MIT
 """Replace machine-specific absolute paths in generated text evidence with neutral placeholders.
 
 The repository root becomes "<repo>" and any remaining "C:/Users/<name>" style home path becomes "<home>".
