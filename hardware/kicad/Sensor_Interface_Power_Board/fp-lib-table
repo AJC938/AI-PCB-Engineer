@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Sensor_Interface_Power_Board")(type "KiCad")(uri "${KIPRJMOD}/Sensor_Interface_Power_Board.pretty")(options "")(descr "Project-local footprints (V0.2.0)"))
+)

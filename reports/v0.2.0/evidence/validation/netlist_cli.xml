@@ -1,0 +1,2194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>%USERPROFILE%\dev\AI-PCB-Engineer\hardware\kicad\Sensor_Interface_Power_Board\Sensor_Interface_Power_Board.kicad_sch</source>
+    <date>2026-11-09T04:53:55</date>
+    <tool>Eeschema 10.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Sensor Interface &amp; Power Management Board for ESP32</title>
+        <company>AI-PCB-Engineer</company>
+        <rev>0.2.0</rev>
+        <date>2026-11-09</date>
+        <source>Sensor_Interface_Power_Board.kicad_sch</source>
+        <comment number="1" value="Architecture B: ESP32 DevKit on its own USB; board powers peripherals"/>
+        <comment number="2" value="V0.2.0: eFuse power entry (DDR-17), TRIG series R15 (DDR-18)"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A106KP8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A106KP8NNNC"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1809a334-ece5-4596-b69a-72b02430b4c1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d15619a7-64aa-4971-8195-3d779d0d603a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A106KP8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A106KP8NNNC"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ff7d0f8-1a27-4bf3-9ed7-391eebf7e8dd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c73de97-cfb2-4f5a-90ce-9ab2d023260d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68288c3e-b232-4972-b2ba-e806448373b4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5b2e4da-0ab5-4329-9d9d-9f49c57c3caa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a3ba005-6150-45c0-87da-f8cc2ff34051</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A106KP8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A106KP8NNN</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A106KP8NNNC"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>226fd9c0-6fef-43d7-9fe0-97e29084bc74</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fc2f9c5-0315-4924-a1ba-909b6a726fd0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f009d21e-b3ed-4b6f-8603-864bf694f11a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Murata</field>
+        <field name="MPN">GRM188R71C104KA01D</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="MPN" value="GRM188R71C104KA01D"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5549803-09af-4feb-82bf-7a0950c7296a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>1uF 50V</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A105KB8NNN</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A105KB8NNN</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43ee878d-3f48-4c5f-b7aa-3adf80c3df1a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>47nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10B473KB8NNN</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="MPN">CL10B473KB8NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10B473KB8NNN</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="MPN" value="CL10B473KB8NNNC"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f005ee54-e542-47aa-ab18-14c3eb204f11</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>5V_IN</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkds-15-2-508-1715721</datasheet>
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Phoenix Contact</field>
+        <field name="MPN">1715721</field>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal</field>
+        <field name="Datasheet">https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkds-15-2-508-1715721</field>
+        <field name="Description">Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Phoenix Contact"/>
+      <property name="MPN" value="1715721"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="screw terminal"/>
+      <property name="ki_fp_filters" value="TerminalBlock*:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de84492d-7a9d-4e07-9b7f-ef9cb54ea794</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>ESP32_IF</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</datasheet>
+      <description>Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">HTSW-112-07-T-S</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</field>
+        <field name="Description">Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x12" description="Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="HTSW-112-07-T-S"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d9ad925b-1937-4dd6-abf2-ae92979d470d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>ULTRASONIC</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</datasheet>
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">HTSW-104-07-T-S</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</field>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="HTSW-104-07-T-S"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f5dbb2f-f837-432b-ba0e-a026a1da1f13</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>UART</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</datasheet>
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">HTSW-104-07-T-S</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</field>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="HTSW-104-07-T-S"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a20a08b8-5931-4374-bd31-61dac2cc1467</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>I2C</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</datasheet>
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">HTSW-104-07-T-S</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</field>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="HTSW-104-07-T-S"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f2196b7a-6652-4544-8c07-52adb418a124</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>GP_3V3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</datasheet>
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <fields>
+        <field name="Manufacturer">Samtec</field>
+        <field name="MPN">HTSW-104-07-T-S</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">https://suddendocs.samtec.com/catalog_english/tsw_th.pdf</field>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="MPN" value="HTSW-104-07-T-S"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09377144-9513-4235-9a8e-5550bbf77bdf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP1">
+      <value>UART_VCC_SEL</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</footprint>
+      <description>3-pole Solder Jumper, pins 1+2 closed/bridged</description>
+      <fields>
+        <field name="Footprint">Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">3-pole Solder Jumper, pins 1+2 closed/bridged</field>
+      </fields>
+      <libsource lib="Jumper" part="SolderJumper_3_Bridged12" description="3-pole Solder Jumper, pins 1+2 closed/bridged"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="Solder Jumper SPDT"/>
+      <property name="ki_fp_filters" value="SolderJumper*Bridged12*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9100d5b6-868f-4bef-bc7c-d832b3acdd77</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP2">
+      <value>I2C_PU_EN</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm</footprint>
+      <description>Solder Jumper, 2-pole, closed/bridged</description>
+      <fields>
+        <field name="Footprint">Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">Solder Jumper, 2-pole, closed/bridged</field>
+      </fields>
+      <libsource lib="Jumper" part="SolderJumper_2_Bridged" description="Solder Jumper, 2-pole, closed/bridged"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="solder jumper SPST"/>
+      <property name="ki_fp_filters" value="SolderJumper*Bridged*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4c2bea47-985a-4cf4-8a46-ee0cbfdda0f2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="LED1">
+      <value>RED 5V</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf</datasheet>
+      <description>Light emitting diode</description>
+      <fields>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="MPN">WP7113ID</field>
+        <field name="Footprint">LED_THT:LED_D5.0mm</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/SPEC/WP7113ID.pdf</field>
+        <field name="Description">Light emitting diode</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="MPN" value="WP7113ID"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35f78619-795e-4a6d-8207-927394d52914</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="LED2">
+      <value>GREEN 3V3</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/SPEC/WP7113SGD.pdf</datasheet>
+      <description>Light emitting diode</description>
+      <fields>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="MPN">WP7113SGD</field>
+        <field name="Footprint">LED_THT:LED_D5.0mm</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/SPEC/WP7113SGD.pdf</field>
+        <field name="Description">Light emitting diode</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="MPN" value="WP7113SGD"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01f995ee-ecbf-4472-b4e1-8fb4fa3afa1a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>1.5k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1501V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1501V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57aa7b52-39d4-49f3-af97-8dbb3abfcb0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF6800V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF6800V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31048162-a7c1-494a-bbfa-6dbd3f13841b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1003V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1003V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf2efa9b-7a98-4158-8cd2-66d7e59b7ca5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1003V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1003V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7e7a8ec3-f64d-48b5-8b88-1bcefa8115de</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1001V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1001V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32ac672c-385b-4312-8ac8-50ad2fb6f894</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1003V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1003V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff1855a9-f598-44de-92a3-974ed3bb0a6d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF2201V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF2201V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>04b18dee-643d-4984-a9da-713c442b0c8e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF2201V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF2201V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b00bdc94-77a2-4c34-8467-a9b60fea417c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>220</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF2200V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF2200V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3fd5c669-b895-41b0-8bff-102a5b002daa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1001V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1001V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61d74b1d-4594-40fa-898b-f61970347a37</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1003V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1003V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>955ceee9-f580-4a01-a79f-c763e6918276</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1001V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1001V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1cc91d44-c1c2-4cd5-9cd0-b654688a5aee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1001V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1001V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bbf9487b-864f-457a-b18e-1a0e5d7bca6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF1001V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF1001V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>151ef7cd-a8e0-4959-b23a-accd2869df2e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>73.2k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF7322V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF7322V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>efd1c296-ce03-4aa4-9dc0-77a723b70b99</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>5.9k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF5901V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF5901V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>097537ce-b97f-4685-92cd-1c3272aa946d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>21.5k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF2152V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF2152V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4641fa8-e1f3-4170-a32f-2d1e48a30495</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>20k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <datasheet>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Manufacturer">Panasonic</field>
+        <field name="MPN">ERJ-3EKF2002V</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet">https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Panasonic"/>
+      <property name="MPN" value="ERJ-3EKF2002V"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee396ade-1303-4c88-b9c5-a01051fc1a54</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>VIN</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3bbde280-467e-4095-aca8-16d34ca3d9cb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>+5V</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3758b771-f0f7-44ca-8229-758f42628429</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>+3V3</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29056c56-850d-4cfd-8809-01e844336463</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>3V3_ESP</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50ec29ec-80c5-4b74-859d-e6ef6932f74c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>612adab5-0c30-4b46-ad58-0b3821b48680</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7306dc96-3a8c-41c7-937a-8c9de9b8d2a5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>ECHO_ESP</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d606f131-23ef-42ae-8be2-d335998858d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>TRIG_5V</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro_Mini</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p55.pdf</datasheet>
+      <description>test point</description>
+      <fields>
+        <field name="Manufacturer">Keystone Electronics</field>
+        <field name="MPN">5015</field>
+        <field name="Footprint">TestPoint:TestPoint_Keystone_5015_Micro_Mini</field>
+        <field name="Datasheet">https://www.keyelco.com/userAssets/file/M65p55.pdf</field>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Manufacturer" value="Keystone Electronics"/>
+      <property name="MPN" value="5015"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70ce0429-80b3-4997-a8f2-c7cecf2b6c99</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>TLV1117LV33</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf</datasheet>
+      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TLV1117LV33DCYR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf</field>
+        <field name="Description">1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TLV1117LV33DCYR"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <property name="ki_fp_filters" value="SOT?223*TabPin2*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4f378009-2bf0-4670-9511-2777ac4e1071</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>SN74LVC1G17DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</datasheet>
+      <description>Single Schmitt Buffer Gate, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC1G17DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</field>
+        <field name="Description">Single Schmitt Buffer Gate, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC1G17" description="Single Schmitt Buffer Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC1G17DBVR"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate Buff Schmitt LVC CMOS"/>
+      <property name="ki_fp_filters" value="SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be9ea70b-1866-4403-88f8-4ad0e24bc6b5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>SN74LVC1T45DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf</datasheet>
+      <description>Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC1T45DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf</field>
+        <field name="Description">Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6</field>
+      </fields>
+      <libsource lib="Logic_LevelTranslator" part="SN74LVC1T45DBV" description="Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC1T45DBVR"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="Level-Shifter CMOS-TTL-Translation"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>812f98a2-43e5-4330-8aad-297cf4c40e38</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>SN74LVC1G17DBVR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</datasheet>
+      <description>Single Schmitt Buffer Gate, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">SN74LVC1G17DBVR</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</field>
+        <field name="Description">Single Schmitt Buffer Gate, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC1G17" description="Single Schmitt Buffer Gate, Low-Voltage CMOS"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="SN74LVC1G17DBVR"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate Buff Schmitt LVC CMOS"/>
+      <property name="ki_fp_filters" value="SOT?23* SOT?553* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11b7e828-2eba-4345-b708-c7ce02a90040</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>TPS26600PWPR</value>
+      <footprint>Sensor_Interface_Power_Board:TI_PWP0016A_HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tps2660.pdf</datasheet>
+      <description>60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16</description>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPS26600PWPR</field>
+        <field name="Footprint">Sensor_Interface_Power_Board:TI_PWP0016A_HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2660.pdf</field>
+        <field name="Description">60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16</field>
+      </fields>
+      <libsource lib="Power_Management" part="TPS26600PWP" description="60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPS26600PWPR"/>
+      <property name="Sheetname" value="Sensor_Interface_Power_Board"/>
+      <property name="Sheetfile" value="Sensor_Interface_Power_Board.kicad_sch"/>
+      <property name="ki_keywords" value="efuse protection switch"/>
+      <property name="ki_fp_filters" value="HTSSOP*1EP*4.4x5mm*P0.65mm*Mask2.66x2.46mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46ff41c7-5403-4859-8031-38105db7eb1f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="17"/>
+            <pin num="9"/>
+            <pin num="13"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="14"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xGxx" part="74LVC1G17">
+      <description>Single Schmitt Buffer Gate, Low-Voltage CMOS</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+        <fp>SOT?553*</fp>
+        <fp>Texas?R-PDSO-G5?DCK*</fp>
+        <fp>Texas?R-PDSO-N5?DRL*</fp>
+        <fp>Texas?X2SON*0.8x0.8mm*P0.48mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC1G17</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf</field>
+        <field name="Description">Single Schmitt Buffer Gate, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x12">
+      <description>Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x12</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_2_Bridged">
+      <description>Solder Jumper, 2-pole, closed/bridged</description>
+      <footprints>
+        <fp>SolderJumper*Bridged*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_2_Bridged</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Solder Jumper, 2-pole, closed/bridged</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Bridged12">
+      <description>3-pole Solder Jumper, pins 1+2 closed/bridged</description>
+      <footprints>
+        <fp>SolderJumper*Bridged12*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Bridged12</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">3-pole Solder Jumper, pins 1+2 closed/bridged</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Logic_LevelTranslator" part="SN74LVC1T45DBV">
+      <description>Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74LVC1T45DBV</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf</field>
+        <field name="Description">Single-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs, SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCA" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="A" type="bidirectional"/>
+        <pin num="4" name="B" type="bidirectional"/>
+        <pin num="5" name="DIR" type="input"/>
+        <pin num="6" name="VCCB" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Management" part="TPS26600PWP">
+      <description>60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tps2660.pdf</docs>
+      <footprints>
+        <fp>HTSSOP*1EP*4.4x5mm*P0.65mm*Mask2.66x2.46mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS26600PWP</field>
+        <field name="Footprint">Package_SO:HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask2.66x2.46mm_ThermalVias</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tps2660.pdf</field>
+        <field name="Description">60V, 2A Current Limiting, Industrial eFuse, Reverse Current Blocking, Adjustable Overvoltage cut-off, Active Current Limiting, Circuit Breaker with auto-retry, HTSSOP-16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="IN" type="passive"/>
+        <pin num="3" name="UVLO" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="OVP" type="input"/>
+        <pin num="6" name="MODE" type="input"/>
+        <pin num="7" name="~{SHDN}" type="input"/>
+        <pin num="8" name="RTN" type="passive"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="IMON" type="output"/>
+        <pin num="11" name="ILIM" type="passive"/>
+        <pin num="12" name="dVdT" type="passive"/>
+        <pin num="13" name="NC" type="no_connect"/>
+        <pin num="14" name="~{FLT}" type="open_collector"/>
+        <pin num="15" name="OUT" type="power_out"/>
+        <pin num="16" name="OUT" type="passive"/>
+        <pin num="17" name="RTN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="AMS1117-3.3">
+      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
+      <docs>http://www.advanced-monolithic.com/pdf/ds1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMS1117-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">http://www.advanced-monolithic.com/pdf/ds1117.pdf</field>
+        <field name="Description">1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xGxx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>${KICAD10_SYMBOL_DIR}/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Logic_LevelTranslator">
+      <uri>${KICAD10_SYMBOL_DIR}/Logic_LevelTranslator.kicad_sym</uri>
+    </library>
+    <library logical="Power_Management">
+      <uri>${KICAD10_SYMBOL_DIR}/Power_Management.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3_P" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A_1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VO_2" pintype="power_out"/>
+    </net>
+    <net code="2" name="+5V_P" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="B_3" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VI_3" pintype="power_in"/>
+      <node ref="U3" pin="6" pinfunction="VCCB_6" pintype="power_in"/>
+      <node ref="U5" pin="15" pinfunction="OUT_15" pintype="power_out"/>
+      <node ref="U5" pin="16" pinfunction="OUT_16" pintype="passive"/>
+    </net>
+    <net code="3" name="3V3_ESP" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="A_1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="VCCA_1" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="DIR_5" pintype="input"/>
+      <node ref="U4" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="4" name="EF_DVDT" class="Default">
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="U5" pin="12" pinfunction="dVdT_12" pintype="passive"/>
+    </net>
+    <net code="5" name="EF_ILIM" class="Default">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U5" pin="11" pinfunction="ILIM_11" pintype="passive"/>
+    </net>
+    <net code="6" name="EF_OVP" class="Default">
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="OVP_5" pintype="input"/>
+    </net>
+    <net code="7" name="EF_RTN" class="Default">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="U5" pin="17" pinfunction="RTN_17" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="MODE_6" pintype="input"/>
+      <node ref="U5" pin="8" pinfunction="RTN_8" pintype="passive"/>
+    </net>
+    <net code="8" name="EF_UVLO" class="Default">
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="UVLO_3" pintype="input"/>
+    </net>
+    <net code="9" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J2" pin="11" pinfunction="Pin_11_11" pintype="passive"/>
+      <node ref="J2" pin="12" pinfunction="Pin_12_12" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="LED1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="LED2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U5" pin="9" pinfunction="GND_9" pintype="power_in"/>
+    </net>
+    <net code="10" name="GP_IO1" class="Default">
+      <node ref="J6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="11" name="GP_IO1_ESP" class="Default">
+      <node ref="J2" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="GP_IO2" class="Default">
+      <node ref="J6" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="GP_IO2_ESP" class="Default">
+      <node ref="J2" pin="10" pinfunction="Pin_10_10" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="I2C_PU" class="Default">
+      <node ref="JP2" pin="2" pinfunction="B_2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="I2C_SCL" class="Default">
+      <node ref="J2" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="J5" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="16" name="I2C_SDA" class="Default">
+      <node ref="J2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="17" name="LED1_A" class="Default">
+      <node ref="LED1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="LED2_A" class="Default">
+      <node ref="LED2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="UART_RX" class="Default">
+      <node ref="J4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="UART_RX_ESP" class="Default">
+      <node ref="J2" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="U4" pin="4" pintype="output"/>
+    </net>
+    <net code="21" name="UART_RX_IN" class="Default">
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U4" pin="2" pintype="input"/>
+    </net>
+    <net code="22" name="UART_TX" class="Default">
+      <node ref="J4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="UART_TX_ESP" class="Default">
+      <node ref="J2" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="24" name="UART_VCC" class="Default">
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="C_2" pintype="passive"/>
+    </net>
+    <net code="25" name="US_ECHO_5V" class="Default">
+      <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="US_ECHO_ESP" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="4" pintype="output"/>
+    </net>
+    <net code="27" name="US_ECHO_IN" class="Default">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pintype="input"/>
+    </net>
+    <net code="28" name="US_TRIG_5V" class="Default">
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="29" name="US_TRIG_B" class="Default">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="B_4" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="US_TRIG_ESP" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="A_3" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="VIN_RAW" class="Default">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U5" pin="2" pinfunction="IN_2" pintype="passive"/>
+    </net>
+    <net code="32" name="unconnected-(U2-NC-Pad1)" class="Default">
+      <node ref="U2" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U4-NC-Pad1)" class="Default">
+      <node ref="U4" pin="1" pinfunction="NC_1" pintype="no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U5-IMON-Pad10)" class="Default">
+      <node ref="U5" pin="10" pinfunction="IMON_10" pintype="output+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U5-NC-Pad4)" class="Default">
+      <node ref="U5" pin="4" pinfunction="NC_4" pintype="no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U5-NC-Pad13)" class="Default">
+      <node ref="U5" pin="13" pinfunction="NC_13" pintype="no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U5-~{FLT}-Pad14)" class="Default">
+      <node ref="U5" pin="14" pinfunction="~{FLT}_14" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U5-~{SHDN}-Pad7)" class="Default">
+      <node ref="U5" pin="7" pinfunction="~{SHDN}_7" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

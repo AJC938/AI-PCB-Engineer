@@ -1,10 +1,12 @@
-"""Generate the MCP call sequence that builds the V0.1.0 schematic (SWIG backend, via ai/workflows/mcp_harness.py).
+"""Generate the MCP call sequence that builds the schematic (V0.2.0 revision; V0.1.0 = git 06f223c) (SWIG backend, via ai/workflows/mcp_harness.py).
 
 Usage: python -I build_schematic.py <out_dir>
 Writes: s1_create.json (create_project) and s2_build.json (symbols, labels, no-connects, properties).
 Between the two runs, set_page_a3.py performs one controlled, verified file edit (paper size and title block).
 Single source of truth for the design: PARTS (symbol, value, footprint, MPN, position) and NETS (pin -> net).
 Connectivity uses global labels placed exactly on pin endpoints (workaround D-2: no '/'-prefixed local nets).
+V0.2.0 (DDR-17/18): F1/Q1/R1/D1 replaced by U5 TPS26600 eFuse (OVP, reverse polarity, current limit);
+R15 1k series resistor added on TRIG. See reports/v0.2.0/TVS_LDO_PROTECTION_ANALYSIS.md.
 """
 import json
 import os
@@ -25,9 +27,12 @@ DS = {
     "C100n": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM188R71C104KA01-01.pdf",
     "HDR": "https://suddendocs.samtec.com/catalog_english/tsw_th.pdf",
     "TP": "https://www.keyelco.com/userAssets/file/M65p55.pdf",
+    "C1u50": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10A105KB8NNN",
+    "C47n": "https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL10B473KB8NNN",
 }
 R_MPN = {"10k": "ERJ-3EKF1002V", "100k": "ERJ-3EKF1003V", "1k": "ERJ-3EKF1001V", "2.2k": "ERJ-3EKF2201V",
-         "220": "ERJ-3EKF2200V", "1.5k": "ERJ-3EKF1501V", "680": "ERJ-3EKF6800V"}
+         "220": "ERJ-3EKF2200V", "1.5k": "ERJ-3EKF1501V", "680": "ERJ-3EKF6800V",
+         "73.2k": "ERJ-3EKF7322V", "5.9k": "ERJ-3EKF5901V", "21.5k": "ERJ-3EKF2152V", "20k": "ERJ-3EKF2002V"}
 
 # ref: (lib_id, value, footprint, (x, y), angle, manufacturer, mpn, datasheet)
 PARTS = {}
@@ -44,6 +49,10 @@ def res(ref, val, x, y):
 def cap(ref, val, x, y):
     if val == "10u":
         part(ref, "Device:C", "10uF", FP_C, x, y, 0, "Samsung Electro-Mechanics", "CL10A106KP8NNNC", DS["C10u"])
+    elif val == "1u50":
+        part(ref, "Device:C", "1uF 50V", FP_C, x, y, 0, "Samsung Electro-Mechanics", "CL10A105KB8NNNC", DS["C1u50"])
+    elif val == "47n":
+        part(ref, "Device:C", "47nF", FP_C, x, y, 0, "Samsung Electro-Mechanics", "CL10B473KB8NNNC", DS["C47n"])
     else:
         part(ref, "Device:C", "100nF", FP_C, x, y, 0, "Murata", "GRM188R71C104KA01D", DS["C100n"])
 
@@ -52,13 +61,16 @@ def cap(ref, val, x, y):
 part("J1", "Connector:Screw_Terminal_01x02", "5V_IN",
      "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal", 55.88, 60.96, 0,
      "Phoenix Contact", "1715721", "https://www.phoenixcontact.com/en-us/products/printed-circuit-board-terminal-mkds-15-2-508-1715721")
-part("F1", "Device:Polyfuse", "0.5A hold", "Fuse:Fuse_1812_4532Metric", 81.28, 60.96, 0,
-     "Bourns", "MF-MSMF050-2", "https://www.bourns.com/docs/Product-Datasheets/mf-msmf.pdf")
-part("Q1", "Transistor_FET:AO3401A", "AO3401A", "Package_TO_SOT_SMD:SOT-23", 104.14, 60.96, 0,
-     "Alpha & Omega Semiconductor", "AO3401A", "https://www.aosmd.com/res/datasheets/AO3401A.pdf")
-res("R1", "10k", 124.46, 60.96)
-part("D1", "Device:D_Zener", "SMAJ6.0A", "Diode_SMD:D_SMA", 142.24, 60.96, 270,
-     "Vishay", "SMAJ6.0A-E3/61", "https://www.vishay.com/docs/88390/smaj50a.pdf")
+# V0.2.0: eFuse power entry (replaces F1/Q1/R1/D1 of V0.1.0)
+cap("C12", "1u50", 76.2, 66.04)
+part("U5", "Power_Management:TPS26600PWP", "TPS26600PWPR",
+     "Sensor_Interface_Power_Board:TI_PWP0016A_HTSSOP-16-1EP_4.4x5mm_P0.65mm_EP3.4x5mm", 109.22, 66.04, 0,
+     "Texas Instruments", "TPS26600PWPR", "https://www.ti.com/lit/ds/symlink/tps2660.pdf")
+res("R16", "73.2k", 78.74, 99.06)
+res("R17", "5.9k", 88.9, 99.06)
+res("R18", "21.5k", 99.06, 99.06)
+res("R19", "20k", 114.3, 99.06)
+cap("C13", "47n", 127.0, 99.06)
 cap("C1", "10u", 157.48, 60.96)
 cap("C2", "100n", 170.18, 60.96)
 cap("C5", "100n", 182.88, 60.96)
@@ -83,6 +95,7 @@ part("U3", "Logic_LevelTranslator:SN74LVC1T45DBV", "SN74LVC1T45DBVR", "Package_T
      "Texas Instruments", "SN74LVC1T45DBVR", "https://www.ti.com/lit/ds/symlink/sn74lvc1t45.pdf")
 res("R4", "100k", 137.16, 130.81)
 res("R5", "100k", 149.86, 130.81)
+res("R15", "1k", 190.5, 130.81)
 cap("C6", "100n", 162.56, 130.81)
 cap("C7", "100n", 175.26, 130.81)
 part("J3", "Connector_Generic:Conn_01x04", "ULTRASONIC", FP_HDR4, 205.74, 130.81, 0, "Samtec", "HTSW-104-07-T-S", DS["HDR"])
@@ -119,26 +132,30 @@ res("R14", "1k", 373.38, 205.74)
 # ---------------- Row 4: ground test points and power flags (y = 250)
 part("TP5", "Connector:TestPoint", "GND", FP_TP, 45.72, 248.92, 0, "Keystone Electronics", "5015", DS["TP"])
 part("TP6", "Connector:TestPoint", "GND", FP_TP, 58.42, 248.92, 0, "Keystone Electronics", "5015", DS["TP"])
-FLAGS = {"#FLG01": ("+5V_P", 83.82), "#FLG02": ("GND", 99.06), "#FLG03": ("3V3_ESP", 114.3)}
+FLAGS = {"#FLG01": ("VIN_RAW", 83.82), "#FLG02": ("GND", 99.06), "#FLG03": ("3V3_ESP", 114.3)}
 
 # ---------------- Connectivity: (ref, pin) -> net
 NETS = {
-    "VIN_RAW": [("J1", 1), ("F1", 1), ("TP1", 1)],
-    "VIN_FUSED": [("F1", 2), ("Q1", 3)],
-    "Q1_GATE": [("Q1", 1), ("R1", 1)],
-    "+5V_P": [("Q1", 2), ("D1", 1), ("C1", 1), ("C2", 1), ("C5", 1), ("U1", 3), ("R2", 1), ("TP2", 1),
-              ("U3", 6), ("C7", 1), ("J3", 1), ("C8", 1), ("C9", 1), ("JP1", 3), ("#FLG01", 1)],
+    "VIN_RAW": [("J1", 1), ("TP1", 1), ("U5", 1), ("U5", 2), ("C12", 1), ("R16", 1), ("#FLG01", 1)],
+    "EF_UVLO": [("R16", 2), ("R17", 1), ("U5", 3)],
+    "EF_OVP": [("R17", 2), ("R18", 1), ("U5", 5)],
+    "EF_RTN": [("R18", 2), ("U5", 8), ("U5", 17), ("U5", 6), ("R19", 2), ("C13", 2)],
+    "EF_ILIM": [("U5", 11), ("R19", 1)],
+    "EF_DVDT": [("U5", 12), ("C13", 1)],
+    "+5V_P": [("U5", 15), ("U5", 16), ("C1", 1), ("C2", 1), ("C5", 1), ("U1", 3), ("R2", 1), ("TP2", 1),
+              ("U3", 6), ("C7", 1), ("J3", 1), ("C8", 1), ("C9", 1), ("JP1", 3)],
     "+3V3_P": [("U1", 2), ("C3", 1), ("C4", 1), ("R3", 1), ("TP3", 1), ("J5", 2), ("JP1", 1), ("J6", 2)],
     "3V3_ESP": [("J2", 1), ("TP4", 1), ("U3", 1), ("U3", 5), ("C6", 1), ("U2", 5), ("C10", 1), ("JP2", 1),
                 ("R12", 2), ("U4", 5), ("C11", 1), ("#FLG03", 1)],
-    "GND": [("J1", 2), ("R1", 2), ("D1", 2), ("C1", 2), ("C2", 2), ("C5", 2), ("U1", 1), ("C3", 2), ("C4", 2),
+    "GND": [("J1", 2), ("U5", 9), ("C12", 2), ("C1", 2), ("C2", 2), ("C5", 2), ("U1", 1), ("C3", 2), ("C4", 2),
             ("LED1", 1), ("LED2", 1), ("J2", 2), ("J2", 11), ("J2", 12), ("U3", 2), ("R4", 2), ("R5", 2), ("C6", 2),
             ("C7", 2), ("J3", 4), ("C8", 2), ("C9", 2), ("R7", 2), ("U2", 3), ("C10", 2), ("J5", 1), ("J4", 1),
             ("U4", 3), ("C11", 2), ("J6", 1), ("TP5", 1), ("TP6", 1), ("#FLG02", 1)],
     "LED1_A": [("R2", 2), ("LED1", 2)],
     "LED2_A": [("R3", 2), ("LED2", 2)],
     "US_TRIG_ESP": [("J2", 3), ("U3", 3), ("R4", 1)],
-    "US_TRIG_5V": [("U3", 4), ("R5", 1), ("J3", 2), ("TP8", 1)],
+    "US_TRIG_B": [("U3", 4), ("R15", 1)],
+    "US_TRIG_5V": [("R15", 2), ("R5", 1), ("J3", 2), ("TP8", 1)],
     "US_ECHO_5V": [("J3", 3), ("R6", 1)],
     "US_ECHO_IN": [("R6", 2), ("R7", 1), ("U2", 2)],
     "US_ECHO_ESP": [("U2", 4), ("J2", 4), ("TP7", 1)],
@@ -156,7 +173,9 @@ NETS = {
     "GP_IO2_ESP": [("J2", 10), ("R14", 2)],
     "GP_IO2": [("J6", 4), ("R14", 1)],
 }
-NO_CONNECT = [("U2", 1), ("U4", 1)]
+# U5: 4/13 NC (datasheet N.C); 7 SHDN floats high internally (enabled, TI Fig. 69 minimal configuration);
+# 10 IMON and 14 FLT unused ("If unused, leave floating", TI pin table p.4).
+NO_CONNECT = [("U2", 1), ("U4", 1), ("U5", 4), ("U5", 13), ("U5", 7), ("U5", 10), ("U5", 14)]
 
 
 def main(out):

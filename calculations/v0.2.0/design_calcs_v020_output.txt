@@ -1,0 +1,92 @@
+
+========================================================================================
+1. Load budget (Architecture B) and input current
+========================================================================================
++3V3_P 252.4 mA + LDO Iq + +5V_P direct 22.46 mA + eFuse Iq 390 uA + divider 53 uA
+Input current worst: 275.4 mA  (V0.1.0: 275.7 mA incl. 0.8 mA TVS leakage, now removed)
+
+========================================================================================
+2. TPS26600 UVLO / OVP thresholds - worst-case corners (thresholds x resistor +-1 %)
+========================================================================================
+Divider 73.2k / 5.90k / 21.5k, string current 50 uA (>= 20 x pin leakage 2 uA: PASS)
+OVP rising : nom 5.568 V, range 5.389 .. 5.823 V
+OVP falling: range 4.998 .. 5.348 V (output re-enables below this)
+UVLO rising: nom 4.369 V, range 4.252 .. 4.564 V
+UVLO falling: range 3.908 .. 4.191 V (POR falling ~3.72 V also applies)
+  OVP rising min > VIN_max (no nuisance trip): margin +0.139 V -> PASS
+  OVP rising max < TLV1117LV VIN abs max 6.0 V: margin +0.177 V -> PASS
+  OVP rising max < LVC VCC abs max 6.5 V: margin +0.677 V -> PASS
+  UVLO rising max < VIN_min (always starts in spec): margin +0.186 V -> PASS
+  UVLO rising min > TPS2660 VIN op min 4.2 V: margin +0.052 V -> PASS
+Note: between 5.5 V (LDO/LVC/sensor ROC max) and OVP max 5.82 V the board is outside the
+recommended range but below every absolute maximum; this only happens with an out-of-spec (> 5.25 V) supply.
+
+========================================================================================
+3. Rails with the eFuse (RON max 250 mOhm over temperature)
+========================================================================================
++5V_P: 4.681 .. 5.250 V (V0.1.0: 4.439 .. 5.250 V); eFuse P = 19.0 mW
+LDO headroom at +5V_P min: 1.381 V vs dropout estimate 0.170 V -> PASS
+
+========================================================================================
+4. Current limit (RILIM) and inrush (dVdT)
+========================================================================================
+RILIM 20.0k -> I_OL nom 0.600 A, assumed range 0.510 .. 0.690 A; fast-trip <= 1.31 A
+Steady load 0.275 A -> margin x1.85 to I_OL min (PASS)
+C_out (incl. LDO output, +10 %) 33.6 uF; C(dVdT) 47 nF -> ramp 1.97 ms, inrush 89 mA
+Inrush + full load 0.365 A vs I_OL min 0.510 A -> PASS
+Start-up average dissipation ~475 mW for 2.0 ms (negligible)
+Output short (current-limit mode, MODE=RTN): P = 3.62 W until thermal shutdown (157 C), auto-retry 512 ms
+  -> device self-protects; with ~38.6 C/W (JEDEC) or worse on 2 layers, TSD within seconds (by design).
+
+========================================================================================
+5. Input transients and OVP response
+========================================================================================
+Hot-short interruption spike: 5.25 + 1.31 A x 1.12 Ohm = 6.71 V << 62 V abs max (PASS)
+Hot-plug ringing (undamped worst, 2 x VIN) 10.5 V at IN: < 62 V; FET is OFF during plug-in
+  (UVLO turn-on delay >= 250 us + dVdT ramp), so the ringing does not reach +5V_P.
+Overvoltage arriving while ON: output follows input for <= 6 us -> abs max respected for
+  input slew <= 29.5 V/ms (bench supplies and adapters ramp in ms; a fast step while ON is NOT covered).
+Reverse polarity: TPS2660 blocks down to -60 V (VERIFIED p.19); C_IN rated 50 V -> board survives -50 .. +50 V at J1
+  (limited by C_IN rating; DESIGN statement, NOT TESTED).
+ESD at J1 (IEC 61000-4-2 8 kV contact, 150 pF): dV on C_IN = 1.2 uC / 1 uF = 1.2 V (ASSUMED model) -> no TVS needed.
+
+========================================================================================
+6. TLV1117LV33 thermal on a 2-layer, 1 oz board
+========================================================================================
+P_LDO worst = (5.25 - 3.250) x 0.2524 + Iq = 0.505 W
+RthJA 62.9 C/W (DS-06) is a JEDEC 2s2p (4-layer) value -> NOT used for this 2-layer board.
+  min pad top 0.0123 in2       RthJA 136 x1.10 -> Tj  125.6 C  FAIL (target <= 110 C)
+  top 0.066 in2                RthJA 123 x1.10 -> Tj  118.4 C  FAIL (target <= 110 C)
+  top 0.3 in2                  RthJA  84 x1.10 -> Tj   96.7 C  PASS
+  top 0.53 in2                 RthJA  75 x1.10 -> Tj   91.7 C  PASS
+  top 1.0 in2                  RthJA  66 x1.10 -> Tj   86.7 C  PASS
+  top+bottom 0.284 in2 each    RthJA  83 x1.10 -> Tj   96.1 C  PASS
+  top+bottom 0.5 in2 each      RthJA  70 x1.10 -> Tj   88.9 C  PASS
+Design requirement: >= 0.30 in2 (194 mm2) of 1 oz top copper on the tab (OUT, +3V3_P), plus a bottom +3V3_P
+  copper area joined by vias where layout allows. Target Tj <= 110 C (15 C below TJ max) at 50 C ambient.
+
+========================================================================================
+7. Trace widths (IPC-2221 external-layer formula, 1 oz = 35 um, dT = 10 C)
+========================================================================================
+  VIN_RAW / +5V_P main               I   690 mA -> min 0.180 mm; chosen 0.80 mm (x4.4); 0.614 mOhm/mm
+  +3V3_P main                        I   379 mA -> min 0.079 mm; chosen 0.60 mm (x7.6); 0.819 mOhm/mm
+  +5V_P branch (sensor, LEDs, LVC)   I    50 mA -> min 0.005 mm; chosen 0.40 mm (x83.0); 1.229 mOhm/mm
+  signals                            I    25 mA -> min 0.002 mm; chosen 0.25 mm (x134.9); 1.966 mOhm/mm
+Voltage drop: 60 mm of 0.8 mm track at 0.28 A = 10.3 mV (negligible)
+
+========================================================================================
+8. I2C pull-up recheck (UM10204 Rev 7.0, DS-I2C)
+========================================================================================
+  VDD 3.0: Rp(min) 867 Ohm vs 2178 Ohm -> PASS; sink 1.38 mA
+  VDD 3.3: Rp(min) 967 Ohm vs 2178 Ohm -> PASS; sink 1.52 mA
+  VDD 3.6: Rp(min) 1067 Ohm vs 2178 Ohm -> PASS; sink 1.65 mA
+Max bus capacitance: Fast-mode 159 pF, Standard-mode 400 pF
+Board contribution ~10 pF (ASSUMED) -> cable + devices may add 149 pF in Fast-mode
+
+========================================================================================
+9. Ultrasonic levels with +5V_P = 4.681 .. 5.250 V and new 1 k TRIG series resistor (R15)
+========================================================================================
+TRIG HIGH at J3 >= 4.535 V = 96.9 % of sensor VCC (PASS: >= 90 %)
+ECHO HIGH at U2 input >= 4.634 V vs VT+ max 2.25 V -> margin 2.38 V; max 5.25 V <= 5.5 V (PASS)
+Mis-wired TRIG<->ECHO (output vs output): contention current <= 5.2 mA (limited by R15) -> no damage
+End of V0.2.0 calculations.

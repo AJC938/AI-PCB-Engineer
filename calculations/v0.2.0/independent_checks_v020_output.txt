@@ -1,0 +1,10 @@
+samples 100000, seed 20261109
+OVP rising trip  : 5.395 .. 5.817 V (must stay in 5.25 .. 6.00 V)
+UVLO rising trip : 4.257 .. 4.556 V (must stay in 4.20 .. 4.75 V)
+LDO Tj (top copper >= 0.3 in2): 50.0 .. 95.5 C (limit 110 C design target)
+  ovp_below_vin_max   : 0 violations -> PASS
+  ovp_above_6v        : 0 violations -> PASS
+  uv_above_vin_min    : 0 violations -> PASS
+  uv_below_4v2        : 0 violations -> PASS
+  ldo_tj_over_110     : 0 violations -> PASS
+RESULT: PASS

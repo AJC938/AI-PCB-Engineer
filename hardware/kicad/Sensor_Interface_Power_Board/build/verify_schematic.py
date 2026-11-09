@@ -7,6 +7,8 @@ Checks:
     no 5 V-capable node (+5V_P, J3 signals, UART RX connector) is on any ESP32 net.
  3. Footprints: every assigned footprint exists, and every symbol pin number has a matching pad.
  4. BOM metadata: Manufacturer and MPN present on every non-virtual part.
+ V0.2.0: eFuse rules (RTN island never on GND, IN on VIN_RAW, OUT on +5V_P), TRIG series resistor,
+         project-local footprint library resolved from the project folder.
 Exit code 1 on any failure.
 """
 import os
@@ -62,6 +64,21 @@ for ref, pin in (("U2", 5), ("U4", 5), ("U3", 1), ("U3", 5)):
         fails.append(f"domain: {ref} pin {pin} not on 3V3_ESP")
 if ("U3", 6) not in actual.get("+5V_P", set()):
     fails.append("domain: U3 VCCB not on +5V_P")
+# eFuse (TI SLVSDG2G 9.3.5.5 / 10.4: never connect RTN to GND; support parts referenced to RTN)
+rtn, gnd = actual.get("EF_RTN", set()), actual.get("GND", set())
+if not rtn or ("U5", 8) in gnd or ("U5", 17) in gnd:
+    fails.append("efuse: RTN net missing or RTN pin on GND")
+for ref, pin in (("U5", 8), ("U5", 17), ("U5", 6)):
+    if (ref, pin) not in rtn:
+        fails.append(f"efuse: U5 pin {pin} not on EF_RTN")
+if ("U5", 9) not in gnd:
+    fails.append("efuse: U5 GND pin 9 not on GND")
+if not {("U5", 1), ("U5", 2)} <= actual.get("VIN_RAW", set()):
+    fails.append("efuse: U5 IN not on VIN_RAW")
+if not {("U5", 15), ("U5", 16)} <= actual.get("+5V_P", set()):
+    fails.append("efuse: U5 OUT not on +5V_P")
+if ("J3", 2) in actual.get("US_TRIG_B", set()) or ("R15", 1) not in actual.get("US_TRIG_B", set()):
+    fails.append("trig: R15 series resistor missing between U3-B and J3")
 print(f"[2] domain rules checked on {len(ESP_NETS)} ESP32 nets")
 
 # ---- 3. footprints vs pins
@@ -75,7 +92,8 @@ for comp in root.iter("comp"):
         fails.append(f"fp: {ref} has no footprint")
         continue
     lib, name = fp.split(":", 1)
-    path = os.path.join(fp_dir, lib + ".pretty", name + ".kicad_mod")
+    base = B.PROJ_DIR if lib == B.NAME else fp_dir
+    path = os.path.join(base, lib + ".pretty", name + ".kicad_mod")
     if not os.path.isfile(path):
         fails.append(f"fp: {ref} footprint not found {fp}")
         continue

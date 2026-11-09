@@ -14,7 +14,8 @@ n_paper = len(re.findall(r'\(paper "[^"]+"\)', s))
 assert n_paper == 1, f"expected one paper token, found {n_paper}"
 s = re.sub(r'\(paper "[^"]+"\)', '(paper "A3")', s)
 tb = (f'(title_block\n\t\t(title "{title}")\n\t\t(date "{date}")\n\t\t(rev "{rev}")\n'
-      f'\t\t(company "AI-PCB-Engineer")\n\t\t(comment 1 "Architecture B: ESP32 DevKit on its own USB; board powers peripherals")\n\t)')
+      f'\t\t(company "AI-PCB-Engineer")\n\t\t(comment 1 "Architecture B: ESP32 DevKit on its own USB; board powers peripherals")\n'
+      f'\t\t(comment 2 "V0.2.0: eFuse power entry (DDR-17), TRIG series R15 (DDR-18)")\n\t)')
 if "(title_block" in s:
     s = re.sub(r"\(title_block.*?\n\t\)", tb, s, count=1, flags=re.S)
 else:
