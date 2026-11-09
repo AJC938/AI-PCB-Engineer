@@ -3,6 +3,36 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: SemVer.
 
+## [1.0.0] — 2026-11-09 — Fabrication-ready open hardware design release, board Rev A (V0.3.0 finalization, branch `release/v0.3.0-finalization`)
+**Status: DIGITALLY VALIDATED DESIGN — NOT PHYSICALLY FABRICATED OR TESTED.**
+
+### Audited
+- Final engineering audit (`reports/v0.3.0/FINAL_ENGINEERING_AUDIT.md`):
+  - TPS26600 pin-by-pin against SLVSDG2G Rev. G;
+  - reverse-polarity path tracing, including the earth-referenced ground-loop limitation;
+  - LDO thermal re-derived from the board read-back (Tj ≈ 94.7 °C at 50 °C; new +3V3_P rating 250 mA at ≤ 50 °C);
+  - signals, connectors, footprints, portability.
+- No electrical or layout correction was required.
+- BOM sourcing re-checked on 2026-11-09: TPS26600PWPR active, but TI store out of stock and DigiKey 0 in stock with a 26-week lead time.
+
+### Changed
+- DDR-22: board revision label Rev A (title blocks, silkscreen "REV A v1.0"). Copper, drills, BOM and CPL are identical to V0.2.0.
+- README rewritten for the hardware. The former toolchain README moved to `docs/ai-workflow/AI_TOOLCHAIN_SETUP.md`.
+
+### Added
+- `manufacturing/Sensor_Interface_Power_Board/RevA/`:
+  - regenerated Gerber X2, Excellon, IPC-D-356, BOM (with sourcing columns), CPL, drawings, STEP;
+  - three tested ZIP packages and SHA-256 checksums;
+  - reviewed manufacturer profiles.
+- `scripts/release/`: build, audit (19 checks), BOM enrichment, packaging, path sanitizer and revision scripts.
+- `docs/`: quick start, architecture, electrical design, connection guide, layout, manufacturing, assembly, safety, validation status, visual review, licensing.
+- `media/renders/`: KiCad-generated 3D and 2D images.
+- `LICENSE-HARDWARE` (CERN-OHL-S-2.0), `LICENSE-CODE` (MIT), `CONTRIBUTING.md`, `release/v1.0.0/` notes and checklist.
+- `.gitattributes`: release folder byte-exact, so the published checksums match on every platform.
+
+### Validation
+ERC 0. DRC 0/0 with zone refill and parity. Verifier PASS. Package audit 19/19. ZIP tests PASS. `sha256sum -c` 28/28. Fresh MCP reopen 7/7.
+
 ## [Unreleased] — 0.2.0 PCB layout, DFM/DFA and manufacturing package (branch `design/v0.2.0-pcb-layout`)
 - Gate A: TVS/LDO analysis showed that SMAJ6.0A (VBR ≥ 6.67 V) cannot protect the TLV1117LV (6 V abs max).
   F1/Q1/R1/D1 were replaced by a TPS26600 eFuse: OVP 5.39–5.82 V worst case, reverse polarity −60 V, 0.6 A
