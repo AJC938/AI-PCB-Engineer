@@ -33,8 +33,6 @@ flowchart LR
   RX -->|conditioned ECHO| IF
   IF --> COM[I2C · UART · GPIO connectors]
   R3 -->|J5/J6; J4 via JP1| PER[Peripheral power]
-  R5 --> IF
-  R3 --> COM
   ESP ---|GND reference| US
 ```
 
