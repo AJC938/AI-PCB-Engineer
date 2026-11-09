@@ -6928,7 +6928,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7098,7 +7098,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -9708,7 +9708,7 @@
 		(uuid "4b57964a-1a89-43de-bc3c-9d1fd6089345")
 	)
 	  (symbol (lib_id "Mechanical:MountingHole") (at 152.4 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "415f8bf4-373d-4dfc-8ef7-c562624e299f")
     (property "Reference" "H1"
       (at 152.4 254 0)
@@ -9773,7 +9773,7 @@
     )
   )
     (symbol (lib_id "Mechanical:MountingHole") (at 165.1 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "6c53bf1c-b91d-4301-be5f-f7633b773414")
     (property "Reference" "H2"
       (at 165.1 254 0)
@@ -9838,7 +9838,7 @@
     )
   )
     (symbol (lib_id "Mechanical:MountingHole") (at 177.8 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "1fc3ca21-d048-4a4b-a563-8155d875083f")
     (property "Reference" "H3"
       (at 177.8 254 0)
@@ -9903,7 +9903,7 @@
     )
   )
     (symbol (lib_id "Mechanical:MountingHole") (at 190.5 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "788607e9-bac4-4927-ae0a-9d17c2beffe3")
     (property "Reference" "H4"
       (at 190.5 254 0)
@@ -9968,7 +9968,7 @@
     )
   )
     (symbol (lib_id "Mechanical:Fiducial") (at 210.82 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "26d6d264-831c-4fd1-9c9b-8bcb2a0e604e")
     (property "Reference" "FID1"
       (at 210.82 254 0)
@@ -10033,7 +10033,7 @@
     )
   )
     (symbol (lib_id "Mechanical:Fiducial") (at 223.52 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "8e4cdbdd-76ac-4b32-b590-ab542d027abc")
     (property "Reference" "FID2"
       (at 223.52 254 0)
@@ -10098,7 +10098,7 @@
     )
   )
     (symbol (lib_id "Mechanical:Fiducial") (at 236.22 248.92 0) (unit 1)
-    (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no)
+    (body_style 1) (exclude_from_sim no) (in_bom no) (on_board yes) (in_pos_files yes) (dnp no)
     (uuid "66dde617-801f-455f-a0e8-0a83e681277e")
     (property "Reference" "FID3"
       (at 236.22 254 0)
