@@ -71,3 +71,17 @@ Every work report contains:
 - Datasheet facts: part number + document revision + page/table.
 - Calculations: formula, inputs, result, file in `calculations/`.
 - Physical results: measurement, instrument, conditions, photo, file in `testing/`.
+
+### Added by V0.2.0 (`reports/v0.2.0/FINAL_V0.2.0_REPORT.md`)
+15. `add_zone` is listed in the board toolbox but returns "Unknown command" on SWIG (D-23): use
+    `add_copper_pour` (no pad-connection or priority parameter; set those with a documented pcbnew script).
+16. `sync_schematic_to_board` leaves no-connect pads without their `unconnected-(...)` net (D-24): run
+    `build/fix_nc_pad_nets.py`, otherwise DRC parity reports net_conflict.
+17. After sync, copy MPN, Manufacturer, Description and Datasheet with `sync_footprint_fields.py`
+    (all four fields are checked by DRC parity).
+18. `add_schematic_component` always writes `in_bom yes` and a compact one-line symbol format; set BOM flags with
+    `build/set_bom_flags.py`.
+19. `refill_zones` writes the file itself and then refuses `save_project` ("changed externally"): reopen, then
+    confirm the fill with pcbnew `IsFilled()` and run kicad-cli DRC both with and without `--refill-zones`.
+20. For multi-net boards, compute routes outside MCP (`build/route_pcb.py`) and write them with `route_trace` /
+    `add_via`. Model custom-shape pads by their bounding box and fiducials by their mask opening plus local clearance.

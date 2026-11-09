@@ -3,6 +3,22 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: SemVer.
 
+## [Unreleased] — 0.2.0 PCB layout, DFM/DFA and manufacturing package (branch `design/v0.2.0-pcb-layout`)
+- Gate A: TVS/LDO analysis showed that SMAJ6.0A (VBR ≥ 6.67 V) cannot protect the TLV1117LV (6 V abs max).
+  F1/Q1/R1/D1 were replaced by a TPS26600 eFuse: OVP 5.39–5.82 V worst case, reverse polarity −60 V, 0.6 A
+  limit, inrush control. TRIG series 1 kΩ (R15) added. LDO thermal re-derived for a 2-layer board
+  (251 mm² copper, Tj ≈ 94.7 °C at 50 °C).
+- Gate B: PCBWay, NextPCB, Seeed Fusion and Eurocircuits compared from official pages. PCBWay is the provisional
+  recommendation and NextPCB the alternate. Supplier approval is pending. BOM sourcing audit done
+  (TPS26600PWPR stock risk).
+- Gate C: footprint verification. Project footprint for TI PWP0016A.
+- Layout: 90 × 64 mm, 2 layers, top-side assembly, 331 tracks, 57 vias, 4 zones. kicad-cli DRC (all
+  severities, parity, refilled and stored zones): 0 violations, 0 unconnected, 0 parity. ERC 0.
+- `manufacturing/v0.2.0/`: Gerber X2, Excellon, IPC-D-356, BOM, CPL, assembly drawings, STEP, notes, DFM
+  profiles. Independent audit 11/11 PASS.
+- New MCP findings D-23 (add_zone unsupported) and D-24 (NC pad nets); workarounds added to AI_AGENT_INSTRUCTIONS.
+- Status: digital design complete. **NOT fabricated, NOT TESTED. Supplier approval pending.**
+
 ## [Unreleased] — 0.1.0 Engineering design, component selection & schematic (branch `design/v0.1.0-phase1`)
 - Architecture B selected (DevKit on its own USB. The board powers peripherals only). Variant-independent ultrasonic
   interface (SN74LVC1T45 TRIG, SN74LVC1G17 ECHO/RX, logic referenced to 3V3_ESP).

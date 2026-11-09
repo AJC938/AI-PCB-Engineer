@@ -55,3 +55,16 @@ OQ-01, OQ-06 and OQ-11 or on established workflow rules.
 
 Resolution status of R-01…R-22 after the V0.1.0 design: see
 [`reports/v0.1.0/FINAL_V0.1.0_DESIGN_REPORT.md`](../../../reports/v0.1.0/FINAL_V0.1.0_DESIGN_REPORT.md).
+
+## V0.2.0 layout-phase additions (2026-11-09)
+| ID | Risk | L | I | Score | Mitigation | Status |
+|---|---|---|---|---|---|---|
+| R-32 | (update) TVS clamp above downstream abs max | — | — | — | TVS removed; TPS26600 OVP 5.39–5.82 V < 6.0 V | CLOSED by design (V0.2.0) |
+| R-36 | TPS26600PWPR out of stock (TI store 2026-11-09); no drop-in alternate | 2 | 3 | 6 | confirm in vendor turnkey quote; consign or redesign (human decision) | OPEN |
+| R-37 | Reverse-polarity current through shared GND when the 5 V supply and the ESP32 host are both earth-referenced (eFuse cannot block a GND path) | 1 | 3 | 3 | use a floating 5 V adapter; observe J1 polarity marking | ACCEPTED (documented) |
+| R-38 | Overvoltage stepping in faster than 23.8 V/ms while powered passes during the 6 µs OVP delay | 1 | 2 | 2 | regulated bench/adapter supplies only | ACCEPTED |
+| R-39 | Vendor applies a wrong CPL rotation offset or substitutes parts | 2 | 2 | 4 | assembly drawing + polarity table; "no substitution" on every BOM line; first-article inspection | OPEN (vendor) |
+| R-40 | MCP defects D-23 (add_zone unsupported) / D-24 (NC pad nets) silently produce incomplete boards | 2 | 2 | 4 | kicad-cli DRC with parity after every MCP session; documented workarounds | MITIGATED |
+| R-41 | LDO thermal estimate borrows LM1117 SOT-223 data (+10 % margin) | 1 | 2 | 2 | 251 mm² copper (target 194); V0.3.0 thermal measurement | OPEN (test) |
+
+Resolution status of R-01…R-35 after V0.2.0: see [`reports/v0.2.0/FINAL_V0.2.0_REPORT.md`](../../../reports/v0.2.0/FINAL_V0.2.0_REPORT.md).
