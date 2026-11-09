@@ -31,3 +31,5 @@
 # Release packages are byte-exact: the published SHA-256 checksums must match on every platform
 manufacturing/Sensor_Interface_Power_Board/** -text
 *.zip  binary
+# Shell scripts must keep LF endings on every platform (Bash fails on CRLF)
+*.sh   text eol=lf
