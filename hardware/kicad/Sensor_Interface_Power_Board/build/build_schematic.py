@@ -132,6 +132,11 @@ res("R14", "1k", 373.38, 205.74)
 # ---------------- Row 4: ground test points and power flags (y = 250)
 part("TP5", "Connector:TestPoint", "GND", FP_TP, 45.72, 248.92, 0, "Keystone Electronics", "5015", DS["TP"])
 part("TP6", "Connector:TestPoint", "GND", FP_TP, 58.42, 248.92, 0, "Keystone Electronics", "5015", DS["TP"])
+# V0.2.0: mechanical items (in schematic so DRC schematic parity holds; not in BOM)
+for i, x in enumerate((152.4, 165.1, 177.8, 190.5), start=1):
+    part(f"H{i}", "Mechanical:MountingHole", "M3", "MountingHole:MountingHole_3.2mm_M3", x, 248.92, 0)
+for i, x in enumerate((210.82, 223.52, 236.22), start=1):
+    part(f"FID{i}", "Mechanical:Fiducial", "Fiducial", "Fiducial:Fiducial_1mm_Mask2mm", x, 248.92, 0)
 FLAGS = {"#FLG01": ("VIN_RAW", 83.82), "#FLG02": ("GND", 99.06), "#FLG03": ("3V3_ESP", 114.3)}
 
 # ---------------- Connectivity: (ref, pin) -> net
@@ -181,25 +186,30 @@ NO_CONNECT = [("U2", 1), ("U4", 1), ("U5", 4), ("U5", 13), ("U5", 7), ("U5", 10)
 def main(out):
     s1 = [{"label": "create", "name": "create_project", "arguments": {"path": PROJ_DIR, "name": NAME}}]
     s2 = []
+    only = os.environ.get("BUILD_ONLY_REFS")  # incremental build: comma list of refs to add
     for ref, p in PARTS.items():
+        if only and ref not in only.split(","):
+            continue
         args = {"schematicPath": SCH, "symbol": p["sym"], "reference": ref, "value": p["val"],
                 "position": {"x": p["x"], "y": p["y"]}, "angle": p["ang"]}
         if p["fp"]:
             args["footprint"] = p["fp"]
         s2.append({"label": f"add_{ref}", "name": "add_schematic_component", "arguments": args})
-    for ref, (net, x) in FLAGS.items():
+    for ref, (net, x) in ({} if only else FLAGS).items():
         s2.append({"label": f"add_{ref}", "name": "add_schematic_component", "arguments": {
             "schematicPath": SCH, "symbol": "power:PWR_FLAG", "reference": ref, "value": "PWR_FLAG",
             "position": {"x": x, "y": 248.92}, "angle": 0}})
-    for net, pins in NETS.items():
+    for net, pins in ({} if only else NETS).items():
         for ref, pin in pins:
             s2.append({"label": f"lbl_{ref}_{pin}", "name": "add_schematic_net_label", "arguments": {
                 "schematicPath": SCH, "netName": net, "labelType": "global_label",
                 "componentRef": ref, "pinNumber": str(pin)}})
-    for ref, pin in NO_CONNECT:
+    for ref, pin in ([] if only else NO_CONNECT):
         s2.append({"label": f"nc_{ref}_{pin}", "name": "add_no_connect", "arguments": {
             "schematicPath": SCH, "componentRef": ref, "pinNumber": str(pin)}})
     for ref, p in PARTS.items():
+        if only and ref not in only.split(","):
+            continue
         for prop, key in (("Manufacturer", "mfr"), ("MPN", "mpn"), ("Datasheet", "ds")):
             if p[key]:
                 s2.append({"label": f"prop_{ref}_{prop}", "name": "set_schematic_component_property", "arguments": {

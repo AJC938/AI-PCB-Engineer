@@ -107,8 +107,8 @@ print(f"[3] footprints verified: {n_fp}")
 n_meta = 0
 for comp in root.iter("comp"):
     ref = comp.get("ref")
-    if ref.startswith("JP"):
-        continue  # PCB solder jumpers: no part
+    if ref.startswith(("JP", "H", "FID")):
+        continue  # PCB solder jumpers, mounting holes, fiducials: PCB features, no purchased part
     f = {x.get("name"): (x.text or "") for x in comp.iter("field")}
     if not f.get("MPN") or not f.get("Manufacturer"):
         fails.append(f"meta: {ref} lacks MPN/Manufacturer")
